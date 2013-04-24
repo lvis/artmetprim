@@ -1,0 +1,742 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro" xml:lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Trimite-ne comentariile tale - Ruukki</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="pageId" content="{6CB62EB6-AA65-42E9-B9BF-8570E20E7594}" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+                
+		
+        <link type="text/css" href="../..RuukkiInternet/css/general.css" rel="Stylesheet" />
+		<link type="text/css" href="../..RuukkiInternet/css/main.css" rel="Stylesheet" />	
+		<link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/colorbox.css" rel="Stylesheet" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jcarousel.css" rel="stylesheet" media="all" />
+        
+        <script type="text/javascript" src="Js/jquery-1.4.2.min.js"></script>
+        
+			<script type="text/javascript" charset="utf-8">var live = true;</script>
+		
+		<script type="text/javascript" src="Js/main.js"></script>
+		<script type="text/javascript" src="Js/jqueryhtmlreplacements.js"></script>
+		<script type="text/javascript" src="Js/jquery.datatables.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.vticker.js"></script>
+		<script type="text/javascript" src="Js/jquery.colorbox-min-1_3_13.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.8.6.custom.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.watermark.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Js/mwheelIntent.js"></script>
+		<script type="text/javascript" src="Js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.jcarousel.min.js"></script>
+        
+        
+
+   		
+        
+
+    <script type="text/javascript" charset="utf-8">
+
+		var oTable;
+    	jQuery(document).ready(function () {
+
+        jQuery('iframe').each(function()
+        {
+	        var url = jQuery(this).attr("src");
+            if (typeof(url)==="undefined" || url=="")
+            {
+                return;
+            }
+
+            var bInsert = false;
+            var paramPrefix = "?";
+
+            var iWmodeIndex = url.indexOf("?wmode=");
+            if (iWmodeIndex<0)
+            {
+                iWmodeIndex=url.indexOf("&wmode=");
+            }
+
+            if (iWmodeIndex<0)
+            {
+                bInsert = true;
+                paramPrefix = url.lastIndexOf('?')<0 ? "?" : "&";
+            }
+
+            if (bInsert)
+            {
+	            jQuery(this).attr("src", url+paramPrefix+"wmode=opaque");
+            }
+        });
+
+
+			oTable = jQuery('.dataTable').dataTable({
+               "bJQueryUI": false,
+			   "bPaginate": false,
+               "oLanguage": {"sLengthMenu": "Afişează _MENU_ documente per pagină","sZeroRecords": "Nu există rezultate","sInfo": "Afişează _START_ până la _END_ din _TOTAL_ documente","sInfoEmtpy": "Afişează 0 până la 0 din 0 documente","sInfoFiltered": "(selectează din _MAX_ total documente)","sSearch": "Caută","oPaginate": {"sFirst": "jquery/datatables/pagingfirst [ro-RO]","sPrevious": "Anterior","sNext": "Următorul","sLast": "jquery/datatables/paginglast [ro-RO]"}},
+               "sDom": 'frt<"bottom">p'
+			});
+    		jQuery('.dataTables_filter').find('input').wrap('<span class="text-218"></span>');
+    		jQuery("div.bottom").html('<table cellpadding="0" cellspacing="0"><tr class="bottom"><td>&nbsp;</td></tr></table>');
+			
+		});
+
+	</script>
+    
+     
+	</head>
+	<body>
+	<form name="form1" method="post" action="/Pagina-principala/Contactati-ne/Trimite-ne-comentariile-tale" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTk4MTA3OA9kFgxmDw8WAh4HVmlzaWJsZWhkZAICDw8WAh8AaGRkAgUPFgIeBFRleHQF2QMib0xhbmd1YWdlIjogeyJzTGVuZ3RoTWVudSI6ICJBZmnFn2VhesSDIF9NRU5VXyBkb2N1bWVudGUgcGVyIHBhZ2luxIMiLCJzWmVyb1JlY29yZHMiOiAiTnUgZXhpc3TEgyByZXp1bHRhdGUiLCJzSW5mbyI6ICJBZmnFn2VhesSDIF9TVEFSVF8gcMOibsSDIGxhIF9FTkRfIGRpbiBfVE9UQUxfIGRvY3VtZW50ZSIsInNJbmZvRW10cHkiOiAiQWZpxZ9lYXrEgyAwIHDDom7EgyBsYSAwIGRpbiAwIGRvY3VtZW50ZSIsInNJbmZvRmlsdGVyZWQiOiAiKHNlbGVjdGVhesSDIGRpbiBfTUFYXyB0b3RhbCBkb2N1bWVudGUpIiwic1NlYXJjaCI6ICJDYXV0xIMiLCJvUGFnaW5hdGUiOiB7InNGaXJzdCI6ICJqcXVlcnkvZGF0YXRhYmxlcy9wYWdpbmdmaXJzdCBbcm8tUk9dIiwic1ByZXZpb3VzIjogIkFudGVyaW9yIiwic05leHQiOiAiVXJtxIN0b3J1bCIsInNMYXN0IjogImpxdWVyeS9kYXRhdGFibGVzL3BhZ2luZ2xhc3QgW3JvLVJPXSJ9fWQCBg8PFgIfAGhkZAIHEGRkFggCAQ9kFgJmD2QWAgIBD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFAS8WAh4DYWx0BQZSdXVra2lkAgMPZBYCZg9kFgJmD2QWCAIBD2QWAmYPZBYCAgEPFgIfAQWKBDx1bD48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL0NvbnRhY3RhdGktbmUvQ2F1dGEtY29udGFjdGUiPkNhdXTEgyBjb250YWN0ZTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9HYXNpdGktbG9jYXRpaWxlLVJ1dWtraSI+R8SDc2nFo2kgbG9jYcWjaWlsZSBSdXVra2k8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL0NvbnRhY3RhdGktbmUvVHJpbWl0ZS1uZS1jZXJlcmUtZGUtb2ZlcnRhIj5UcmltaXRlLW5lIGNlcmVyZSBkZSBvZmVydMSDPC9hPjwvbGk+PGxpIGNsYXNzPSJzZWxlY3RlZCI+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL0NvbnRhY3RhdGktbmUvVHJpbWl0ZS1uZS1jb21lbnRhcmlpbGUtdGFsZSI+VHJpbWl0ZS1uZSBjb21lbnRhcmlpbGUgdGFsZTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9OZXdzbGV0dGVycyI+TmV3c2xldHRlcnM8L2E+PC9saT48L3VsPmQCBw9kFgJmD2QWAmYPZBYCAgIPZBYsAgMPDxYCHwEFDVRpcHVsIG9waW5pZWlkZAIFDxBkEBUECFdlYiBzaXRlB0NhcmllcmUHUHJvZHVzZQRBbHRlFQQIV2ViIHNpdGUCSFIIUHJvZHVjdHMFT3RoZXIUKwMEZ2dnZ2RkAgcPZBYIAgEPDxYCHwEFGkRlZmluacWjaSBncnVwYSBkZSBwcm9kdXNlZGQCBQ8QZBAVAR5TZWxlY3RhxaNpIGdydXBhIGRlIHByb2R1c2UuLi4VAQEwFCsDAWcWAWZkAgcPDxYCHwEFFlNwZWNpZmljYcWjaSBwcm9kdXNlbGVkZAILDxAPFgIeB0VuYWJsZWRoZBAVARZTZWxlY3RhxaNpIHBvZHVzZWxlLi4uFQEBMBQrAwFnFgFmZAIJDw8WAh4MRXJyb3JNZXNzYWdlBRZFc3RlIG5lY2VzYXIgdW4gbWVzYWouZGQCCw8PFgQeCENzc0NsYXNzBV5zY2ZNdWx0aXBsZUxpbmVUZXh0Qm9yZGVyIG5hbWUuWW91cittZXNzYWdlIGZpZWxkaWQuJTdiREU0NEQzNjQtQUNENy00QTZCLTgwREMtQUZBMzE1MTBFQTBCJTdkHgRfIVNCAgJkFgJmDw8WAh8BBQdNZXNhaiAqZGQCDQ8PFgQfBgVUc2NmU2luZ2xlTGluZVRleHRCb3JkZXIgbmFtZS5OYW1lIGZpZWxkaWQuJTdiQjVGREJDRkMtRjU3NS00REJGLTk0RDctREUzMzY5QzkzRDdGJTdkHwcCAmQWAmYPDxYCHwEFBE51bWVkZAIPDw8WAh8FBRlUcmVidWllIGNvbXBsZXRhdCBudW1lbGUuZGQCEQ8PFgQfBgVZc2NmU2luZ2xlTGluZVRleHRCb3JkZXIgbmFtZS5MYXN0K25hbWUgZmllbGRpZC4lN2IwNEZEMTQ3QS0wRjRBLTRBMEUtQTk3Ny1CRjlGMUExN0IzOTQlN2QfBwICZBYCZg8PFgIfAQUJUHJlbnVtZSAqZGQCEw8PFgQfBgVfc2NmU2luZ2xlTGluZVRleHRCb3JkZXIgbmFtZS5UaXRsZXByb2Zlc3Npb24gZmllbGRpZC4lN2I3QkQzNDVGRS1DQTdFLTQ0QjUtQjdBMy1ERjZFQkQ0QzcyQjklN2QfBwICZBYCZg8PFgIfAQUSVGl0bHUgc2F1IHByb2Zlc2lhZGQCFQ8PFgQfBgVXc2NmU2luZ2xlTGluZVRleHRCb3JkZXIgbmFtZS5Db21wYW55IGZpZWxkaWQuJTdiRTMyMUJBNzctNDc2Ni00Mjk2LTg3NDgtQTIxNUZFQTdBNTg2JTdkHwcCAmQWAmYPDxYCHwEFCENvbXBhbmlhZGQCFw8PFgQfBQUuQWRyZXNhIGRlIGVtYWlsIG51IGVzdGUgaW50cm8gZm9ybcSDIGNvcmVjdMSDLh4UVmFsaWRhdGlvbkV4cHJlc3Npb24FhQFbYS16MC05ISMkJSYnKisvPT9eX2B7fH1+LV0rKD86XC5bYS16MC05ISMkJSYnKisvPT9eX2B7fH1+LV0rKSpAKD86W2EtejAtOV0oPzpbYS16MC05LV0qW2EtejAtOV0pP1wuKStbYS16MC05XSg/OlthLXowLTktXSpbYS16MC05XSk/ZGQCGQ8PFgIfBQUkVHJlYnVpZSBjb21wbGV0YXTEgyBhZHJlc2EgZGUgZW1haWwuZGQCGw8PFgQfBgVMdHh0QWRkIG5hbWUuRW1haWwrYWRkcmVzcyBmaWVsZGlkLiU3YkYwMEUzQjJCLTgzMjAtNEY1RC1BNkUzLTM0MjAzQ0M2REI2QyU3ZB8HAgJkFgJmDw8WAh8BBRFBZHJlc2EgZGUgZW1haWwgKmRkAh0PDxYEHwgFIl4oXCg/XCs/WzAtOV0qXCk/KT9bMC05X1wtIFwoXCldKiQfBQUtRm9ybWF0dWwgbnVtxINydWx1aSBkZSB0ZWxlZm9uIGVzdGUgaW5jb3JlY3QuZGQCHw8PFgIfBQUmVHJlYnVpZSBjb21wbGV0YXQgbnVtxINydWwgZGUgdGVsZWZvbi5kZAIhDw8WBB8GBVxzY2ZTaW5nbGVMaW5lVGV4dEJvcmRlciBuYW1lLlBob25lK251bWJlciBmaWVsZGlkLiU3YkE2MzFERjBGLTlDQUEtNEJFOS1CNDkzLTEwMzgzODY1NDk4RSU3ZB8HAgJkFgJmDw8WAh8BBRNOdW3Eg3IgZGUgdGVsZWZvbiAqZGQCIw8PFgQfBgVXc2NmU2luZ2xlTGluZVRleHRCb3JkZXIgbmFtZS5BZGRyZXNzIGZpZWxkaWQuJTdiNkFENUQ3QTAtQUM1MC00NTgxLTlDMDEtNDlERUQzMkI1NkFEJTdkHwcCAmQWAmYPDxYCHwEFB0FkcmVzxINkZAIlDw8WAh8FBSNUcmVidWllIGNvbXBsZXRhdCDFo2FyYSBkZSBvcmlnaW5lLmRkAikPDxYCHwEFCMWiYXLEgyAqZGQCLQ8QZBAVABUAFCsDAGRkAi8PZBYCAgMPDxYCHwUFMDxici8+Rm9ybS9TdWJtaXR0YWwgYXBwcm92YWwgaXMgcmVxdWlyZWQgW3JvLVJPXWRkAjEPDxYCHwEFFDxzcGFuPlRyaW1pdGU8L3NwYW4+FgIeB29uY2xpY2sFkgFXZWJGb3JtX0RvUG9zdEJhY2tXaXRoT3B0aW9ucyhuZXcgV2ViRm9ybV9Qb3N0QmFja09wdGlvbnMoIm1haW5fMCRib3R0b21fMCRidG5TZW5kIiwgIiIsIHRydWUsICJmc2VuZEZlZWRCYWNrIiwgIj9hZD1TZW5kZmVlZGJhY2siLCBmYWxzZSwgZmFsc2UpKWQCCQ9kFgJmD2QWAmYPZBYEZg9kFgICAQ8PFgIfAGhkZAICD2QWAgIBDw8WAh8AaGRkAg0PDxYCHwBoZBYCZg8WAh8AaGQCBQ9kFgJmD2QWAgIDD2QWBAIBD2QWAgIBDw8WBB8BBQtUaXDEg3JlxZ90ZR8CBT4vUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9UcmltaXRlLW5lLWNvbWVudGFyaWlsZS10YWxlIxYCHwkFqQF3aW5kb3cub3BlbignL3J1dWtraWludGVybmV0L2xheW91dHMvcHJpbnQuYXNweD9wPXs2Q0I2MkVCNi1BQTY1LTQyRTktQjlCRi04NTcwRTIwRTc1OTR9JywgJ1J1dWtraWNvbScsICdzY3JvbGxiYXJzPTEsIHJlc2l6YWJsZT0xLCB3aWR0aD04MDAsIGhlaWdodD01MDAnKTtyZXR1cm4gZmFsc2U7ZAIDD2QWBgIBDxYCHwEFCEZhdm9yaXRlZAIDDxYCHwEFBUVtYWlsZAIFDxYCHwEFF1RyaW1pdGUgYWNlc3TEgyBwYWdpbsSDZAIHDw8WAh8AaGRkAggPDxYCHwBoZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFImN0bDAzJFNlYXJjaEJveDEkbG5rUHJvZHVjdHNTZWFyY2h0xEOtk1xUO6n7QWU50C2ks7Of0Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+
+
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="H2FCuXm2tqr8Mfw3koGCYKWUMav6bknR8Srx7K55QcOHbDkv-3rfWhe1WUtmVjNcPZpK1eQXIS7ikDnKNIeCezwFy_qbI7VrZXI0IYkxc1yQ_a4bxjcYGZBe12VFHUs123f5bUFYYkXJlwdK_T1qedm7Y6Y1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEQKt4umQBQKa3YKZBAKRvvHyDQKJq+z1CwLBpvf8DwLD+erfBwL+7fuLCgKpyZWMAwK9/9KIDwLGkr7RBwKe2risDALD6ZnkBwLA5dfRDALUnuWeBgKc3ZjOBwLjlLzXAgKQn/bfCUlv37hRQ7wlSPY97lhYxdg1no3B" />
+</div>
+		<div id="page-wrapper">
+			<div id="page-wrapper2">
+				
+
+<div id="header">
+	
+<div id="logo"><a id="ctl03_Logo1_LogoLink" alt="Ruukki" href="../../index.html"></a></div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        // watermark
+        var searchText = 'Căutare';
+        jQuerytb = jQuery('.autocomplete');
+        jQuerytb.val(searchText);
+
+        jQuery('.autocomplete').focus(function() {
+            if (jQuerytb.val() == searchText) {
+                jQuerytb.val('');
+            }
+        });
+        jQuery('.autocomplete').blur(function() {
+            if (jQuery.trim(jQuerytb.val()) == '') {
+                jQuerytb.val(searchText);
+            }
+        });
+
+
+        // autocomplete
+        jQuery("#ctl03_SearchBox1_txtSearch").autocomplete({
+                source: function(request, response) {
+                    jQuery.ajax({
+                        url: "/RuukkiInternet/HttpHandlers/SearchAutoComplete.ashx",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: { query: request.term },
+                        success: function( res ) {
+						    response( $.map( res.matches, 
+                                function( item ) {
+							        return { label: item.Label.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    $.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),	
+                                             value: item.Value, 
+                                             target: item.Target }
+                                }
+                            ))
+                        }
+                    })
+                }
+            , minLength: 2
+            ,focus: function(event, ui) { return false; }
+            ,select: function(event, ui) { 
+                        var link = ui.item.value;
+                        var target = ui.item.target;
+                        if (target == '') window.location = link;
+                        else window.open(link);
+                        return false;
+                    }
+        });
+                jQuery("#ctl03_SearchBox1_txtSearch").data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+	            };
+    });
+
+
+
+
+
+</script>
+
+<div id="search">
+<div id="ctl03_SearchBox1_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl03_SearchBox1_lnkProductsSearch')">
+	
+	    <span id="main-search"><input name="ctl03$SearchBox1$txtSearch" type="text" id="ctl03_SearchBox1_txtSearch" class="autocomplete" />
+        <input type="image" name="ctl03$SearchBox1$lnkProductsSearch" id="ctl03_SearchBox1_lnkProductsSearch" class="search-btn" onmouseover="this.src='/RuukkiInternet/images/search-btn-small-hover.png';" onmouseout="this.src='/RuukkiInternet/images/search-btn-small.png';" src="http://www.ruukkiacoperis.ro/RuukkiInternet/images/search-btn-small.png" style="height:21px;width:25px;border-width:0px;" /></span>
+
+</div>
+</div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('ul li span a').length == 0)
+                jQuery('.layer-open').hide();
+        });
+
+
+
+        jQuery('div#buttons ul li span a').click(function () {
+            jQuery('.layer-open').toggle();
+        });
+    });
+
+    </script>
+<div id="buttons">
+	<ul>
+		<li><span><a href="" onclick="return false;"><span>Alte siteuri Ruukki</span></a><div class="layer-open" style="display: none;"><ul><li><a href="../../www.ruukki.com/index.html">International</a></li><li><a href="../../www.ruukki.nl/index.html">Benelux</a></li><li><a href="../../www.ruukki.com.br/index.html">Brasil</a></li><li><a href="../../www.ruukki.bg/index.html">Bulgarien</a></li><li><a href="../../www.ruukki.cn/index.html">China</a></li><li><a href="../../www.ruukki.cz/index.html">Czech Republic</a></li><li><a href="../../www.ruukki.ee/index.html">Estonia</a></li><li><a href="../../www.ruukki.fi/index.html">Finland</a></li><li><a href="../../www.ruukki.fr/index.html">France</a></li><li><a href="../../www.ruukki.de/index.html">Germany</a></li><li><a href="../../www.ruukki.hu/index.html">Hungary</a></li><li><a href="../../www.ruukki.in/index.html">India</a></li><li><a href="../../www.ruukki.it/index.html">Italy</a></li><li><a href="../../www.ruukki.lv/index.html">Latvia</a></li><li><a href="../../www.ruukki.lt/index.html">Lithuania</a></li><li><a href="../../www.ruukki.no/index.html">Norway</a></li><li><a href="../../www.ruukki.pl/index.html">Poland</a></li><li><a href="../../www.ruukki.ro/index.html">Romania</a></li><li><a href="../../www.ruukki.ru/index.html">Russia</a></li><li><a href="../../www.ruukki.sk/index.html">Slovakia</a></li><li><a href="../../www.ruukki.se/index.html">Sweden</a></li><li><a href="../../www.ruukki.com.tr/index.html">Turkey</a></li><li><a href="../../www.ruukki.com.ua/index.html">Ukraine</a></li></ul></div></span></li>
+		<li><div class="languages"><ul></ul></div></li>
+	</ul>
+</div>
+
+	
+
+<div id="links">
+
+	<ul>
+		
+	</ul>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#main-navi .first a").mouseenter(function () {
+            jQuery(".product-layer").show();
+        });
+        jQuery("#main-navi .first").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+        jQuery(".product-layer").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+    });
+</script>
+<div id="main-navi">
+	<ul>
+		<li class="first"><a href="../..Totul-despre-acoperisuri.html">TOTUL DESPRE ACOPERIŞURI</a><div class="product-layer"><table><tr><td class="professionals"><div class="row">Pentru Profesionişti</div><table><tr><td><ul><li class="header"><a href="../Produse-si-solutii/Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></td><td></td><td><ul><li class="header"><a href="../Produse-si-solutii/Produse-metalurgice.html">Produse metalurgice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-cald">Oţeluri laminate la cald</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-rece">Oţeluri laminate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Produse-din-otel-cu-invelis-colorat">Produse din oţel cu înveliş colorat</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Otel-cu-invelis-metalic">Oţel cu înveliş metalic</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Sectiuni-din-otel-galvanizate-la-rece">Secţiuni din oţel galvanizate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Servicii-si-produse-din-otel-de-prima-clasa-disponibile-pentru-clienti-din-diferite-sectoare-">Produse în funcţie de aplicaţie</a></li></ul></td><td></td></tr></table></td><td class="consumers"><div class="row">Pentru clienţi finali</div><a href="../../index.html" target="_blank"><img alt="" width="225" height="225" src="http://www.ruukkiacoperis.ro/Pagina-principala/Contactati-ne/~/media/504AC8F64F3F438CA1EC57DA189A5929.ashx" /></a></td></tr></table></div></li><li><a href="../../Produse-pentru-acoperis/Acoperisuri.html">PRODUSE PENTRU ACOPERIŞ</a></li><li><a href="../../Experimenteaza-modele-de-acoperis.html">EXPERIMENTEAZĂ MODELE DE ACOPERIŞ</a></li><li><a href="../..Solicitati-oferta.html">SOLICITAŢI O OFERTĂ</a></li><li><a href="../..Distribuitori.html">DISTRIBUITORI </a></li><li><a href="../../Asistenta/Trimiteti-o-intrebare-doctorului-de-acoperis.html">ASISTENŢĂ</a></li>
+	</ul>
+</div>
+
+
+				<div id="page-content">
+					
+<div id="content-wrapper">
+ <div id="content-wrapper2">
+    <div id="sidebar">
+		
+<div class="sidebar-header">
+    <div class="sidebar-header-2">Contactaţi-ne</div>
+</div>
+<div class="sidebar-content">
+	<ul><li><a href="Cauta-contacte.html">Caută contacte</a></li><li><a href="Gasiti-locatiile-Ruukki.html">Găsiţi locaţiile Ruukki</a></li><li><a href="Trimite-ne-cerere-de-oferta.html">Trimite-ne cerere de ofertă</a></li><li class="selected"><a href="Trimite-ne-comentariile-tale.html">Trimite-ne comentariile tale</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Contactati-ne/Newsletters">Newsletters</a></li></ul>
+</div>
+
+
+		
+	</div>
+	<div id="content">
+		
+<div id="breadcrumb">
+	<ul>
+					
+	</ul>  
+</div>
+		<div id="main">
+			
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+
+        jQuery('#main_0_bottom_0_btnSend').click(function () {
+            _gaq.push(['_trackEvent', 'Send Feedback form', 'Submit']);
+            if (Page_IsValid) {
+                jQuery('.btn-container').replaceWith('<img src="/RuukkiInternet/Css/images/loading.gif" />');
+            }
+            else {
+                FormValidatorHandler();
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    (function (jQuery) {
+        jQuery.widget("ui.combobox", {
+            _create: function () {
+                var self = this,
+			    select = this.element.hide(),
+			    selected = select.children(":selected"),
+			    value = selected.val() ? selected.text() : "";
+                var input = jQuery("<input>")
+			    .insertBefore(select)
+			    .val(value)
+			    .autocomplete({
+			        delay: 0,
+			        minLength: 0,
+			        source: function (request, response) {
+			            var matcher = new RegExp(jQuery.ui.autocomplete.escapeRegex(request.term), "i");
+			            response(select.children("option").map(function () {
+			                var text = jQuery(this).text();
+			                if (this.value && (!request.term || matcher.test(text)))
+			                    return {
+			                        label: text.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    jQuery.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),
+			                        value: text,
+			                        option: this
+			                    };
+			            }));
+			        },
+			        select: function (event, ui) {
+			            ui.item.option.selected = true;
+			            self._trigger("selected", event, {
+			                item: ui.item.option
+			            });
+			        },
+			        change: function (event, ui) {
+			            if (!ui.item) {
+			                var matcher = new RegExp("^" + jQuery.ui.autocomplete.escapeRegex(jQuery(this).val()) + "$", "i"),
+							    valid = false;
+			                select.children("option").each(function () {
+			                    if (this.text.match(matcher)) {
+			                        this.selected = valid = true;
+			                        return false;
+			                    }
+			                });
+			                if (!valid) {
+			                    // remove invalid value, as it didn't match anything
+			                    jQuery(this).val("");
+			                    select.val("0");
+			                    return false;
+			                }
+			            }
+			        }
+			    })
+			    .addClass("ui-widget ui-widget-content ui-corner-left");
+
+                input.data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+                };
+            }
+        });
+    })(jQuery);
+
+    jQuery(function () {
+        jQuery(".combobox").combobox();
+    });
+
+    function CheckBoxRequired_ClientValidate(sender, e) {
+        e.IsValid = jQuery("#submittal input:checkbox").is(':checked');
+    } 
+
+</script>
+
+<div id="main-content-small">
+    <div class="text-content">
+        <h1>
+            Trimite-ne comentariile tale</h1>
+        <p>
+            
+		<p>Vă asigurăm că opiniile dumneavoastră asupra produselor, website-ului sau alte subiecte legate de operaţiunile companiei Ruukki, sunt foarte apreciate. </p>
+    <p>Pentru o cerere de ofertă sau detalii tehnice a produselor, vă rugăm sa completaţi <a href="Trimite-ne-cerere-de-oferta.html">formularul de cerere</a>.</p>
+        <p class="error">
+        </p>
+    </div>
+    <div id="main_0_bottom_0_pForm">
+	
+        <div class="form">
+            <div class="row">
+                
+                <p>
+                    <strong>
+                        <span id="main_0_bottom_0_lblFeedBackType">Tipul opiniei</span></strong></p>
+                <table id="main_0_bottom_0_rblSendFeedBackType" border="0">
+		<tr>
+			<td><input id="main_0_bottom_0_rblSendFeedBackType_0" type="radio" name="main_0$bottom_0$rblSendFeedBackType" value="Web site" checked="checked" /><label for="main_0_bottom_0_rblSendFeedBackType_0">Web site</label></td><td><input id="main_0_bottom_0_rblSendFeedBackType_1" type="radio" name="main_0$bottom_0$rblSendFeedBackType" value="HR" onclick="javascript:setTimeout('__doPostBack(\'main_0$bottom_0$rblSendFeedBackType$1\',\'\')', 0)" /><label for="main_0_bottom_0_rblSendFeedBackType_1">Cariere</label></td><td><input id="main_0_bottom_0_rblSendFeedBackType_2" type="radio" name="main_0$bottom_0$rblSendFeedBackType" value="Products" onclick="javascript:setTimeout('__doPostBack(\'main_0$bottom_0$rblSendFeedBackType$2\',\'\')', 0)" /><label for="main_0_bottom_0_rblSendFeedBackType_2">Produse</label></td><td><input id="main_0_bottom_0_rblSendFeedBackType_3" type="radio" name="main_0$bottom_0$rblSendFeedBackType" value="Other" onclick="javascript:setTimeout('__doPostBack(\'main_0$bottom_0$rblSendFeedBackType$3\',\'\')', 0)" /><label for="main_0_bottom_0_rblSendFeedBackType_3">Alte</label></td>
+		</tr>
+	</table>
+                <br />
+            </div>
+            
+            <div class="row">
+                <span id="main_0_bottom_0_rfvYourMessage" class="validator" style="color:Red;display:none;">Este necesar un mesaj.</span>
+                <div id="main_0_bottom_0_mltMessage_scope" class="scfMultipleLineTextBorder name.Your+message fieldid.%7bDE44D364-ACD7-4A6B-80DC-AFA31510EA0B%7d">
+		<label for="main_0_bottom_0_mltMessage" id="main_0_bottom_0_mltMessage_text" class="scfMultipleLineTextLabel">Mesaj *</label><div class="scfMultipleLineGeneralPanel">
+			<textarea name="main_0$bottom_0$mltMessage" rows="5" cols="20" id="main_0_bottom_0_mltMessage" class="scfMultipleLineTextBox"></textarea><span class="scfMultipleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+            </div>
+            <div class="personal-information">
+                <div id="main_0_bottom_0_sltFirstName_scope" class="scfSingleLineTextBorder name.Name fieldid.%7bB5FDBCFC-F575-4DBF-94D7-DE3369C93D7F%7d">
+		<label for="main_0_bottom_0_sltFirstName" id="main_0_bottom_0_sltFirstName_text" class="scfSingleLineTextLabel">Nume</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltFirstName" type="text" maxlength="256" id="main_0_bottom_0_sltFirstName" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <span id="main_0_bottom_0_rfvLastName" class="validator" style="color:Red;display:none;">Trebuie completat numele.</span>
+                <div id="main_0_bottom_0_sltLastName_scope" class="scfSingleLineTextBorder name.Last+name fieldid.%7b04FD147A-0F4A-4A0E-A977-BF9F1A17B394%7d">
+		<label for="main_0_bottom_0_sltLastName" id="main_0_bottom_0_sltLastName_text" class="scfSingleLineTextLabel">Prenume *</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltLastName" type="text" maxlength="256" id="main_0_bottom_0_sltLastName" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <div id="main_0_bottom_0_sltTitleOrProfession_scope" class="scfSingleLineTextBorder name.Titleprofession fieldid.%7b7BD345FE-CA7E-44B5-B7A3-DF6EBD4C72B9%7d">
+		<label for="main_0_bottom_0_sltTitleOrProfession" id="main_0_bottom_0_sltTitleOrProfession_text" class="scfSingleLineTextLabel">Titlu sau profesia</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltTitleOrProfession" type="text" maxlength="256" id="main_0_bottom_0_sltTitleOrProfession" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <div id="main_0_bottom_0_sltCompnay_scope" class="scfSingleLineTextBorder name.Company fieldid.%7bE321BA77-4766-4296-8748-A215FEA7A586%7d">
+		<label for="main_0_bottom_0_sltCompnay" id="main_0_bottom_0_sltCompnay_text" class="scfSingleLineTextLabel">Compania</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltCompnay" type="text" maxlength="256" id="main_0_bottom_0_sltCompnay" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>                
+            </div>
+            <div class="personal-information-2">
+                <span id="main_0_bottom_0_revEmail" class="validator" style="color:Red;display:none;">Adresa de email nu este intro formă corectă.</span>
+                <span id="main_0_bottom_0_rfvEmail" class="validator" style="color:Red;display:none;">Trebuie completată adresa de email.</span>
+                <div id="main_0_bottom_0_sltEmail_scope" class="txtAdd name.Email+address fieldid.%7bF00E3B2B-8320-4F5D-A6E3-34203CC6DB6C%7d">
+		<label for="main_0_bottom_0_sltEmail" id="main_0_bottom_0_sltEmail_text" class="scfSingleLineTextLabel">Adresa de email *</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltEmail" type="text" maxlength="256" id="main_0_bottom_0_sltEmail" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <span id="main_0_bottom_0_revPhoneNumber" class="validator" style="color:Red;display:none;">Formatul numărului de telefon este incorect.</span>
+                <span id="main_0_bottom_0_rfvPhoneNumber" class="validator" style="color:Red;display:none;">Trebuie completat numărul de telefon.</span>
+                <div id="main_0_bottom_0_sltPhoneNumber_scope" class="scfSingleLineTextBorder name.Phone+number fieldid.%7bA631DF0F-9CAA-4BE9-B493-10383865498E%7d">
+		<label for="main_0_bottom_0_sltPhoneNumber" id="main_0_bottom_0_sltPhoneNumber_text" class="scfSingleLineTextLabel">Număr de telefon *</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltPhoneNumber" type="text" maxlength="256" id="main_0_bottom_0_sltPhoneNumber" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <div id="main_0_bottom_0_sltAddress_scope" class="scfSingleLineTextBorder name.Address fieldid.%7b6AD5D7A0-AC50-4581-9C01-49DED32B56AD%7d">
+		<label for="main_0_bottom_0_sltAddress" id="main_0_bottom_0_sltAddress_text" class="scfSingleLineTextLabel">Adresă</label><div class="scfSingleLineGeneralPanel">
+			<input name="main_0$bottom_0$sltAddress" type="text" maxlength="256" id="main_0_bottom_0_sltAddress" class="scfSingleLineTextBox" /><span class="scfSingleLineTextUsefulInfo" style="display:none;"></span>
+		</div>
+	</div>
+                <span id="main_0_bottom_0_rfvCountry" class="validator" style="color:Red;display:none;">Trebuie completat ţara de origine.</span>
+                <p>
+                    <strong>
+                        </strong></p>
+                
+                <p>
+                   
+                </p>
+                <div class="scfSingleLineTextBorder">
+                    <label class="scfSingleLineTextLabel"><span id="main_0_bottom_0_lblCountry">Ţară *</span></label>
+                    <div class="scfSingleLineGeneralPanel">
+                        
+                        <select name="main_0$bottom_0$ddlCountry" id="main_0_bottom_0_ddlCountry" class="combobox">
+
+	</select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="separator">
+                    
+                    <br />
+                    <div class="btn-container">
+                        <a onclick="WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;main_0$bottom_0$btnSend&quot;, &quot;&quot;, true, &quot;fsendFeedBack&quot;, &quot;?ad=Sendfeedback&quot;, false, false));" id="main_0_bottom_0_btnSend" class="button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;main_0$bottom_0$btnSend&quot;, &quot;&quot;, true, &quot;fsendFeedBack&quot;, &quot;&quot;, false, true))"><span>Trimite</span></a></div>
+                </p>
+            </div>
+        </div>
+    
+</div>
+    
+    
+</div>
+
+			<div id="right-sidebar">
+				
+	
+ 
+
+	
+	
+	<br />
+
+			</div>
+		</div>
+        
+        
+        <div class="text-content social_bottom">
+            
+        </div>
+    </div>
+ </div>
+</div>
+					
+
+
+
+<div id="footer">
+	<div id="footer-wrapper">
+		
+		<ul class="footer-links">
+			
+            
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('.countrytoggle').length == 0) {
+                jQuery('.country-open').hide();
+            } 
+        });
+
+        jQuery('.countrytoggle').click(function () {
+            jQuery('.country-open').toggle();
+        });
+    });
+
+</script>
+    <li><div class="countries"></div></li>	
+    
+	
+   
+   
+		</ul>         
+		
+		
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact: 'delicious, digg, facebook, more',
+        data_ga_property: 'UA-27088716-1',
+        data_ga_social: true
+    };
+
+</script>
+<style type="text/css">
+    .at300bs
+    {
+        background: none !important;
+        height: 0px !important;
+    }
+</style>
+<ul class="footer-actions">
+    <li id="ctl05_Actions1_liPrint" class="print">
+        <a id="ctl05_Actions1_lnkPrint" onclick="window.open('/ruukkiinternet/layouts/print.aspx?p={6CB62EB6-AA65-42E9-B9BF-8570E20E7594}', 'Ruukkicom', 'scrollbars=1, resizable=1, width=800, height=500');return false;" href="Trimite-ne-comentariile-tale.html#" target="_blank">Tipăreşte</a></li>
+    
+        <li class="bookmark"><a class="addthis_button_favorites" href="Trimite-ne-comentariile-tale.html#">
+            Favorite</a></li>
+        <li class="email"><a class="addthis_button_email" href="Trimite-ne-comentariile-tale.html#">
+            Email</a></li>
+        <li class="share"><a class="addthis_button" href="../../www.addthis.com/bookmark.php-v=25038username=ruukki.html">
+            Trimite acestă pagină</a>
+            <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#username=ruukki"></script>
+        </li>
+    
+</ul>
+
+	</div>
+
+    <div>
+    
+     <div id="sitemapContent" >
+            <div class="four-columns">
+                <div class="four-columns2">
+                    <div class="box content sitemap-links">
+                      <ul>
+                        
+                     </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+     		            <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box-last content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </div>
+
+	<div id="footer-copyright">
+		<p><br/></p>		
+	</div>
+</div>
+				
+
+
+				</div>
+			</div>
+		</div>
+        
+	
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("main_0_bottom_0_rfvYourMessage"), document.getElementById("main_0_bottom_0_rfvLastName"), document.getElementById("main_0_bottom_0_revEmail"), document.getElementById("main_0_bottom_0_rfvEmail"), document.getElementById("main_0_bottom_0_revPhoneNumber"), document.getElementById("main_0_bottom_0_rfvPhoneNumber"), document.getElementById("main_0_bottom_0_rfvCountry"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var main_0_bottom_0_rfvYourMessage = document.all ? document.all["main_0_bottom_0_rfvYourMessage"] : document.getElementById("main_0_bottom_0_rfvYourMessage");
+main_0_bottom_0_rfvYourMessage.controltovalidate = "main_0_bottom_0_mltMessage";
+main_0_bottom_0_rfvYourMessage.focusOnError = "t";
+main_0_bottom_0_rfvYourMessage.errormessage = "Este necesar un mesaj.";
+main_0_bottom_0_rfvYourMessage.display = "Dynamic";
+main_0_bottom_0_rfvYourMessage.validationGroup = "fsendFeedBack";
+main_0_bottom_0_rfvYourMessage.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+main_0_bottom_0_rfvYourMessage.initialvalue = "";
+var main_0_bottom_0_rfvLastName = document.all ? document.all["main_0_bottom_0_rfvLastName"] : document.getElementById("main_0_bottom_0_rfvLastName");
+main_0_bottom_0_rfvLastName.controltovalidate = "main_0_bottom_0_sltLastName";
+main_0_bottom_0_rfvLastName.focusOnError = "t";
+main_0_bottom_0_rfvLastName.errormessage = "Trebuie completat numele.";
+main_0_bottom_0_rfvLastName.display = "Dynamic";
+main_0_bottom_0_rfvLastName.validationGroup = "fsendFeedBack";
+main_0_bottom_0_rfvLastName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+main_0_bottom_0_rfvLastName.initialvalue = "";
+var main_0_bottom_0_revEmail = document.all ? document.all["main_0_bottom_0_revEmail"] : document.getElementById("main_0_bottom_0_revEmail");
+main_0_bottom_0_revEmail.controltovalidate = "main_0_bottom_0_sltEmail";
+main_0_bottom_0_revEmail.focusOnError = "t";
+main_0_bottom_0_revEmail.errormessage = "Adresa de email nu este intro formă corectă.";
+main_0_bottom_0_revEmail.display = "Dynamic";
+main_0_bottom_0_revEmail.validationGroup = "fsendFeedBack";
+main_0_bottom_0_revEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+main_0_bottom_0_revEmail.validationexpression = "[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+var main_0_bottom_0_rfvEmail = document.all ? document.all["main_0_bottom_0_rfvEmail"] : document.getElementById("main_0_bottom_0_rfvEmail");
+main_0_bottom_0_rfvEmail.controltovalidate = "main_0_bottom_0_sltEmail";
+main_0_bottom_0_rfvEmail.focusOnError = "t";
+main_0_bottom_0_rfvEmail.errormessage = "Trebuie completată adresa de email.";
+main_0_bottom_0_rfvEmail.display = "Dynamic";
+main_0_bottom_0_rfvEmail.validationGroup = "fsendFeedBack";
+main_0_bottom_0_rfvEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+main_0_bottom_0_rfvEmail.initialvalue = "";
+var main_0_bottom_0_revPhoneNumber = document.all ? document.all["main_0_bottom_0_revPhoneNumber"] : document.getElementById("main_0_bottom_0_revPhoneNumber");
+main_0_bottom_0_revPhoneNumber.controltovalidate = "main_0_bottom_0_sltPhoneNumber";
+main_0_bottom_0_revPhoneNumber.focusOnError = "t";
+main_0_bottom_0_revPhoneNumber.errormessage = "Formatul numărului de telefon este incorect.";
+main_0_bottom_0_revPhoneNumber.display = "Dynamic";
+main_0_bottom_0_revPhoneNumber.validationGroup = "fsendFeedBack";
+main_0_bottom_0_revPhoneNumber.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+main_0_bottom_0_revPhoneNumber.validationexpression = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
+var main_0_bottom_0_rfvPhoneNumber = document.all ? document.all["main_0_bottom_0_rfvPhoneNumber"] : document.getElementById("main_0_bottom_0_rfvPhoneNumber");
+main_0_bottom_0_rfvPhoneNumber.controltovalidate = "main_0_bottom_0_sltPhoneNumber";
+main_0_bottom_0_rfvPhoneNumber.focusOnError = "t";
+main_0_bottom_0_rfvPhoneNumber.errormessage = "Trebuie completat numărul de telefon.";
+main_0_bottom_0_rfvPhoneNumber.display = "Dynamic";
+main_0_bottom_0_rfvPhoneNumber.validationGroup = "fsendFeedBack";
+main_0_bottom_0_rfvPhoneNumber.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+main_0_bottom_0_rfvPhoneNumber.initialvalue = "";
+var main_0_bottom_0_rfvCountry = document.all ? document.all["main_0_bottom_0_rfvCountry"] : document.getElementById("main_0_bottom_0_rfvCountry");
+main_0_bottom_0_rfvCountry.controltovalidate = "main_0_bottom_0_ddlCountry";
+main_0_bottom_0_rfvCountry.focusOnError = "t";
+main_0_bottom_0_rfvCountry.errormessage = "Trebuie completat ţara de origine.";
+main_0_bottom_0_rfvCountry.display = "Dynamic";
+main_0_bottom_0_rfvCountry.validationGroup = "fsendFeedBack";
+main_0_bottom_0_rfvCountry.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+main_0_bottom_0_rfvCountry.initialvalue = "0";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+	
+    
+    <!-- Old browser notification -->
+    <script type="text/javascript">
+        var $buoop = { vs: { i: 6, f: 3.5, s: 3, o: 9 }, newwindow: true }
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            if ($buoop.ol) $buoop.ol();
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "http://browser-update.org/update.js");
+            document.body.appendChild(e);
+        } 
+     </script>
+     
+	</body>
+</html>

@@ -1,0 +1,542 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro" xml:lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Ridicare, manipulare şi transport - Ruukki</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="pageId" content="{179520A8-EE77-401A-BD2F-BD4F8ED68820}" />
+		<meta name="keywords" content="Ridicare, manipulare şi transport " />
+		<meta name="description" content="" />
+                
+		
+        <link type="text/css" href="../..RuukkiInternet/css/general.css" rel="Stylesheet" />
+		<link type="text/css" href="../..RuukkiInternet/css/main.css" rel="Stylesheet" />	
+		<link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/colorbox.css" rel="Stylesheet" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jcarousel.css" rel="stylesheet" media="all" />
+        
+        <script type="text/javascript" src="Js/jquery-1.4.2.min.js"></script>
+        
+			<script type="text/javascript" charset="utf-8">var live = true;</script>
+		
+		<script type="text/javascript" src="Js/main.js"></script>
+		<script type="text/javascript" src="Js/jqueryhtmlreplacements.js"></script>
+		<script type="text/javascript" src="Js/jquery.datatables.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.vticker.js"></script>
+		<script type="text/javascript" src="Js/jquery.colorbox-min-1_3_13.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.8.6.custom.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.watermark.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Js/mwheelIntent.js"></script>
+		<script type="text/javascript" src="Js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.jcarousel.min.js"></script>
+        
+        
+
+   		
+        
+
+    <script type="text/javascript" charset="utf-8">
+
+		var oTable;
+    	jQuery(document).ready(function () {
+
+        jQuery('iframe').each(function()
+        {
+	        var url = jQuery(this).attr("src");
+            if (typeof(url)==="undefined" || url=="")
+            {
+                return;
+            }
+
+            var bInsert = false;
+            var paramPrefix = "?";
+
+            var iWmodeIndex = url.indexOf("?wmode=");
+            if (iWmodeIndex<0)
+            {
+                iWmodeIndex=url.indexOf("&wmode=");
+            }
+
+            if (iWmodeIndex<0)
+            {
+                bInsert = true;
+                paramPrefix = url.lastIndexOf('?')<0 ? "?" : "&";
+            }
+
+            if (bInsert)
+            {
+	            jQuery(this).attr("src", url+paramPrefix+"wmode=opaque");
+            }
+        });
+
+
+			oTable = jQuery('.dataTable').dataTable({
+               "bJQueryUI": false,
+			   "bPaginate": false,
+               "oLanguage": {"sLengthMenu": "Afişează _MENU_ documente per pagină","sZeroRecords": "Nu există rezultate","sInfo": "Afişează _START_ până la _END_ din _TOTAL_ documente","sInfoEmtpy": "Afişează 0 până la 0 din 0 documente","sInfoFiltered": "(selectează din _MAX_ total documente)","sSearch": "Caută","oPaginate": {"sFirst": "jquery/datatables/pagingfirst [ro-RO]","sPrevious": "Anterior","sNext": "Următorul","sLast": "jquery/datatables/paginglast [ro-RO]"}},
+               "sDom": 'frt<"bottom">p'
+			});
+    		jQuery('.dataTables_filter').find('input').wrap('<span class="text-218"></span>');
+    		jQuery("div.bottom").html('<table cellpadding="0" cellspacing="0"><tr class="bottom"><td>&nbsp;</td></tr></table>');
+			
+		});
+
+	</script>
+    
+     
+	</head>
+	<body>
+	<form name="form1" method="post" action="/Pagina-principala/Referinte/Ridicare-manipulare-si-transport" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTk4MTA3OA9kFgxmDw8WAh4HVmlzaWJsZWhkZAICDw8WAh8AaGRkAgUPFgIeBFRleHQF2QMib0xhbmd1YWdlIjogeyJzTGVuZ3RoTWVudSI6ICJBZmnFn2VhesSDIF9NRU5VXyBkb2N1bWVudGUgcGVyIHBhZ2luxIMiLCJzWmVyb1JlY29yZHMiOiAiTnUgZXhpc3TEgyByZXp1bHRhdGUiLCJzSW5mbyI6ICJBZmnFn2VhesSDIF9TVEFSVF8gcMOibsSDIGxhIF9FTkRfIGRpbiBfVE9UQUxfIGRvY3VtZW50ZSIsInNJbmZvRW10cHkiOiAiQWZpxZ9lYXrEgyAwIHDDom7EgyBsYSAwIGRpbiAwIGRvY3VtZW50ZSIsInNJbmZvRmlsdGVyZWQiOiAiKHNlbGVjdGVhesSDIGRpbiBfTUFYXyB0b3RhbCBkb2N1bWVudGUpIiwic1NlYXJjaCI6ICJDYXV0xIMiLCJvUGFnaW5hdGUiOiB7InNGaXJzdCI6ICJqcXVlcnkvZGF0YXRhYmxlcy9wYWdpbmdmaXJzdCBbcm8tUk9dIiwic1ByZXZpb3VzIjogIkFudGVyaW9yIiwic05leHQiOiAiVXJtxIN0b3J1bCIsInNMYXN0IjogImpxdWVyeS9kYXRhdGFibGVzL3BhZ2luZ2xhc3QgW3JvLVJPXSJ9fWQCBg8PFgIfAGhkZAIHEGRkFggCAQ9kFgJmD2QWAgIBD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFAS8WAh4DYWx0BQZSdXVra2lkAgMPZBYCZg9kFgJmD2QWCAIBD2QWAmYPZBYCAgEPFgIfAQW3Ajx1bD48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1JlZmVyaW50ZS9BcmVuZS1zcG9ydGl2ZSI+QXJlbmUgc3BvcnRpdmU8L2E+PC9saT48bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0Ij5SaWRpY2FyZSwgbWFuaXB1bGFyZSDFn2kgdHJhbnNwb3J0IDwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL01hc2luaS1BZ3JpY29sZSI+TWHFn2luaSBBZ3JpY29sZTwvYT48L2xpPjwvdWw+ZAIFD2QWAmYPZBYCZg8PFgIfAGhkFgICAQ9kFgICAQ9kFgICAQ8PFgIfAGhkZAIHD2QWAmYPZBYCZg9kFgICAQ9kFgJmD2QWAmYPZBYMZg8QZA8WAmYCARYCEAURxaJhcsSDIHNhdSBwcm9kdXMFATBnEAURQW51bCBkZSByZWFsaXphcmUFATFnZGQCAQ8QZBAVBwhUb2F0ZS4uLghPcHRpbSBNQwhPcHRpbSBRQxJPxaNlbHVyaSBwcm9maWxhdGUiT8WjZWx1cmkgUmFleCByZXppc3RlbnRlIGxhIHV6dXLEgx1PxaNlbHVyaSByZXppc3RlbnRlIGxhIHV6dXLEgydTZWPFo2l1bmkgZGluIG/Fo2VsIGdhbHZhbml6YXRlIGxhIHJlY2UVBwNBbGwme0I3M0I5QkRELTg2RjctNDlCRS05OUY2LUEzNEQ1OUYyMzdGNH0mezBGQjI5MzczLUM3MjQtNDhENy04NDM2LTQzNEU1Q0VDMkVENn0mezI0REIzODJBLTQ4RDUtNERDMy04MzE0LTA0MzYyRkJEMDI4Nn0me0E0N0M1NTA3LTU2RkItNEFFMi1BNTZCLUVFQkFBODA1MzhDMn0mezZCRjA1NDk3LTcxRTctNEE4OC1BMEY2LTcxMERDNDUwOTIzNX0mezM2QzdGMzUxLTAxQkMtNDJFMC05REE0LUE3RTRDMUYyMThCNn0UKwMHZ2dnZ2dnZ2RkAgIPEGQQFQcIVG9hdGUuLi4IRmlubGFuZGEIR2VybWFuaWEGSXRhbGlhBk9sYW5kYQVSdXNpYQZTcGFuaWEVBwNBbGwme0ExM0Q3MTRDLThDNDUtNEU5NC1CNjgyLUZERjNEOThBQTNBNH0mezVFNEFGMUNFLTBDQjItNDI5QS04OTQxLTgyMDJGRTUxNjk5RH0mezdDOEQyQjdDLUYyNUEtNEYzRC04MDBELTAyQzEwOTU0QzI1Rn0mezZEMURGRkE1LTI3MDMtNDQ3OC05RjdFLUQyMDZDQTI3QTg0NX0mezU2REEwNEQ1LTQ3MkItNEI1RS1BRUExLUI2MUNEMEQzNDFDOH0mezM3MUU5QkNDLTNFNUYtNDMyMi1BRTdCLUREM0JDMkY0NEI1OX0UKwMHZ2dnZ2dnZ2RkAgMPEGQQFQYIVG9hdGUuLi4EMjAxMAUyMDA5IAQyMDA5BSAyMDA5BDIwMDgVBgNBbGwEMjAxMAUyMDA5IAQyMDA5BSAyMDA5BDIwMDgUKwMGZ2dnZ2dnZGQCBA8PFgIfAQUVPHNwYW4+Q8SDdXRhcmU8L3NwYW4+ZGQCBg8WAh8BBdQkPGRpdiBjbGFzcz0icHJvZHVjdC1jYXRlZ29yaWVzIj48ZGl2IGNsYXNzPSJwcm9kdWN0LWNhdGVnb3JpZXMyIj48ZGl2IGNsYXNzPXByb2R1Y3QtY2F0ZWdvcnk+PGRpdiBjbGFzcz0iY29udGVudCI+PGgyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvQnJvbnRvLVNreWxpZnQtSW5kcmVwdGFuZHUtbmUtdXNvci1zcHJlLWluYWludGUiPkJyb250byBTa3lsaWZ0OiDDjm5kcmVwdMOibmR1LW5lIHXFn29yIHNwcmUgw65uYWludGU8L2E+PC9oMj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0L0Jyb250by1Ta3lsaWZ0LUluZHJlcHRhbmR1LW5lLXVzb3Itc3ByZS1pbmFpbnRlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL1JlZmVyZW5jZXMvQnJvbnRvLVNreWxpZnRfMi5hc2h4P21oPTE0NiZhbXA7bXc9MjM2IiBhbHQ9IiIgd2lkdGg9IjIzMyIgaGVpZ2h0PSIxNDYiIC8+PC9hPjx0YWJsZSBjbGFzcz0iaW5mbyIgY2VsbFNwYWNpbmc9IjAiIGNlbGxQYWRkaW5nPSIwIj48dGJvZHk+PHRyPjx0ZD5UaXA6PC90ZD48dGg+IFJpZGljYXJlIHN1cHJhdGVyYW7EgzwvdGg+PHRyPjx0ZD7FomFyYTo8L3RkPjx0aD5GaW5sYW5kYTwvdGg+PHRyPjx0ZD5BbnVsOjwvdGQ+PHRoPiAyMDA5PC90aD48L3Rib2R5PjwvdGFibGU+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz1wcm9kdWN0LWNhdGVnb3J5PjxkaXYgY2xhc3M9ImNvbnRlbnQiPjxoMj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0L1NjaGVuay1DYXBhY2l0YXRlLXN1cGxpbWVudGFyYS1wcmluLWtpdC11cmktZ2F0YS1wcmVnYXRpdGUtZGUtc3VkdXJhIj5TY2hlbms6IENhcGFjaXRhdGUgc3VwbGltZW50YXLEgyBwcmluIGtpdC11cmkgZ2F0YSBwcmVnxIN0aXRlIGRlIHN1ZHVyxIM8L2E+PC9oMj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0L1NjaGVuay1DYXBhY2l0YXRlLXN1cGxpbWVudGFyYS1wcmluLWtpdC11cmktZ2F0YS1wcmVnYXRpdGUtZGUtc3VkdXJhIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL1JlZmVyZW5jZXMvU2NoZW5rLTEuYXNoeD9taD0xNDYmYW1wO213PTIzNiIgYWx0PSIiIHdpZHRoPSIyMzMiIGhlaWdodD0iMTQ2IiAvPjwvYT48dGFibGUgY2xhc3M9ImluZm8iIGNlbGxTcGFjaW5nPSIwIiBjZWxsUGFkZGluZz0iMCI+PHRib2R5Pjx0cj48dGQ+VGlwOjwvdGQ+PHRoPiBDb250ZWluZXI8L3RoPjx0cj48dGQ+xaJhcmE6PC90ZD48dGg+T2xhbmRhPC90aD48dHI+PHRkPkFudWw6PC90ZD48dGg+MjAwOTwvdGg+PC90Ym9keT48L3RhYmxlPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9cHJvZHVjdC1jYXRlZ29yeS1sYXN0PjxkaXYgY2xhc3M9ImNvbnRlbnQiPjxoMj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0L01lbmNpLU5vaS1hdmFudGFqZS1jb21wZXRpdGl2ZSI+TWVuY2k6IE5vaSBhdmFudGFqZSBjb21wZXRpdGl2ZTwvYT48L2gyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvTWVuY2ktTm9pLWF2YW50YWplLWNvbXBldGl0aXZlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL1JlZmVyZW5jZXMvTWVuY2ktMS5hc2h4P21oPTE0NiZhbXA7bXc9MjM2IiBhbHQ9IiIgd2lkdGg9IjIzMyIgaGVpZ2h0PSIxNDYiIC8+PC9hPjx0YWJsZSBjbGFzcz0iaW5mbyIgY2VsbFNwYWNpbmc9IjAiIGNlbGxQYWRkaW5nPSIwIj48dGJvZHk+PHRyPjx0ZD5UaXA6PC90ZD48dGg+QmV0b25pZXJlPC90aD48dHI+PHRkPsWiYXJhOjwvdGQ+PHRoPkl0YWxpYTwvdGg+PHRyPjx0ZD5BbnVsOjwvdGQ+PHRoPjIwMDg8L3RoPjwvdGJvZHk+PC90YWJsZT48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPXByb2R1Y3QtY2F0ZWdvcnk+PGRpdiBjbGFzcz0iY29udGVudCI+PGgyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvTWVpbGxlci1GWC1CZW5hLXBlbnRydS1iYXNjdWxhbnRlIj5NZWlsbGVyIEYuWC4gQmVuYSBwZW50cnUgYmFzY3VsYW50ZTwvYT48L2gyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvTWVpbGxlci1GWC1CZW5hLXBlbnRydS1iYXNjdWxhbnRlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL1JlZmVyZW5jZXMvTWVpbGxlci0xLmFzaHg/bWg9MTQ2JmFtcDttdz0yMzYiIGFsdD0iIiB3aWR0aD0iMjMzIiBoZWlnaHQ9IjE0NiIgLz48L2E+PHRhYmxlIGNsYXNzPSJpbmZvIiBjZWxsU3BhY2luZz0iMCIgY2VsbFBhZGRpbmc9IjAiPjx0Ym9keT48dHI+PHRkPlRpcDo8L3RkPjx0aD4gQmVuYSBwZW50cnUgYmFzY3VsYW50ZTwvdGg+PHRyPjx0ZD7FomFyYTo8L3RkPjx0aD5HZXJtYW5pYTwvdGg+PHRyPjx0ZD5BbnVsOjwvdGQ+PHRoPjIwMTA8L3RoPjwvdGJvZHk+PC90YWJsZT48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPXByb2R1Y3QtY2F0ZWdvcnk+PGRpdiBjbGFzcz0iY29udGVudCI+PGgyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvVmVtYS1MaWZ0LUNvbXBldGl0aXZlbmVzcy13aXRoLXVsdHJhLWhpZ2gtc3RyZW5ndGgtc3RlZWxzIj4gVmVtYSBMaWZ0OiBDb21wZXRpdGl2aXRhdGUgcHJpbiBvxaNlbHVyaSB1bHRyYSByZXppc3RlbnRlPC9hPjwvaDI+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1JlZmVyaW50ZS9SaWRpY2FyZS1tYW5pcHVsYXJlLXNpLXRyYW5zcG9ydC9WZW1hLUxpZnQtQ29tcGV0aXRpdmVuZXNzLXdpdGgtdWx0cmEtaGlnaC1zdHJlbmd0aC1zdGVlbHMiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvUmVmZXJlbmNlcy9WZW1hLWxpZnQtMS5hc2h4P21oPTE0NiZhbXA7bXc9MjM2IiBhbHQ9IlJlZmVyZW5jZSBWZW1hIGxpZnQgY3JhbmVzIiB3aWR0aD0iMjMzIiBoZWlnaHQ9IjE0NiIgLz48L2E+PHRhYmxlIGNsYXNzPSJpbmZvIiBjZWxsU3BhY2luZz0iMCIgY2VsbFBhZGRpbmc9IjAiPjx0Ym9keT48dHI+PHRkPlRpcDo8L3RkPjx0aD5NYWNhcmFsZTwvdGg+PHRyPjx0ZD7FomFyYTo8L3RkPjx0aD5GaW5sYW5kYTwvdGg+PHRyPjx0ZD5BbnVsOjwvdGQ+PHRoPjIwMDkgPC90aD48L3Rib2R5PjwvdGFibGU+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz1wcm9kdWN0LWNhdGVnb3J5LWxhc3Q+PGRpdiBjbGFzcz0iY29udGVudCI+PGgyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvR2ljYWxsYS1Qcml2aW5kLXNwcmUtdmlpdG9yIj5HaWNhbGxhOiBQcml2aW5kIHNwcmUgdmlpdG9yPC9hPjwvaDI+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1JlZmVyaW50ZS9SaWRpY2FyZS1tYW5pcHVsYXJlLXNpLXRyYW5zcG9ydC9HaWNhbGxhLVByaXZpbmQtc3ByZS12aWl0b3IiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvUmVmZXJlbmNlcy9HaWNhbGxhLTEuYXNoeD9taD0xNDYmYW1wO213PTIzNiIgYWx0PSIiIHdpZHRoPSIyMzMiIGhlaWdodD0iMTQ2IiAvPjwvYT48dGFibGUgY2xhc3M9ImluZm8iIGNlbGxTcGFjaW5nPSIwIiBjZWxsUGFkZGluZz0iMCI+PHRib2R5Pjx0cj48dGQ+VGlwOjwvdGQ+PHRoPkJldG9uaWVyZTwvdGg+PHRyPjx0ZD7FomFyYTo8L3RkPjx0aD5TcGFuaWE8L3RoPjx0cj48dGQ+QW51bDo8L3RkPjx0aD4yMDA4PC90aD48L3Rib2R5PjwvdGFibGU+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz1wcm9kdWN0LWNhdGVnb3J5PjxkaXYgY2xhc3M9ImNvbnRlbnQiPjxoMj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUmVmZXJpbnRlL1JpZGljYXJlLW1hbmlwdWxhcmUtc2ktdHJhbnNwb3J0L0F1dG9tYXJrZXQtTWluaW5nLVV0aWxhamUtc2ktZWNoaXBhbWVudGUtbWluaWVyZS1leGNsdXNpdmUiPkF1dG9tYXJrZXQgTWluaW5nOiBVdGlsYWplIMWfaSBlY2hpcGFtZW50ZSBtaW5pZXJlIGV4Y2x1c2l2ZTwvYT48L2gyPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9SZWZlcmludGUvUmlkaWNhcmUtbWFuaXB1bGFyZS1zaS10cmFuc3BvcnQvQXV0b21hcmtldC1NaW5pbmctVXRpbGFqZS1zaS1lY2hpcGFtZW50ZS1taW5pZXJlLWV4Y2x1c2l2ZSI+PGltZyBzcmM9Ii9+L21lZGlhL0ltYWdlcy9SZWZlcmVuY2VzL0F1dG9tYXJrZXQtTWluaW5nLU1hY2hpbmVyeS0xLmFzaHg/bWg9MTQ2JmFtcDttdz0yMzYiIGFsdD0iIiB3aWR0aD0iMjMzIiBoZWlnaHQ9IjE0NiIgLz48L2E+PHRhYmxlIGNsYXNzPSJpbmZvIiBjZWxsU3BhY2luZz0iMCIgY2VsbFBhZGRpbmc9IjAiPjx0Ym9keT48dHI+PHRkPlRpcDo8L3RkPjx0aD4gVXRpbGFqZSBwZW50cnUgbWluZXJpdDwvdGg+PHRyPjx0ZD7FomFyYTo8L3RkPjx0aD5SdXNpYTwvdGg+PHRyPjx0ZD5BbnVsOjwvdGQ+PHRoPiAyMDA5PC90aD48L3Rib2R5PjwvdGFibGU+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+ZAILDw8WAh8AaGQWAmYPFgIfAGhkAgUPZBYCZg9kFgICAw9kFgQCAQ9kFgICAQ8PFgQfAQULVGlwxINyZcWfdGUfAgU+L1BhZ2luYS1wcmluY2lwYWxhL1JlZmVyaW50ZS9SaWRpY2FyZS1tYW5pcHVsYXJlLXNpLXRyYW5zcG9ydCMWAh4Hb25jbGljawWpAXdpbmRvdy5vcGVuKCcvcnV1a2tpaW50ZXJuZXQvbGF5b3V0cy9wcmludC5hc3B4P3A9ezE3OTUyMEE4LUVFNzctNDAxQS1CRDJGLUJENEY4RUQ2ODgyMH0nLCAnUnV1a2tpY29tJywgJ3Njcm9sbGJhcnM9MSwgcmVzaXphYmxlPTEsIHdpZHRoPTgwMCwgaGVpZ2h0PTUwMCcpO3JldHVybiBmYWxzZTtkAgMPZBYGAgEPFgIfAQUIRmF2b3JpdGVkAgMPFgIfAQUFRW1haWxkAgUPFgIfAQUXVHJpbWl0ZSBhY2VzdMSDIHBhZ2luxINkAgcPDxYCHwBoZGQCCA8PFgIfAGhkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUiY3RsMDMkU2VhcmNoQm94MSRsbmtQcm9kdWN0c1NlYXJjaLIA+qTgJtvlFzMwQV8eNxPfKyLd" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGwLpzuKIDAKa3YKZBAKRvvHyDQLU1M3aCQLL1M3aCQLEu+e0BQKHivq2CwKG/LznCQLw8I+DAQLv386SCwKArvK6CgK0gfaXAwLSqfisCAKLppv5BgKW+sWwCALCprX1AwLpzKGDAgLbo8aPAgKxu7rsCgLwiJ74AQKQ2ImLDwKugKz8DwLzhPP9DQLFuZ7lCAKamOf9DgLFuSoC7oalygwndoBx+Ub7j41keeK5+9wPQ2yIfw==" />
+</div>
+		<div id="page-wrapper">
+			<div id="page-wrapper2">
+				
+
+<div id="header">
+	
+<div id="logo"><a id="ctl03_Logo1_LogoLink" alt="Ruukki" href="../../index.html"></a></div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        // watermark
+        var searchText = 'Căutare';
+        jQuerytb = jQuery('.autocomplete');
+        jQuerytb.val(searchText);
+
+        jQuery('.autocomplete').focus(function() {
+            if (jQuerytb.val() == searchText) {
+                jQuerytb.val('');
+            }
+        });
+        jQuery('.autocomplete').blur(function() {
+            if (jQuery.trim(jQuerytb.val()) == '') {
+                jQuerytb.val(searchText);
+            }
+        });
+
+
+        // autocomplete
+        jQuery("#ctl03_SearchBox1_txtSearch").autocomplete({
+                source: function(request, response) {
+                    jQuery.ajax({
+                        url: "/RuukkiInternet/HttpHandlers/SearchAutoComplete.ashx",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: { query: request.term },
+                        success: function( res ) {
+						    response( $.map( res.matches, 
+                                function( item ) {
+							        return { label: item.Label.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    $.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),	
+                                             value: item.Value, 
+                                             target: item.Target }
+                                }
+                            ))
+                        }
+                    })
+                }
+            , minLength: 2
+            ,focus: function(event, ui) { return false; }
+            ,select: function(event, ui) { 
+                        var link = ui.item.value;
+                        var target = ui.item.target;
+                        if (target == '') window.location = link;
+                        else window.open(link);
+                        return false;
+                    }
+        });
+                jQuery("#ctl03_SearchBox1_txtSearch").data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+	            };
+    });
+
+
+
+
+
+</script>
+
+<div id="search">
+<div id="ctl03_SearchBox1_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl03_SearchBox1_lnkProductsSearch')">
+	
+	    <span id="main-search"><input name="ctl03$SearchBox1$txtSearch" type="text" id="ctl03_SearchBox1_txtSearch" class="autocomplete" />
+        <input type="image" name="ctl03$SearchBox1$lnkProductsSearch" id="ctl03_SearchBox1_lnkProductsSearch" class="search-btn" onmouseover="this.src='/RuukkiInternet/images/search-btn-small-hover.png';" onmouseout="this.src='/RuukkiInternet/images/search-btn-small.png';" src="http://www.ruukkiacoperis.ro/RuukkiInternet/images/search-btn-small.png" style="height:21px;width:25px;border-width:0px;" /></span>
+
+</div>
+</div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('ul li span a').length == 0)
+                jQuery('.layer-open').hide();
+        });
+
+
+
+        jQuery('div#buttons ul li span a').click(function () {
+            jQuery('.layer-open').toggle();
+        });
+    });
+
+    </script>
+<div id="buttons">
+	<ul>
+		<li><span><a href="" onclick="return false;"><span>Alte siteuri Ruukki</span></a><div class="layer-open" style="display: none;"><ul><li><a href="../../www.ruukki.com/index.html">International</a></li><li><a href="../../www.ruukki.nl/index.html">Benelux</a></li><li><a href="../../www.ruukki.com.br/index.html">Brasil</a></li><li><a href="../../www.ruukki.bg/index.html">Bulgarien</a></li><li><a href="../../www.ruukki.cn/index.html">China</a></li><li><a href="../../www.ruukki.cz/index.html">Czech Republic</a></li><li><a href="../../www.ruukki.ee/index.html">Estonia</a></li><li><a href="../../www.ruukki.fi/index.html">Finland</a></li><li><a href="../../www.ruukki.fr/index.html">France</a></li><li><a href="../../www.ruukki.de/index.html">Germany</a></li><li><a href="../../www.ruukki.hu/index.html">Hungary</a></li><li><a href="../../www.ruukki.in/index.html">India</a></li><li><a href="../../www.ruukki.it/index.html">Italy</a></li><li><a href="../../www.ruukki.lv/index.html">Latvia</a></li><li><a href="../../www.ruukki.lt/index.html">Lithuania</a></li><li><a href="../../www.ruukki.no/index.html">Norway</a></li><li><a href="../../www.ruukki.pl/index.html">Poland</a></li><li><a href="../../www.ruukki.ro/index.html">Romania</a></li><li><a href="../../www.ruukki.ru/index.html">Russia</a></li><li><a href="../../www.ruukki.sk/index.html">Slovakia</a></li><li><a href="../../www.ruukki.se/index.html">Sweden</a></li><li><a href="../../www.ruukki.com.tr/index.html">Turkey</a></li><li><a href="../../www.ruukki.com.ua/index.html">Ukraine</a></li></ul></div></span></li>
+		<li><div class="languages"><ul></ul></div></li>
+	</ul>
+</div>
+
+	
+
+<div id="links">
+
+	<ul>
+		
+	</ul>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#main-navi .first a").mouseenter(function () {
+            jQuery(".product-layer").show();
+        });
+        jQuery("#main-navi .first").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+        jQuery(".product-layer").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+    });
+</script>
+<div id="main-navi">
+	<ul>
+		<li class="first"><a href="../..Totul-despre-acoperisuri.html">TOTUL DESPRE ACOPERIŞURI</a><div class="product-layer"><table><tr><td class="professionals"><div class="row">Pentru Profesionişti</div><table><tr><td><ul><li class="header"><a href="../Produse-si-solutii/Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></td><td></td><td><ul><li class="header"><a href="../Produse-si-solutii/Produse-metalurgice.html">Produse metalurgice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-cald">Oţeluri laminate la cald</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-rece">Oţeluri laminate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Produse-din-otel-cu-invelis-colorat">Produse din oţel cu înveliş colorat</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Otel-cu-invelis-metalic">Oţel cu înveliş metalic</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Sectiuni-din-otel-galvanizate-la-rece">Secţiuni din oţel galvanizate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Servicii-si-produse-din-otel-de-prima-clasa-disponibile-pentru-clienti-din-diferite-sectoare-">Produse în funcţie de aplicaţie</a></li></ul></td><td></td></tr></table></td><td class="consumers"><div class="row">Pentru clienţi finali</div><a href="../../index.html" target="_blank"><img alt="" width="225" height="225" src="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/~/media/504AC8F64F3F438CA1EC57DA189A5929.ashx" /></a></td></tr></table></div></li><li><a href="../../Produse-pentru-acoperis/Acoperisuri.html">PRODUSE PENTRU ACOPERIŞ</a></li><li><a href="../../Experimenteaza-modele-de-acoperis.html">EXPERIMENTEAZĂ MODELE DE ACOPERIŞ</a></li><li><a href="../..Solicitati-oferta.html">SOLICITAŢI O OFERTĂ</a></li><li><a href="../..Distribuitori.html">DISTRIBUITORI </a></li><li><a href="../../Asistenta/Trimiteti-o-intrebare-doctorului-de-acoperis.html">ASISTENŢĂ</a></li>
+	</ul>
+</div>
+
+
+				<div id="page-content">
+					
+<div id="content-wrapper">
+    <div id="content-wrapper2">
+        <div id="sidebar">
+            
+<div class="sidebar-header">
+    <div class="sidebar-header-2">Referinţe</div>
+</div>
+<div class="sidebar-content">
+	<ul><li><a href="Arene-sportive.html">Arene sportive</a></li><li class="selected"><a href="Ridicare-manipulare-si-transport.html">Ridicare, manipulare şi transport </a></li><li><a href="Masini-Agricole.html">Maşini Agricole</a></li></ul>
+</div>
+
+
+            
+        </div>
+        <div id="content">
+            
+<div id="breadcrumb">
+	<ul>
+					
+	</ul>  
+</div>
+            <div id="main">
+                
+<div id="main-content-large">
+    
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function () {
+		EqualHeight(jQuery(".product-categories2 div.content"));
+		EqualHeight(jQuery(".product-categories2 div.content h2"));
+	});
+
+
+</script>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        var dllCountry = jQuery('#main_0_bottom_0_additional_0_ddlRefrencesCountry');
+        var dllProduct = jQuery('#main_0_bottom_0_additional_0_ddlRefrencesProduct');
+        var pageId = '{179520A8-EE77-401A-BD2F-BD4F8ED68820}';
+
+
+        jQuery('#main_0_bottom_0_additional_0_rblFilterSearch').change(function () {
+            var value = jQuery(this).find(':radio:checked').val();
+            if (value == 0) {
+                jQuery("td[show='1']").show();
+                jQuery("td[show='2']").hide();
+            }
+            if (value == 1) {
+                jQuery("td[show='1']").hide();
+                jQuery("td[show='2']").show();
+            }
+        }).filter(':first').change();
+
+
+        dllCountry.change(function () {
+            var filterId = jQuery(this).val();
+
+            if (dllCountry.val() == 'All') {
+                getReferenceCountries(pageId, filterId, dllCountry);
+            }
+            getReferenceProducts(pageId, filterId, dllProduct);
+
+
+        });
+
+        dllProduct.change(function () {
+            var filterId = jQuery(this).val();
+
+            if (dllProduct.val() == 'All') {
+                getReferenceProducts(pageId, filterId, dllProduct);
+            }
+            getReferenceCountries(pageId, filterId, dllCountry);
+
+        });
+
+    });
+
+</script>
+
+<div class="product-search">
+    <table cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td class="search-heading">Căutare referinţe în funcţie de</td>
+                <td class="search-by">
+                <table id="main_0_bottom_0_additional_0_rblFilterSearch" border="0">
+	<tr>
+		<td><input id="main_0_bottom_0_additional_0_rblFilterSearch_0" type="radio" name="main_0$bottom_0$additional_0$rblFilterSearch" value="0" checked="checked" /><label for="main_0_bottom_0_additional_0_rblFilterSearch_0">Ţară sau produs</label></td>
+	</tr><tr>
+		<td><input id="main_0_bottom_0_additional_0_rblFilterSearch_1" type="radio" name="main_0$bottom_0$additional_0$rblFilterSearch" value="1" /><label for="main_0_bottom_0_additional_0_rblFilterSearch_1">Anul de realizare</label></td>
+	</tr>
+</table>
+                </td>
+                <td show="1" class="reference-search-option-1">Căutare în funcţie de produs<br /><select name="main_0$bottom_0$additional_0$ddlRefrencesProduct" id="main_0_bottom_0_additional_0_ddlRefrencesProduct">
+	<option value="All">Toate...</option>
+	<option value="{B73B9BDD-86F7-49BE-99F6-A34D59F237F4}">Optim MC</option>
+	<option value="{0FB29373-C724-48D7-8436-434E5CEC2ED6}">Optim QC</option>
+	<option value="{24DB382A-48D5-4DC3-8314-04362FBD0286}">Oţeluri profilate</option>
+	<option value="{A47C5507-56FB-4AE2-A56B-EEBAA80538C2}">Oţeluri Raex rezistente la uzură</option>
+	<option value="{6BF05497-71E7-4A88-A0F6-710DC4509235}">Oţeluri rezistente la uzură</option>
+	<option value="{36C7F351-01BC-42E0-9DA4-A7E4C1F218B6}">Secţiuni din oţel galvanizate la rece</option>
+
+</select></td>
+                <td show="1" class="reference-search-option-2">Căutare în funcţie de ţara<br /><select name="main_0$bottom_0$additional_0$ddlRefrencesCountry" id="main_0_bottom_0_additional_0_ddlRefrencesCountry">
+	<option value="All">Toate...</option>
+	<option value="{A13D714C-8C45-4E94-B682-FDF3D98AA3A4}">Finlanda</option>
+	<option value="{5E4AF1CE-0CB2-429A-8941-8202FE51699D}">Germania</option>
+	<option value="{7C8D2B7C-F25A-4F3D-800D-02C10954C25F}">Italia</option>
+	<option value="{6D1DFFA5-2703-4478-9F7E-D206CA27A845}">Olanda</option>
+	<option value="{56DA04D5-472B-4B5E-AEA1-B61CD0D341C8}">Rusia</option>
+	<option value="{371E9BCC-3E5F-4322-AE7B-DD3BC2F44B59}">Spania</option>
+
+</select></td>   
+                
+				<td show="2" class="reference-search-option-1">Căutare în funcţie de an<br /><select name="main_0$bottom_0$additional_0$ddlYear" id="main_0_bottom_0_additional_0_ddlYear">
+	<option value="All">Toate...</option>
+	<option value="2010">2010</option>
+	<option value="2009 ">2009 </option>
+	<option value="2009">2009</option>
+	<option value=" 2009"> 2009</option>
+	<option value="2008">2008</option>
+
+</select></td>
+                <td show="2" class="reference-search-option-2">&nbsp;</td>
+                <td><a id="main_0_bottom_0_additional_0_lnkReferenceSearch" class="button" href="javascript:__doPostBack('main_0$bottom_0$additional_0$lnkReferenceSearch','')"><span>Căutare</span></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="product-categories"><div class="product-categories2"><div class=product-category><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Bronto-Skylift-Indreptandu-ne-usor-spre-inainte">Bronto Skylift: Îndreptându-ne uşor spre înainte</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Bronto-Skylift-Indreptandu-ne-usor-spre-inainte"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Bronto-Skylift_2.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th> Ridicare supraterană</th><tr><td>Ţara:</td><th>Finlanda</th><tr><td>Anul:</td><th> 2009</th></tbody></table></div></div><div class=product-category><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Schenk-Capacitate-suplimentara-prin-kit-uri-gata-pregatite-de-sudura">Schenk: Capacitate suplimentară prin kit-uri gata pregătite de sudură</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Schenk-Capacitate-suplimentara-prin-kit-uri-gata-pregatite-de-sudura"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Schenk-1.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th> Conteiner</th><tr><td>Ţara:</td><th>Olanda</th><tr><td>Anul:</td><th>2009</th></tbody></table></div></div><div class=product-category-last><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Menci-Noi-avantaje-competitive">Menci: Noi avantaje competitive</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Menci-Noi-avantaje-competitive"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Menci-1.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th>Betoniere</th><tr><td>Ţara:</td><th>Italia</th><tr><td>Anul:</td><th>2008</th></tbody></table></div></div><div class=product-category><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Meiller-FX-Bena-pentru-basculante">Meiller F.X. Bena pentru basculante</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Meiller-FX-Bena-pentru-basculante"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Meiller-1.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th> Bena pentru basculante</th><tr><td>Ţara:</td><th>Germania</th><tr><td>Anul:</td><th>2010</th></tbody></table></div></div><div class=product-category><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Vema-Lift-Competitiveness-with-ultra-high-strength-steels"> Vema Lift: Competitivitate prin oţeluri ultra rezistente</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Vema-Lift-Competitiveness-with-ultra-high-strength-steels"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Vema-lift-1.ashx?mh=14638mw=236" alt="Reference Vema lift cranes" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th>Macarale</th><tr><td>Ţara:</td><th>Finlanda</th><tr><td>Anul:</td><th>2009 </th></tbody></table></div></div><div class=product-category-last><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Gicalla-Privind-spre-viitor">Gicalla: Privind spre viitor</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Gicalla-Privind-spre-viitor"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Gicalla-1.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th>Betoniere</th><tr><td>Ţara:</td><th>Spania</th><tr><td>Anul:</td><th>2008</th></tbody></table></div></div><div class=product-category><div class="content"><h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Automarket-Mining-Utilaje-si-echipamente-miniere-exclusive">Automarket Mining: Utilaje şi echipamente miniere exclusive</a></h2><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Referinte/Ridicare-manipulare-si-transport/Automarket-Mining-Utilaje-si-echipamente-miniere-exclusive"><img src="http://www.ruukkiacoperis.ro/~/media/Images/References/Automarket-Mining-Machinery-1.ashx?mh=14638mw=236" alt="" width="233" height="146" /></a><table class="info" cellSpacing="0" cellPadding="0"><tbody><tr><td>Tip:</td><th> Utilaje pentru minerit</th><tr><td>Ţara:</td><th>Rusia</th><tr><td>Anul:</td><th> 2009</th></tbody></table></div></div></div></div>
+
+</div>
+
+            </div>
+            
+
+            <div class="text-content social_bottom">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+					
+
+
+
+<div id="footer">
+	<div id="footer-wrapper">
+		
+		<ul class="footer-links">
+			
+            
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('.countrytoggle').length == 0) {
+                jQuery('.country-open').hide();
+            } 
+        });
+
+        jQuery('.countrytoggle').click(function () {
+            jQuery('.country-open').toggle();
+        });
+    });
+
+</script>
+    <li><div class="countries"></div></li>	
+    
+	
+   
+   
+		</ul>         
+		
+		
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact: 'delicious, digg, facebook, more',
+        data_ga_property: 'UA-27088716-1',
+        data_ga_social: true
+    };
+
+</script>
+<style type="text/css">
+    .at300bs
+    {
+        background: none !important;
+        height: 0px !important;
+    }
+</style>
+<ul class="footer-actions">
+    <li id="ctl05_Actions1_liPrint" class="print">
+        <a id="ctl05_Actions1_lnkPrint" onclick="window.open('/ruukkiinternet/layouts/print.aspx?p={179520A8-EE77-401A-BD2F-BD4F8ED68820}', 'Ruukkicom', 'scrollbars=1, resizable=1, width=800, height=500');return false;" href="Ridicare-manipulare-si-transport.html#" target="_blank">Tipăreşte</a></li>
+    
+        <li class="bookmark"><a class="addthis_button_favorites" href="Ridicare-manipulare-si-transport.html#">
+            Favorite</a></li>
+        <li class="email"><a class="addthis_button_email" href="Ridicare-manipulare-si-transport.html#">
+            Email</a></li>
+        <li class="share"><a class="addthis_button" href="../../www.addthis.com/bookmark.php-v=25038username=ruukki.html">
+            Trimite acestă pagină</a>
+            <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#username=ruukki"></script>
+        </li>
+    
+</ul>
+
+	</div>
+
+    <div>
+    
+     <div id="sitemapContent" >
+            <div class="four-columns">
+                <div class="four-columns2">
+                    <div class="box content sitemap-links">
+                      <ul>
+                        
+                     </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+     		            <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box-last content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </div>
+
+	<div id="footer-copyright">
+		<p><br/></p>		
+	</div>
+</div>
+				
+
+
+				</div>
+			</div>
+		</div>
+        
+	
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+</form>
+	
+    
+    <!-- Old browser notification -->
+    <script type="text/javascript">
+        var $buoop = { vs: { i: 6, f: 3.5, s: 3, o: 9 }, newwindow: true }
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            if ($buoop.ol) $buoop.ol();
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "http://browser-update.org/update.js");
+            document.body.appendChild(e);
+        } 
+     </script>
+     
+	</body>
+</html>

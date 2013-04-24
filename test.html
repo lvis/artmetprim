@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+.headerMenu 
+{
+  background: -webkit-linear-gradient(#f1f1f1, #d6d6d6);
+  background: -moz-linear-gradient(#f1f1f1, #d6d6d6);
+  background: -ms-linear-gradient(#f1f1f1, #d6d6d6);
+  background: linear-gradient(#f1f1f1, #d6d6d6);
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #c2c2c2;
+  margin-top: -47px;
+}
+
+.headerMenu:after 
+{
+  content: "";
+  position: absolute;
+  width: 1030px;
+  height: 20px;
+  background: red;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  opacity: 0;
+}
+
+.headerMenu .fixed 
+{
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  width: 1030px;
+  z-index: 30;
+  margin-top: 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+.headerMenu .fixed:after 
+{
+  opacity: 1;
+}
+.headerMenu ul 
+{
+  display: table;
+  margin: 0 auto;
+}
+.headerMenu ul li 
+{
+  display: block;
+  float: left;
+}
+.headerMenu ul li a 
+{
+  padding: 12px 20px;
+  width: 120px;
+  margin: 0 5px;
+  display: block;
+  text-align: center;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+}
+.headerMenu ul li a:hover 
+{
+  background: -webkit-radial-gradient(center center, circle farthest-side, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  color: #333;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+.headerMenu ul li.active a,
+.headerMenu ul li a:active
+{
+  border-color: rgba(0, 0, 0, 0.2);
+  background: #fff;
+  background: -webkit-radial-gradient(bottom center, ellipse cover, #ffffff, #f4f4f4, #aaaaaa);
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+}
+.headerMenu.compact ul li a 
+{
+  width: 80px;
+}
+
+</style>
+</head>
+<body>
+<div class="headerMenu">
+    <ul role="tablist">
+        <li><a href="#1">Why Xamarin</a></li>
+        <li class="active"><a href="#2">How it Works</a></li>
+        <li><a href="#3">Products</a></li>
+        <li><a href="#4">FAQ</a></li>
+    </ul>
+</div>
+</body>
+</html>

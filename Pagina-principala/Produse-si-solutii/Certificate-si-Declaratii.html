@@ -1,0 +1,488 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro" xml:lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Certificate si Declaraţii - Ruukki</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="pageId" content="{BC473055-CD0E-495D-9182-80423BBDE4BC}" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+                
+		
+        <link type="text/css" href="../..RuukkiInternet/css/general.css" rel="Stylesheet" />
+		<link type="text/css" href="../..RuukkiInternet/css/main.css" rel="Stylesheet" />	
+		<link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/colorbox.css" rel="Stylesheet" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jcarousel.css" rel="stylesheet" media="all" />
+        
+        <script type="text/javascript" src="Js/jquery-1.4.2.min.js"></script>
+        
+			<script type="text/javascript" charset="utf-8">var live = true;</script>
+		
+		<script type="text/javascript" src="Js/main.js"></script>
+		<script type="text/javascript" src="Js/jqueryhtmlreplacements.js"></script>
+		<script type="text/javascript" src="Js/jquery.datatables.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.vticker.js"></script>
+		<script type="text/javascript" src="Js/jquery.colorbox-min-1_3_13.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.8.6.custom.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.watermark.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Js/mwheelIntent.js"></script>
+		<script type="text/javascript" src="Js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.jcarousel.min.js"></script>
+        
+        
+
+   		
+        
+
+    <script type="text/javascript" charset="utf-8">
+
+		var oTable;
+    	jQuery(document).ready(function () {
+
+        jQuery('iframe').each(function()
+        {
+	        var url = jQuery(this).attr("src");
+            if (typeof(url)==="undefined" || url=="")
+            {
+                return;
+            }
+
+            var bInsert = false;
+            var paramPrefix = "?";
+
+            var iWmodeIndex = url.indexOf("?wmode=");
+            if (iWmodeIndex<0)
+            {
+                iWmodeIndex=url.indexOf("&wmode=");
+            }
+
+            if (iWmodeIndex<0)
+            {
+                bInsert = true;
+                paramPrefix = url.lastIndexOf('?')<0 ? "?" : "&";
+            }
+
+            if (bInsert)
+            {
+	            jQuery(this).attr("src", url+paramPrefix+"wmode=opaque");
+            }
+        });
+
+
+			oTable = jQuery('.dataTable').dataTable({
+               "bJQueryUI": false,
+			   "bPaginate": false,
+               "oLanguage": {"sLengthMenu": "Afişează _MENU_ documente per pagină","sZeroRecords": "Nu există rezultate","sInfo": "Afişează _START_ până la _END_ din _TOTAL_ documente","sInfoEmtpy": "Afişează 0 până la 0 din 0 documente","sInfoFiltered": "(selectează din _MAX_ total documente)","sSearch": "Caută","oPaginate": {"sFirst": "jquery/datatables/pagingfirst [ro-RO]","sPrevious": "Anterior","sNext": "Următorul","sLast": "jquery/datatables/paginglast [ro-RO]"}},
+               "sDom": 'frt<"bottom">p'
+			});
+    		jQuery('.dataTables_filter').find('input').wrap('<span class="text-218"></span>');
+    		jQuery("div.bottom").html('<table cellpadding="0" cellspacing="0"><tr class="bottom"><td>&nbsp;</td></tr></table>');
+			
+		});
+
+	</script>
+    
+     
+	</head>
+	<body>
+	<form name="form1" method="post" action="/Pagina-principala/Produse-si-solutii/Certificate-si-Declaratii" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTk4MTA3OA9kFgxmDw8WAh4HVmlzaWJsZWhkZAICDw8WAh8AaGRkAgUPFgIeBFRleHQF2QMib0xhbmd1YWdlIjogeyJzTGVuZ3RoTWVudSI6ICJBZmnFn2VhesSDIF9NRU5VXyBkb2N1bWVudGUgcGVyIHBhZ2luxIMiLCJzWmVyb1JlY29yZHMiOiAiTnUgZXhpc3TEgyByZXp1bHRhdGUiLCJzSW5mbyI6ICJBZmnFn2VhesSDIF9TVEFSVF8gcMOibsSDIGxhIF9FTkRfIGRpbiBfVE9UQUxfIGRvY3VtZW50ZSIsInNJbmZvRW10cHkiOiAiQWZpxZ9lYXrEgyAwIHDDom7EgyBsYSAwIGRpbiAwIGRvY3VtZW50ZSIsInNJbmZvRmlsdGVyZWQiOiAiKHNlbGVjdGVhesSDIGRpbiBfTUFYXyB0b3RhbCBkb2N1bWVudGUpIiwic1NlYXJjaCI6ICJDYXV0xIMiLCJvUGFnaW5hdGUiOiB7InNGaXJzdCI6ICJqcXVlcnkvZGF0YXRhYmxlcy9wYWdpbmdmaXJzdCBbcm8tUk9dIiwic1ByZXZpb3VzIjogIkFudGVyaW9yIiwic05leHQiOiAiVXJtxIN0b3J1bCIsInNMYXN0IjogImpxdWVyeS9kYXRhdGFibGVzL3BhZ2luZ2xhc3QgW3JvLVJPXSJ9fWQCBg8PFgIfAGhkZAIHEGRkFggCAQ9kFgJmD2QWAgIBD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFAS8WAh4DYWx0BQZSdXVra2lkAgMPZBYCZg9kFgJmD2QWCAIBD2QWAmYPZBYCAgEPFgIfAQWYBzx1bD48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpIj5Tb2x1xaNpaSDDrm4gY29uc3RydWPFo2lpPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvUHJvZHVzZS1tZXRhbHVyZ2ljZSI+UHJvZHVzZSBtZXRhbHVyZ2ljZTwvYT48L2xpPjxkaXYgY2xhc3M9InNpZGViYXItaGVhZGVyIj48ZGl2IGNsYXNzPSJzaWRlYmFyLWhlYWRlci0yIj5SdXVra2kgbGEgZGlzcG96acWjaWEgZHVtbmVhdm9hc3RyxIM8L2Rpdj48L2Rpdj48bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL0NlcnRpZmljYXRlLXNpLURlY2xhcmF0aWkiPkNlcnRpZmljYXRlIHNpIERlY2xhcmHFo2lpPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvTWFzdXJpbGUtbHVhdGUtcGVudHJ1LWFzaWd1cmFyZWEtdW5laS1kZXp2b2x0YXJpLWR1cmFiaWxlIj5NxINzdXJpIHBlbnRydSBkZXp2b2x0YXJlYSBkdXJhYmlsxIM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Qcm9ncmFtdWwtUnV1a2tpLWRlLWNyZWFyZS1pbi1jb2xhYm9yYXJlIj5FeHBlcsWjaSDDrm4gcHJvZHVzZSBkaW4gb8WjZWx1cmkgc3BlY2lhbGU8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Bc2lndXJhcmVhLWRlLXNlcnZpY2lpLWRlLWRlcG96aXRhcmUtc2ktcHJlZmFicmljYXJlIj5Bc2lndXJhcmVhIGRlIHNlcnZpY2lpIGRlIGRlcG96aXRhcmUgxZ9pIHByZWZhYnJpY2FyZTwvYT48L2xpPjwvdWw+ZAIHD2QWAmYPZBYCZg9kFgICAQ8WAh8AaGQCCQ9kFgJmD2QWAmYPZBYEZg9kFgICAQ8PFgIfAGhkZAICD2QWAgIBDw8WAh8AaGRkAg0PDxYCHwBoZGQCBQ9kFgJmD2QWAgIDD2QWBAIBD2QWAgIBDw8WBB8BBQtUaXDEg3JlxZ90ZR8CBUAvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL0NlcnRpZmljYXRlLXNpLURlY2xhcmF0aWkjFgIeB29uY2xpY2sFqQF3aW5kb3cub3BlbignL3J1dWtraWludGVybmV0L2xheW91dHMvcHJpbnQuYXNweD9wPXtCQzQ3MzA1NS1DRDBFLTQ5NUQtOTE4Mi04MDQyM0JCREU0QkN9JywgJ1J1dWtraWNvbScsICdzY3JvbGxiYXJzPTEsIHJlc2l6YWJsZT0xLCB3aWR0aD04MDAsIGhlaWdodD01MDAnKTtyZXR1cm4gZmFsc2U7ZAIDD2QWBgIBDxYCHwEFCEZhdm9yaXRlZAIDDxYCHwEFBUVtYWlsZAIFDxYCHwEFF1RyaW1pdGUgYWNlc3TEgyBwYWdpbsSDZAIHDw8WAh8AaGRkAggPDxYCHwBoZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFImN0bDAzJFNlYXJjaEJveDEkbG5rUHJvZHVjdHNTZWFyY2ix7m0mia2/laroLbOZT7L87xnBtQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKPzvOiBAKa3YKZBAKRvvHyDaI5vW/Lkdw+BlsDe3HAmQv3+ze7" />
+</div>
+		<div id="page-wrapper">
+			<div id="page-wrapper2">
+				
+
+<div id="header">
+	
+<div id="logo"><a id="ctl03_Logo1_LogoLink" alt="Ruukki" href="../../index.html"></a></div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        // watermark
+        var searchText = 'Căutare';
+        jQuerytb = jQuery('.autocomplete');
+        jQuerytb.val(searchText);
+
+        jQuery('.autocomplete').focus(function() {
+            if (jQuerytb.val() == searchText) {
+                jQuerytb.val('');
+            }
+        });
+        jQuery('.autocomplete').blur(function() {
+            if (jQuery.trim(jQuerytb.val()) == '') {
+                jQuerytb.val(searchText);
+            }
+        });
+
+
+        // autocomplete
+        jQuery("#ctl03_SearchBox1_txtSearch").autocomplete({
+                source: function(request, response) {
+                    jQuery.ajax({
+                        url: "/RuukkiInternet/HttpHandlers/SearchAutoComplete.ashx",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: { query: request.term },
+                        success: function( res ) {
+						    response( $.map( res.matches, 
+                                function( item ) {
+							        return { label: item.Label.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    $.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),	
+                                             value: item.Value, 
+                                             target: item.Target }
+                                }
+                            ))
+                        }
+                    })
+                }
+            , minLength: 2
+            ,focus: function(event, ui) { return false; }
+            ,select: function(event, ui) { 
+                        var link = ui.item.value;
+                        var target = ui.item.target;
+                        if (target == '') window.location = link;
+                        else window.open(link);
+                        return false;
+                    }
+        });
+                jQuery("#ctl03_SearchBox1_txtSearch").data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+	            };
+    });
+
+
+
+
+
+</script>
+
+<div id="search">
+<div id="ctl03_SearchBox1_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl03_SearchBox1_lnkProductsSearch')">
+	
+	    <span id="main-search"><input name="ctl03$SearchBox1$txtSearch" type="text" id="ctl03_SearchBox1_txtSearch" class="autocomplete" />
+        <input type="image" name="ctl03$SearchBox1$lnkProductsSearch" id="ctl03_SearchBox1_lnkProductsSearch" class="search-btn" onmouseover="this.src='/RuukkiInternet/images/search-btn-small-hover.png';" onmouseout="this.src='/RuukkiInternet/images/search-btn-small.png';" src="http://www.ruukkiacoperis.ro/RuukkiInternet/images/search-btn-small.png" style="height:21px;width:25px;border-width:0px;" /></span>
+
+</div>
+</div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('ul li span a').length == 0)
+                jQuery('.layer-open').hide();
+        });
+
+
+
+        jQuery('div#buttons ul li span a').click(function () {
+            jQuery('.layer-open').toggle();
+        });
+    });
+
+    </script>
+<div id="buttons">
+	<ul>
+		<li><span><a href="" onclick="return false;"><span>Alte siteuri Ruukki</span></a><div class="layer-open" style="display: none;"><ul><li><a href="../../www.ruukki.com/index.html">International</a></li><li><a href="../../www.ruukki.nl/index.html">Benelux</a></li><li><a href="../../www.ruukki.com.br/index.html">Brasil</a></li><li><a href="../../www.ruukki.bg/index.html">Bulgarien</a></li><li><a href="../../www.ruukki.cn/index.html">China</a></li><li><a href="../../www.ruukki.cz/index.html">Czech Republic</a></li><li><a href="../../www.ruukki.ee/index.html">Estonia</a></li><li><a href="../../www.ruukki.fi/index.html">Finland</a></li><li><a href="../../www.ruukki.fr/index.html">France</a></li><li><a href="../../www.ruukki.de/index.html">Germany</a></li><li><a href="../../www.ruukki.hu/index.html">Hungary</a></li><li><a href="../../www.ruukki.in/index.html">India</a></li><li><a href="../../www.ruukki.it/index.html">Italy</a></li><li><a href="../../www.ruukki.lv/index.html">Latvia</a></li><li><a href="../../www.ruukki.lt/index.html">Lithuania</a></li><li><a href="../../www.ruukki.no/index.html">Norway</a></li><li><a href="../../www.ruukki.pl/index.html">Poland</a></li><li><a href="../../www.ruukki.ro/index.html">Romania</a></li><li><a href="../../www.ruukki.ru/index.html">Russia</a></li><li><a href="../../www.ruukki.sk/index.html">Slovakia</a></li><li><a href="../../www.ruukki.se/index.html">Sweden</a></li><li><a href="../../www.ruukki.com.tr/index.html">Turkey</a></li><li><a href="../../www.ruukki.com.ua/index.html">Ukraine</a></li></ul></div></span></li>
+		<li><div class="languages"><ul></ul></div></li>
+	</ul>
+</div>
+
+	
+
+<div id="links">
+
+	<ul>
+		
+	</ul>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#main-navi .first a").mouseenter(function () {
+            jQuery(".product-layer").show();
+        });
+        jQuery("#main-navi .first").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+        jQuery(".product-layer").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+    });
+</script>
+<div id="main-navi">
+	<ul>
+		<li class="first"><a href="../..Totul-despre-acoperisuri.html">TOTUL DESPRE ACOPERIŞURI</a><div class="product-layer"><table><tr><td class="professionals"><div class="row">Pentru Profesionişti</div><table><tr><td><ul><li class="header"><a href="Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></td><td></td><td><ul><li class="header"><a href="Produse-metalurgice.html">Produse metalurgice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-cald">Oţeluri laminate la cald</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-rece">Oţeluri laminate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Produse-din-otel-cu-invelis-colorat">Produse din oţel cu înveliş colorat</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Otel-cu-invelis-metalic">Oţel cu înveliş metalic</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Sectiuni-din-otel-galvanizate-la-rece">Secţiuni din oţel galvanizate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Servicii-si-produse-din-otel-de-prima-clasa-disponibile-pentru-clienti-din-diferite-sectoare-">Produse în funcţie de aplicaţie</a></li></ul></td><td></td></tr></table></td><td class="consumers"><div class="row">Pentru clienţi finali</div><a href="../../index.html" target="_blank"><img alt="" width="225" height="225" src="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/~/media/504AC8F64F3F438CA1EC57DA189A5929.ashx" /></a></td></tr></table></div></li><li><a href="../../Produse-pentru-acoperis/Acoperisuri.html">PRODUSE PENTRU ACOPERIŞ</a></li><li><a href="../../Experimenteaza-modele-de-acoperis.html">EXPERIMENTEAZĂ MODELE DE ACOPERIŞ</a></li><li><a href="../..Solicitati-oferta.html">SOLICITAŢI O OFERTĂ</a></li><li><a href="../..Distribuitori.html">DISTRIBUITORI </a></li><li><a href="../../Asistenta/Trimiteti-o-intrebare-doctorului-de-acoperis.html">ASISTENŢĂ</a></li>
+	</ul>
+</div>
+
+
+				<div id="page-content">
+					
+<div id="content-wrapper">
+ <div id="content-wrapper2">
+    <div id="sidebar">
+		
+<div class="sidebar-header">
+    <div class="sidebar-header-2">Gama de produse</div>
+</div>
+<div class="sidebar-content">
+	<ul><li><a href="Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="Produse-metalurgice.html">Produse metalurgice</a></li><div class="sidebar-header"><div class="sidebar-header-2">Ruukki la dispoziţia dumneavoastră</div></div><li class="selected"><a href="Certificate-si-Declaratii.html">Certificate si Declaraţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Masurile-luate-pentru-asigurarea-unei-dezvoltari-durabile">Măsuri pentru dezvoltarea durabilă</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Programul-Ruukki-de-creare-in-colaborare">Experţi în produse din oţeluri speciale</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Asigurarea-de-servicii-de-depozitare-si-prefabricare">Asigurarea de servicii de depozitare şi prefabricare</a></li></ul>
+</div>
+
+
+		
+	</div>
+	<div id="content">
+		
+<div id="breadcrumb">
+	<ul>
+					
+	</ul>  
+</div>
+		<div id="main">
+			
+<div id="main-content-small">
+    <div class="text-content">
+        
+        <h1>
+            Certificate si Declaraţii
+        </h1>
+        <div class="social_top">
+            
+    <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:locale="en_US"></a><a class="addthis_button_linkedin_counter">
+        </a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone"
+            g:plusone:size="medium"></a><a class="addthis_counter addthis_pill_style"></a>
+    </div>
+    <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f5eff8a1756d046"></script>
+
+
+        </div>
+    </div>
+    
+<div class="text-content">
+    <h2>Calitate constantă bazată pe standardele ISO</h2>
+Aspectele privind calitatea şi mediul înconjurător ale Ruukki sunt gestionate în conformitate cu standardul de management al calităţii ISO 9001 şi standardul de management de mediu ISO 14001. în 2009, sistemele certificate s-au referit la 98% (2008: 98) din producţie şi la 87% (2008: 80) dintre angajaţi.<br />
+<br />
+în conformitate cu sistemele de management, în cadrul Ruukki sunt identificate aspectele de mediu şi referitoare la procese ale operaţiunilor şi sunt întocmite obiectivele şi programele necesare pentru a le realiza. Ca parte din sistemul de management de mediu, scopul este cel de a identifica cerinţele legale referitoare la operaţiuni şi de a asigura conformitatea cu acestea şi angajamente voluntare. Identificarea şi dezvoltarea nevoilor părţilor interesate reprezintă de asemenea un aspect important al gestionării aspectelor privind calitatea şi mediul înconjurător.<br />
+<br />
+Pentru a asigura o îmbunătăţire continuă, sistemele şi operaţiunile sunt evaluate de obicei utiliz&acirc;nd audituri interne şi externe. în cadrul auditurilor se va stabili dacă sistemele întrunesc sau nu cerinţele. în plus, echipa de conducere va stabili în mod regulat în cadrul analizelor sale dacă sistemele de management al calităţii şi de mediu întrunesc obiectivele stabilite.<br />
+<br />
+<a href="http://www.ruukki.com/Products-and-solutions/Certificates-and-declarations" target="_blank">Certificatele privind sistemul de management ale Ruukki</a>
+</div>
+<div class="text-content">
+    <h2>Declaraţii privind produsele relevante pentru mediul înconjurător</h2>
+<p>Există declaraţii referitoare la produse relevante pentru mediul înconjurător pentru cele mai populare produse din oţel de la Ruukki.<br />
+<br />
+Aceste declaraţii se bazează pe metodologia naţională urm&acirc;nd principiile de bază prezentate în seria de standarde ISO 14040 şi 14020.<br />
+<br />
+Declaraţiile despre produse relevante pentru mediul înconjurător includ informaţii despre utilizarea materiilor prime, consumul de energie şi emisiile generate de producţie precum şi caracterul reciclabil al produselor.<br />
+<br />
+<a href="http://www.ruukki.com/Products-and-solutions/Certificates-and-declarations" target="_blank">Citeşte mai mult</a></p>
+</div>
+</div>
+
+			<div id="right-sidebar">
+				
+	
+ 
+
+	
+	
+
+
+<div class="infobox">
+    <div class="infobox-header"><div class="infobox-header-2">Contactaţi-ne</div></div>
+    <div class="content">
+        <p>
+            <a href="../Contactati-ne.html" class="arrow-link">Contactaţi-ne</a><br /><a href="../Contactati-ne/Trimite-ne-cerere-de-oferta.html" class="arrow-link">Trimite-ne cerere de ofertă</a><br /><a href="../Contactati-ne/Trimite-ne-comentariile-tale.html" class="arrow-link">Trimite-ne comentariile tale</a><br />
+        </p>
+    </div>
+</div>
+	<br />
+
+			</div>
+		</div>
+        
+        
+        <div class="text-content social_bottom">
+            
+        </div>
+    </div>
+ </div>
+</div>
+					
+
+
+
+<div id="footer">
+	<div id="footer-wrapper">
+		
+		<ul class="footer-links">
+			
+            
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('.countrytoggle').length == 0) {
+                jQuery('.country-open').hide();
+            } 
+        });
+
+        jQuery('.countrytoggle').click(function () {
+            jQuery('.country-open').toggle();
+        });
+    });
+
+</script>
+    <li><div class="countries"></div></li>	
+    
+	
+   
+   
+		</ul>         
+		
+		
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact: 'delicious, digg, facebook, more',
+        data_ga_property: 'UA-27088716-1',
+        data_ga_social: true
+    };
+
+</script>
+<style type="text/css">
+    .at300bs
+    {
+        background: none !important;
+        height: 0px !important;
+    }
+</style>
+<ul class="footer-actions">
+    <li id="ctl05_Actions1_liPrint" class="print">
+        <a id="ctl05_Actions1_lnkPrint" onclick="window.open('/ruukkiinternet/layouts/print.aspx?p={BC473055-CD0E-495D-9182-80423BBDE4BC}', 'Ruukkicom', 'scrollbars=1, resizable=1, width=800, height=500');return false;" href="Certificate-si-Declaratii.html#" target="_blank">Tipăreşte</a></li>
+    
+        <li class="bookmark"><a class="addthis_button_favorites" href="Certificate-si-Declaratii.html#">
+            Favorite</a></li>
+        <li class="email"><a class="addthis_button_email" href="Certificate-si-Declaratii.html#">
+            Email</a></li>
+        <li class="share"><a class="addthis_button" href="../../www.addthis.com/bookmark.php-v=25038username=ruukki.html">
+            Trimite acestă pagină</a>
+            <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#username=ruukki"></script>
+        </li>
+    
+</ul>
+
+	</div>
+
+    <div>
+    
+     <div id="sitemapContent" >
+            <div class="four-columns">
+                <div class="four-columns2">
+                    <div class="box content sitemap-links">
+                      <ul>
+                        
+                     </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+     		            <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box-last content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </div>
+
+	<div id="footer-copyright">
+		<p><br/></p>		
+	</div>
+</div>
+				
+
+
+				</div>
+			</div>
+		</div>
+        
+	
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+</form>
+	
+    
+    <!-- Old browser notification -->
+    <script type="text/javascript">
+        var $buoop = { vs: { i: 6, f: 3.5, s: 3, o: 9 }, newwindow: true }
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            if ($buoop.ol) $buoop.ol();
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "http://browser-update.org/update.js");
+            document.body.appendChild(e);
+        } 
+     </script>
+     
+	</body>
+</html>

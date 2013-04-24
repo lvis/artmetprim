@@ -1,0 +1,151 @@
+@import url("../RuukkiInternet/css/TableStyles.css");
+/**
+* Ruukki.com
+* Created by Johanna Töyrylä
+*/
+
+* {margin: 0; padding: 0;}
+
+body { text-align: center; font-family: Arial, Helvetica, sans-serif !important; margin: 0; padding: 0; font-size: /*100%*/ 12px; color: #000;/*  background: #fff url("http://www.ruukkiacoperis.ro/images/main-bg-right.gif") repeat-y top right; */ background: #fff;}
+
+html, body { height: 100%; }
+
+/* general */
+p {font-family: Arial, Helvetica; color: #222222; font-size:  /*100%*/ 12px; margin: 0 0 10px 0; color: #000; line-height: 16px;}
+h1 {font-family: Arial, Helvetica; color: #829105; font-size: 24px; font-weight: normal; margin: 0 0 10px 0;}
+h1 a {font-family: Arial, Helvetica !important; color: #829105 !important; font-size: 24px !important; font-weight: normal !important; margin: 0 0 10px 0 !important;}
+h2 {font-family: Arial, Helvetica; color: #829105; font-size: 16px; font-weight: normal; margin: 0 0 10px 0; position: relative;}
+h2 a {font-family: Arial, Helvetica !important; color: #829105 !important; font-size: 16px !important; font-weight: normal !important; margin: 0 0 10px 0 !important;}
+h2 span.right { color: #999999; font-size: 12px; float: none; position: absolute; top: 0; right: 0; }
+h3 {font-family: Arial, Helvetica; color: #666666; font-size: 14px; font-weight: normal; margin: 0 0 10px 0;}
+h3 a {font-family: Arial, Helvetica !important; color: #666666 !important; font-size: 14px !important; font-weight: normal !important; margin: 0 0 10px 0 !important;}
+h4 {font-family: Arial, Helvetica !important; color: #000 !important; font-size: 12px !important; font-weight: bold !important; margin: 0 0 10px 0 !important;}
+h4 a {font-family: Arial, Helvetica !important; color: #000 !important; font-size: 12px !important; font-weight: bold !important; margin: 0 0 10px 0 !important;}
+.two-infoboxes-557 h4 {font-family: Arial, Helvetica; color: #829105 !important; font-size: 16px !important; font-weight: normal !important; margin: 0 0 10px 0; padding: 0 0 5px 0 !important; border-bottom: solid #c9d06f 2px; position: relative; line-height: 19px;}
+.two-infoboxes-557 h4 a {font-family: Arial, Helvetica !important; color: #829105 !important; font-size: 16px !important; font-weight: normal !important; margin: 0 0 10px 0 !important; padding: 0; line-height: 19px !important;}
+
+a:link, a:visited, a:hover, a:active { color: #006476; font-family: Arial, Helvetica; font-size: 12px; }
+a:link, a:visited { text-decoration: none; }
+a:hover, a:active { text-decoration: underline; }
+a img {border: none;}
+
+a.arrow-link { color: #000 !important; background: transparent url("http://www.ruukkiacoperis.ro/images/arrow-link-bg.png") no-repeat 0 6px; padding: 0 0 0 10px; display: inline-block; line-height: 16px;}
+#main-content-small a.arrow-link,
+#main-content-large a.arrow-link  { color: #006476 !important;  }
+#right-sidebar a.arrow-link,
+.right-sidebar a.arrow-link  { color: #000 !important;  }
+
+/* buttons */
+a.search-btn {background: transparent url("../RuukkiInternet/images/search-btn-large.png") no-repeat 0 0; height: 26px; width: 40px; display: inline-block; }
+a.search-btn:hover {background-position: 0 -28px;}
+a.button {display: inline-block; background: transparent url("http://www.ruukkiacoperis.ro/images/button-bg.png") no-repeat right -26px; line-height: 26px; padding: 0 10px 0 0;}
+a.button span {display: inline-block; background: transparent url("http://www.ruukkiacoperis.ro/images/button-bg.png") no-repeat 0 0; height: 26px; padding: 0 0 0 10px; cursor: pointer;}
+a.button:hover {background-position: right -78px; text-decoration: none;}
+a.button:hover span {background-position: 0 -52px;}
+
+a.rss-btn {background: transparent url("http://www.ruukkiacoperis.ro/images/rss-icon.png") no-repeat 0 0; display: block; height: 16px; width: 16px; position: absolute; top: 0; right: 3px; cursor: pointer;}
+a.add-to-calendar-btn {background: transparent url("http://www.ruukkiacoperis.ro/images/add-to-calendar-icon.jpg") no-repeat 0 0; display: inline-block; height: 15px; width: 15px; cursor: pointer;}
+ul li a.add-to-calendar-btn {position: absolute; top: 0; right: -7px; }
+
+a.sort {background: transparent url("http://www.ruukkiacoperis.ro/images/sort-icon.jpg") no-repeat right 5px; padding: 0 10px 0 0; color: #000000; cursor: pointer;}
+a.sort:hover { color: #000000;}
+
+/* list */
+ul {margin: 0 0 10px 0; padding: 0; list-style-type: none; list-style-position: outside; list-style-image: none; }
+ul li {font-family: Arial, Helvetica; font-size: 12px; background: transparent url("../RuukkiInternet/images/list-bullet.gif") no-repeat 0 6px; padding: 0 0 0 10px; }
+
+ol { padding: 0 0 0 20px; }
+
+.right {float: right; margin: 0 0 5px 5px; }
+.text-content .right {margin: 0 0 20px 20px; }
+.left {float: left; margin: 4px 5px 5px 0; }
+.text-content .left {margin: 4px 20px 10px 0; }
+
+.error {color: #ff3300;}
+
+span.time {color: #666666;}
+.date {color: #999999;}
+
+span.up {color: #809212; font-weight: bold;}
+span.down {color: #FF3300; font-weight: bold;}
+span.flat {font-weight: bold;}
+
+.separator {border-top: solid #c9d06f 2px; padding-top: 15px; margin: 20px 0 15px 0;}
+
+p.text-input {display: inline-block; height: 21px; background: transparent url("http://www.ruukkiacoperis.ro/images/input-bg.gif") no-repeat top left; padding: 0 0 0 10px; margin: 0 0 15px 0;}
+p.text-input span {display: inline-block; height: 21px; background: white url("http://www.ruukkiacoperis.ro/images/input-bg.gif") no-repeat top right; padding: 0 10px 0 0; }
+p.text-input span input {border: none; height: 19px; padding: 1px 0; background: none; width: 100%;}
+
+.width278 {width: 268px;}
+.width278 span {width: 258px;}
+
+/* input */
+span.text-218 {display: inline-block; background: transparent url("http://www.ruukkiacoperis.ro/images/input-bg.png") no-repeat 0 0; height: 21px; width: 218px;}
+span.text-218 input {background: none; border: none; padding: 2px 5px; width: 208px;}
+
+/* select */
+select.full-length {width: 100%;}
+
+/* table */
+table th {text-align: left;}
+
+.table {width: 100%; margin: 0 0 10px 0; background: transparent url("../RuukkiInternet/images/large-tab-navi-top-bg.png") no-repeat 0 0;  }
+#main-content-small .table { background: transparent url("../RuukkiInternet/images/contentbox-bg-top.png") no-repeat 0 0;  }
+.table .table1 {  padding: 4px 0;  background: transparent url("../RuukkiInternet/images/large-tab-navi-bottom-bg.png") no-repeat bottom left; width: 100%;}
+#main-content-small .table .table1 { background: transparent url("../RuukkiInternet/images/contentbox-bg-bottom.png") no-repeat left bottom; }
+.table .table1 .table2 {border-left: solid #cccccc 1px; border-right: solid #cccccc 1px; background: #fff; padding: 6px 10px 0;}
+.table .table1 .table2 .content,
+.table .table1 .table2 .dataTable {padding: 0 0 10px 0;}
+.large-tab-area .table,
+.table .table {background: none;}
+
+.table table {width: 100%; border-bottom: solid #ffffff 10px;} 
+table.simple {width: 100%;} 
+.table table tr.header th,
+table.simple tr.header th {border-bottom: solid #c9d06f 2px;} 
+.table table tr.total td,
+table.simple tr.total td {border: none;} 
+.table table tr.bottom td,
+table.simple tr.bottom td {border-bottom: solid #cccccc 2px;} 
+.table table tr.subtitle th,
+.table table tr.subtitle td,
+.table table tr.subtitle-center th,
+.table table tr.subtitle-center td {background: #f2f2f2; font-weight: bold; border: none; border-bottom: solid #cccccc 1px;} 
+table.simple tr.subtitle th,
+table.simple tr.subtitle td,
+table.simple tr.subtitle-center th,
+table.simple tr.subtitle-center td { font-weight: bold; border: none; border-bottom: solid #cccccc 1px;} 
+.table table tr.subtitle-center th,
+.table table tr.subtitle-center td,
+table.simple tr.subtitle-center th,
+table.simple tr.subtitle-center td {border-top: solid #cccccc 1px;} 
+.table table tr.subsubtitle th,
+.table table tr.subsubtitle td,
+table.simple tr.subsubtitle th,
+table.simple tr.subsubtitle td {/* text-transform: uppercase;  */font-weight: normal; border-bottom: solid #cccccc 1px; } 
+
+
+.table table tr th,
+table.simple tr th { padding: 7px 10px 7px 5px; } 
+.table table tr td,
+table.simple tr td {border-bottom: solid #e5e5e5 1px; padding: 7px 10px 7px 5px; vertical-align: top;} 
+.table table tr th.text,
+.table table tr td.text,
+table.simple tr th.text,
+table.simple tr td.text {width: 270px; }
+.table table tr th.number,
+table.simple tr th.number {text-align: right;}
+.table table tr td.number,
+table.simple tr td.number {text-align: right; /* padding-right: 5px; */ }  
+.table table tr td.address,
+table.simple tr td.address {width: 150px;}
+.table table tr td.sublevel,
+table.simple tr td.sublevel {padding-left: 40px; width: 250px; } 
+.table table tr td.phone,
+table.simple tr td.phone {width: 150px;} 
+.table table tr th.highlight,
+.table table tr td.highlight,
+table.simple tr th.highlight,
+table.simple tr td.highlight {background: #f2f2f2; } 
+
+

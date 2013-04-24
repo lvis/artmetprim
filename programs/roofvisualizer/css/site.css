@@ -1,0 +1,707 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+@import url('http://apps.ruukki.com/ruukki21/public_html/css/null.css');
+
+a:link, a:visited, a:active { color: #006476; font-family: Arial, Helvetica; font-size: 12px; text-decoration: none; }
+a:hover { color: #006476; font-family: Arial, Helvetica; font-size: 12px; text-decoration: underline; }
+.link { color: #006476; font-family: Arial, Helvetica; font-size: 12px; cursor:pointer;}
+
+#house_main_div { position: absolute; }
+#wall_div { position: absolute; }
+#rws_div { position: absolute; }
+#roof_div { position: absolute; }
+#access_div { position: absolute; }
+
+#cover {
+	display: none; 
+	position: absolute;
+	margin-top: -554px; 
+	margin-left: auto;
+	margin-right: auto; 
+	width: 997px; 
+	height: 494px; 
+	background: #000000;
+}
+
+/*#dealer_video { position: absolute; width: 997px; height: 561px; z-index: 21; background: #ffffff; }*/
+
+.house_menu {height: 60px; }
+.house_menu_item { float: left; text-align: center; margin: 3px 5px 0 0; background: #ffffff; cursor: pointer; }
+
+#chooser_menu { display: none; position: absolute; width: 997px; height: 95px; top: 399px; background: url('http://apps.ruukki.com/ruukki21/public_html/images/chooser_back.png'); }
+#chooser_loader { display: none; position: absolute; width: 997px; height: 95px; top: 399px; background: url('http://apps.ruukki.com/ruukki21/public_html/images/chooser_back.png'); text-align: center; line-height: 95px; }
+#chooser_loader img { margin-top: 20px; }
+#menu_inner { overflow: hidden; width: 846px; height: 95px; margin-left: 61px; position: relative; }
+.chooser_inner { display: none; position: relative; }
+.chooser_inner img { margin-right: 10px; float: left; cursor: pointer; }
+.chooser_inner div { cursor: pointer; }
+.chooser_inner { margin-right: 5px; float: left; }
+
+.arrow { position: absolute; top: 429px; float: left; display: none; cursor: pointer; }
+.closeBtn { position: absolute; top: 404px; float: left; display: none; cursor: pointer; }
+
+.menu_left { float: left; width: 14px; height: 32px; background: url("http://apps.ruukki.com/ruukki21/public_html/images/btn_left.gif"); }
+
+.menu_center { float: left; height: 32px; background: url("http://apps.ruukki.com/ruukki21/public_html/images/btn_back.gif"); line-height: 28px; color: #006476; font-weight: bold; }
+
+.menu_right { float: left; width: 14px; height: 32px; background: url("http://apps.ruukki.com/ruukki21/public_html/images/btn_right.gif"); }
+.menu_center1 { 
+float: left; height: 42px; line-height: 42px; font-weight: bold; border: 1px solid #258e4a;
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #CDE0AE 0%, #96B765 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CDE0AE', endColorstr='#96B765');
+color: #fff;
+padding: 0 15px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+text-shadow:1px 1px #000;
+}
+
+.menu_center1:hover { 
+float: left; height: 42px; line-height: 42px; font-weight: bold; border: 1px solid #258e4a;
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96B765', endColorstr='#CDE0AE');
+color: #fff;
+padding: 0 15px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+text-shadow:1px 1px #000;
+}
+
+.teaser_title { font-family: Arial, Helvetica; color: #829105; font-size: 14px; font-weight: normal; margin: 0 0 10px 0; }
+
+.dealer_icon { padding-left: 2px; }
+
+.questcont { width: 997px; height: 96px;}
+.quiz_title { font-size: 27px; font-family: Arial; line-height: 20px; font-weight: bold; padding: 0 18px; }
+.quiz_subtitle { font-size:  18px; padding-top: 10px; position: absolute;}
+.result_profile_title { font-size: 24px; font-family: Arial; }
+#result_profiles {background: url('http://apps.ruukki.com/ruukki21/public_html/images/resultbg.png') no-repeat; height: 518px; width: 922px; position: relative; top: 100px; left: 37px;}
+.imgholder {width: 267px; height: auto; text-align: center;}
+
+.header-line {background: url('http://apps.ruukki.com/ruukki21/public_html/images/header-line.png') no-repeat; margin: 0; padding: 18px 0 !important; }
+
+.footer-line {background: url('http://apps.ruukki.com/ruukki21/public_html/images/footer-line.png') no-repeat; width: 997px; height: 56px; position: absolute; top: 730px;}
+
+.start_text { font-size: 18px; }
+.quiz_start_title { font-size: 21px; font-weight: bold; padding-bottom: 20px; }
+
+#startquiz_btn { width: 161px; height: 54px; cursor: pointer; margin-top: 50px;
+border: 1px solid #258e4a;
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96B765', endColorstr='#CDE0AE')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+font-size: 24px;
+line-height: 54px;
+text-align: center;
+text-shadow:1px 1px #000;
+-moz-box-shadow: 1px 1px 6px #7d7d7d;
+-webkit-box-shadow: 1px 1px 6px #7d7d7d;
+box-shadow: 1px 1px 6px #7d7d7d;
+}
+
+#startquiz_btn:hover { 
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CDE0AE', endColorstr='#96B765')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+}
+
+.quiz_learn_more_btn { width: 161px; height: 40px; cursor: pointer; margin-top: 50px;
+border: 1px solid #258e4a;
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96B765', endColorstr='#CDE0AE')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+font-size: 24px;
+line-height: 40px;
+text-align: center;
+text-shadow:1px 1px #000;
+-moz-box-shadow: 1px 1px 6px #7d7d7d;
+-webkit-box-shadow: 1px 1px 6px #7d7d7d;
+box-shadow: 1px 1px 6px #7d7d7d;
+}
+
+.quiz_learn_more_btn:hover { 
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CDE0AE', endColorstr='#96B765')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+}
+
+.quiz_gallery_btn { width: 215px; height: 40px; cursor: pointer; margin-top: 20px;
+border: 1px solid #258e4a;
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96B765', endColorstr='#CDE0AE')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+font-size: 24px;
+line-height: 40px;
+text-align: center;
+text-shadow:1px 1px #000;
+-moz-box-shadow: 1px 1px 6px #7d7d7d;
+-webkit-box-shadow: 1px 1px 6px #7d7d7d;
+box-shadow: 1px 1px 6px #7d7d7d;
+}
+
+.quiz_gallery_btn:hover { 
+ /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #CDE0AE), color-stop(1, #96B765));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #CDE0AE 0%, #96B765 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #CDE0AE 0%, #96B765 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CDE0AE', endColorstr='#96B765')
+progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#7d7d7d');
+color: #fff;
+}
+
+.rotateimg {
+-webkit-transform: scaleY(-1);
+-moz-transform: scaleY(-1);
+-ms-transform: scaleY(-1);
+-o-transform: scaleY(-1);
+transform: scaleY(-1);
+opacity:0.3;
+filter:alpha(opacity=30); /* For IE8 and earlier */
+position: relative;
+margin-top: -3px;
+}
+
+#quiz_cont { display: none; }
+
+.question_headline { width: 456px; height: 225px; position: absolute; top: 310px; left: 500px; font-family: Arial; font-size: 21px; line-height: 22px; font-weight: bold;}
+
+
+img{
+	border:  none;
+}
+
+
+#wrapper {
+	width: 997px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	/*margin-top: 210px;*/
+}
+
+body {
+	background: #ffffff;
+	margin:  0;
+	padding: 0;
+	font-size: 12px;
+	color: #000000;
+	font-family: Arial, Helvetica;
+	/*overflow: hidden;*/
+	}
+
+#header{
+	margin-left:  auto;
+	margin-right:  auto;
+	height:  166px;
+	width:  960px;
+	border-left: solid 1px #635b53;
+	border-right: solid 1px #635b53;
+}
+
+
+#menu_btn_left {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_left.png') no-repeat;
+	width: 15px;
+	height: 34px;
+	float: left;
+	color: #006476;
+	font-weight: bold;
+	cursor: pointer;
+}
+#menu_btn_left:hover {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_left_a.png') no-repeat;
+	color: #666666;
+	cursor: pointer;
+}
+
+#menu_btn_right {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_right.png') no-repeat;
+	width: 15px;
+	height: 34px;
+	float: right;
+	color: #006476;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#menu_btn_right:hover {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_right_a.png') no-repeat;
+	color: #666666;
+	cursor: pointer;
+}
+
+#menu_btn_cent {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_cent.png') repeat-x;
+	width: auto;
+	height: 34px;
+	color: #006476;
+	font-weight: bold;
+	cursor: pointer;
+}
+#menu_btn_cent:hover {
+	background: url('http://apps.ruukki.com/ruukki21/public_html/images/menu/btn_cent_a.png') repeat-x;
+	color: #666666;	
+	cursor: pointer;
+}
+
+#headerTop{
+	height:  116px;
+	width: 960px;
+	border-bottom: solid 1px #635b53;
+}
+
+.headerSubmenus{
+	position:  absolute;
+	top:  153px;
+}
+
+#sub_1{position: relative; z-index:100;}
+#sub_2{position: relative; z-index:100; left: 192px;}
+#sub_6{position: relative; z-index:100; left: 576px;}
+
+.mainMenuButton{
+	height:  60px;
+}
+
+.mainMenuButton:hover{
+	background: #403932;
+	height:  60px;
+}
+
+.mainMenuButton .content{
+	width: 100px;
+	padding-left: 20px;
+	padding-top: 14px;
+}
+
+
+#logo{
+	background: url( 'http://apps.ruukki.com/ruukki21/public_html/images/logo.png' ) no-repeat;
+	width:  168px;
+	height:  58px;
+	position: relative;
+	left: 35px;
+	top:  25px;
+	float:  left;
+	z-index: 1;
+	
+}
+
+#headerTitle{
+	font-family: 'CharisSILRegular';
+	font-size: 15px;
+	line-height: 16px;
+	float:  left;
+	margin-left: 65px;
+	margin-top:  55px;
+}
+
+#headerMenu{
+	width:  960px;
+	border-bottom: 1px solid #635b53;
+	margin-bottom:  15px;
+	height: 35px;
+	font-family: 'myrid-webfont';
+}
+
+#headerMenu a:link{text-decoration: none;}
+#headerMenu a:visited{text-decoration: none;}
+#headerMenu a:hover{text-decoration: none;}
+
+.menu{
+	width: 191px;
+	font-size:  15px;
+	color:  #ffffff;
+	float:  left;
+	text-align: center;
+	padding-top: 10px;
+	border-right: 1px solid #635b53;
+	font-family: 'myrid-webfont';
+	padding-bottom:20px;
+}
+
+#menu_houses {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/house_type.png');
+	width: 100px;
+	height: 34px;
+	cursor: pointer;
+}
+#menu_roofprofile {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/roof_profile.png');
+	width: 100px;
+	height: 34px;
+	cursor: pointer;
+}
+#menu_roofcolor {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/roof_color.png');
+	width: 97px;
+	height: 34px;
+	cursor: pointer;
+}
+#menu_rainwater {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/rainwater.png');
+	width: 173px;
+	height: 34px;
+	cursor: pointer;
+}
+#menu_wallcolor {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/wall_color.png');
+	width: 94px;
+	height: 34px;
+	cursor: pointer;
+}
+#menu_accessory {
+	background:url('http://apps.ruukki.com/ruukki21/public_html/images/menu/accessory_color.png');
+	width: 131px;
+	height: 34px;
+	cursor: pointer;
+}
+
+#container{
+	margin-left:  auto;
+	margin-right:  auto;
+	width:  960px;
+}
+
+#mainContent{
+	width:  960px;
+	margin-bottom:  18px;
+}
+
+#mainContentLeft{
+	width:  635px;
+	height: 368px;
+	float:  left;
+	background: url( 'http://apps.ruukki.com/ruukki21/public_html/images/mainContentLeft_bg1.jpg' ) no-repeat;
+}
+
+#mainContentLeft .boxTitle{
+	margin-top: 220px;
+	color: #ffffff;
+	font-family: 'Adelle_light';
+	margin-left: 25px;
+	margin-bottom: 10px;
+	padding-right: 25px;
+	font-size:  26px;
+}
+
+#mainContentLeft .boxLead{
+	color: #514840;
+	font-family: 'AdelleBasic_Bold';
+	margin-left: 25px;
+	padding-right: 25px;
+	line-height: 18px;
+	font-size:  13px;
+}
+
+#mainContentRight{
+	width:  310px;
+	height: 368px;
+	float: right;
+	background: url( 'http://apps.ruukki.com/ruukki21/public_html/images/mainContentRight_bg.jpg' ) no-repeat;
+}
+
+#mainContentBottom{
+	margin-left:  auto;
+	margin-right:  auto;
+	width:  960px;
+}
+
+
+#otherContentRight{
+	width:  310px;
+	float: right;
+}
+
+#applicationBox{
+	background: #39332d;
+	width: 310px;
+	height: 135px;
+	margin-bottom:  15px;
+}
+
+
+.rightMenu{
+	width:  310px;
+	height:  75px;
+	background: #daa542;
+	margin-bottom:  15px;
+	font-family: 'AdelleBasic_Bold';
+	font-size:  15px;
+}
+
+.rightMenu a:link{color: #ffffff; text-decoration: none;}
+.rightMenu a:visited{color: #ffffff; text-decoration: none;}
+.rightMenu  a:hover{color: #514840; text-decoration: none;}
+
+
+.bottomBox{
+	width: 310px;
+	height: 195px;
+	background: #daa542;
+	float:  left;
+}
+
+.bottomBox .boxTitle{
+	color: #ffffff;
+	font-family: 'AdelleBasic_Bold';
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	padding-right: 25px;
+}
+
+.bottomBox .boxLead{
+	color: #322c27;
+	font-family: 'myrid-webfont';
+	margin-left: 25px;
+	padding-right: 25px;
+	line-height: 18px;
+}
+
+
+.bottomBoxSpacer{
+	width: 15px;
+	height: 195px;
+	float:  left;
+}
+
+#contentelements {
+	width: 997px;
+	clear: both;
+}
+
+#content1 {
+	width: 331px;
+	height: 226px;
+	position: relative;
+	border-right: 1px solid grey;
+	float: left;
+}
+
+#content2 {
+	width: 331px;
+	height: 226px;
+	position: relative;
+	border-right: 1px solid grey;
+	float: left;
+}
+
+#content3 {
+	width: 333px;
+	height: 226px;
+	position: relative;
+	float: left;
+}
+
+#content1_inside {
+	padding-right: 10px;
+}
+
+#content2_inside {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#content3_inside {
+	padding-left: 10px;
+}
+
+
+#footer{
+	width:  960px;
+	height:  110px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footerSpacer{
+	width:  100%;
+	height:  60px;
+	border-left: solid 1px #635b53;
+	border-right: solid 1px #635b53;
+	border-bottom: solid 1px #635b53;
+	margin-left: auto;
+	margin-right:  auto;
+}
+
+#footer #pageTitle{
+	color: #daa542;
+	float:  left;
+	margin-left: 24px;
+	padding-top: 15px;
+	
+}
+
+#footer #foundAddress{
+	color: #a89788;
+	float:  left;
+	margin-left: 24px;
+	padding-top: 15px;
+	font-size: 14px;
+	
+}
+
+#staticContentLeft{
+	width:  635px;
+	float:  left;
+	background: #ffffff;
+	padding-bottom: 15px;
+	min-height: 405px;
+}
+
+#galleryContentLeft{
+	width:  635px;
+	float:  left;
+	background: none;
+	padding-bottom: 15px;
+	min-height: 405px;
+}
+
+.bigSpacer{
+	height: 88px;
+	width:  1px;
+	float:  left;
+	border-left: 1px solid #635b53;
+}
+
+.smallSpacer{
+	height: 15px;
+	width:  1px;
+	float:  left;
+	border-left: 1px solid #635b53;
+}
+
+.emailIco{
+	margin-top: 15px;
+	margin-left: 23px;
+	width: 28px;
+	height: 17px;
+	background: url( 'http://apps.ruukki.com/ruukki21/public_html/images/emailIco.png' ) no-repeat;
+	float:  left;
+}
+
+h1.static{
+	height:  85px;
+	width: 635px;
+	background: #daa542;
+	font-family: 'Adelle_light';
+	font-size: 23px;
+	margin-top: 0px;
+	color:  #fff;
+}
+
+.buttonLink{
+	font-family: 'myrid-webfont'; 
+	font-size: 14px;
+	color: #daa542;
+	font-weight: bold;
+}
+
+.buttonLink a:link{color: #daa542; text-decoration: none;}
+.buttonLink a:visited{color: #daa542; text-decoration: none;}
+.buttonLink a:hover{color: #ffffff; text-decoration: none;}
+
+.clear{clear: both; height: 0px; font-size: 0px;}

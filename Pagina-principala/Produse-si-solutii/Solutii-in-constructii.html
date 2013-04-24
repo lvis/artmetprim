@@ -1,0 +1,499 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro" xml:lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Soluţii în construcţii - Ruukki</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="pageId" content="{230843F5-7A25-4D98-BD70-0866F170EE44}" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+                
+		
+        <link type="text/css" href="../..RuukkiInternet/css/general.css" rel="Stylesheet" />
+		<link type="text/css" href="../..RuukkiInternet/css/main.css" rel="Stylesheet" />	
+		<link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/colorbox.css" rel="Stylesheet" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jcarousel.css" rel="stylesheet" media="all" />
+        
+        <script type="text/javascript" src="Js/jquery-1.4.2.min.js"></script>
+        
+			<script type="text/javascript" charset="utf-8">var live = true;</script>
+		
+		<script type="text/javascript" src="Js/main.js"></script>
+		<script type="text/javascript" src="Js/jqueryhtmlreplacements.js"></script>
+		<script type="text/javascript" src="Js/jquery.datatables.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.vticker.js"></script>
+		<script type="text/javascript" src="Js/jquery.colorbox-min-1_3_13.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.8.6.custom.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.watermark.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Js/mwheelIntent.js"></script>
+		<script type="text/javascript" src="Js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.jcarousel.min.js"></script>
+        
+        
+
+   		
+        
+
+    <script type="text/javascript" charset="utf-8">
+
+		var oTable;
+    	jQuery(document).ready(function () {
+
+        jQuery('iframe').each(function()
+        {
+	        var url = jQuery(this).attr("src");
+            if (typeof(url)==="undefined" || url=="")
+            {
+                return;
+            }
+
+            var bInsert = false;
+            var paramPrefix = "?";
+
+            var iWmodeIndex = url.indexOf("?wmode=");
+            if (iWmodeIndex<0)
+            {
+                iWmodeIndex=url.indexOf("&wmode=");
+            }
+
+            if (iWmodeIndex<0)
+            {
+                bInsert = true;
+                paramPrefix = url.lastIndexOf('?')<0 ? "?" : "&";
+            }
+
+            if (bInsert)
+            {
+	            jQuery(this).attr("src", url+paramPrefix+"wmode=opaque");
+            }
+        });
+
+
+			oTable = jQuery('.dataTable').dataTable({
+               "bJQueryUI": false,
+			   "bPaginate": false,
+               "oLanguage": {"sLengthMenu": "Afişează _MENU_ documente per pagină","sZeroRecords": "Nu există rezultate","sInfo": "Afişează _START_ până la _END_ din _TOTAL_ documente","sInfoEmtpy": "Afişează 0 până la 0 din 0 documente","sInfoFiltered": "(selectează din _MAX_ total documente)","sSearch": "Caută","oPaginate": {"sFirst": "jquery/datatables/pagingfirst [ro-RO]","sPrevious": "Anterior","sNext": "Următorul","sLast": "jquery/datatables/paginglast [ro-RO]"}},
+               "sDom": 'frt<"bottom">p'
+			});
+    		jQuery('.dataTables_filter').find('input').wrap('<span class="text-218"></span>');
+    		jQuery("div.bottom").html('<table cellpadding="0" cellspacing="0"><tr class="bottom"><td>&nbsp;</td></tr></table>');
+			
+		});
+
+	</script>
+    
+     
+	</head>
+	<body>
+	<form name="form1" method="post" action="/Pagina-principala/Produse-si-solutii/Solutii-in-constructii" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTk4MTA3OA9kFgxmDw8WAh4HVmlzaWJsZWhkZAICDw8WAh8AaGRkAgUPFgIeBFRleHQF2QMib0xhbmd1YWdlIjogeyJzTGVuZ3RoTWVudSI6ICJBZmnFn2VhesSDIF9NRU5VXyBkb2N1bWVudGUgcGVyIHBhZ2luxIMiLCJzWmVyb1JlY29yZHMiOiAiTnUgZXhpc3TEgyByZXp1bHRhdGUiLCJzSW5mbyI6ICJBZmnFn2VhesSDIF9TVEFSVF8gcMOibsSDIGxhIF9FTkRfIGRpbiBfVE9UQUxfIGRvY3VtZW50ZSIsInNJbmZvRW10cHkiOiAiQWZpxZ9lYXrEgyAwIHDDom7EgyBsYSAwIGRpbiAwIGRvY3VtZW50ZSIsInNJbmZvRmlsdGVyZWQiOiAiKHNlbGVjdGVhesSDIGRpbiBfTUFYXyB0b3RhbCBkb2N1bWVudGUpIiwic1NlYXJjaCI6ICJDYXV0xIMiLCJvUGFnaW5hdGUiOiB7InNGaXJzdCI6ICJqcXVlcnkvZGF0YXRhYmxlcy9wYWdpbmdmaXJzdCBbcm8tUk9dIiwic1ByZXZpb3VzIjogIkFudGVyaW9yIiwic05leHQiOiAiVXJtxIN0b3J1bCIsInNMYXN0IjogImpxdWVyeS9kYXRhdGFibGVzL3BhZ2luZ2xhc3QgW3JvLVJPXSJ9fWQCBg8PFgIfAGhkZAIHEGRkFggCAQ9kFgJmD2QWAgIBD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFAS8WAh4DYWx0BQZSdXVra2lkAgMPZBYCZg9kFgJmD2QWBgIBD2QWAmYPZBYCAgEPFgIfAQXoDzx1bD48bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkiPlNvbHXFo2lpIMOubiBjb25zdHJ1Y8WjaWk8L2E+PC9saT48bGkgY2xhc3M9ImxlZnRuYXZpLTIiPjx1bD48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1N0cnVjdHVyaS1tZXRhbGljZSI+U3RydWN0dXJpIG1ldGFsaWNlPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QYW5vdXJpLXRlcm1vaXpvbGFudGUtdGlwLXNhbmR3aWNoIj5QYW5vdXJpIHRlcm1vaXpvbGFudGUgdGlwIHNhbmR3aWNoPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QbGFjYXJpLWZhdGFkZS12ZW50aWxhdGUiPlBsYWPEg3JpIGZhxaNhZGUgdmVudGlsYXRlPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9Qcm9maWxlLWF1dG9wb3J0YW50ZS1kaW4tdGFibGEtY3V0YXRhIj5Qcm9maWxlIGF1dG9wb3J0YW50ZSBkaW4gdGFibMSDIGN1dGF0xIM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1BhbmUtY3UtcGVyZXRpLXN1YnRpcmkiPlBhbmUgY3UgcGVyZcWjaSBzdWLFo2lyaTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvQ2FzZXRlLXN0cnVjdHVyYWxlLSI+Q2FzZXRlIHN0cnVjdHVyYWxlIDwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvSGFsZS1tZXRhbGljZSI+SGFsZSBtZXRhbGljZTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvQWNvcGVyaXN1cmktcGVudHJ1LWNhc2UiPkFjb3BlcmnFn3VyaSBwZW50cnUgY2FzZTwvYT48L2xpPjwvdWw+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Qcm9kdXNlLW1ldGFsdXJnaWNlIj5Qcm9kdXNlIG1ldGFsdXJnaWNlPC9hPjwvbGk+PGRpdiBjbGFzcz0ic2lkZWJhci1oZWFkZXIiPjxkaXYgY2xhc3M9InNpZGViYXItaGVhZGVyLTIiPlJ1dWtraSBsYSBkaXNwb3ppxaNpYSBkdW1uZWF2b2FzdHLEgzwvZGl2PjwvZGl2PjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL0NlcnRpZmljYXRlLXNpLURlY2xhcmF0aWkiPkNlcnRpZmljYXRlIHNpIERlY2xhcmHFo2lpPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvTWFzdXJpbGUtbHVhdGUtcGVudHJ1LWFzaWd1cmFyZWEtdW5laS1kZXp2b2x0YXJpLWR1cmFiaWxlIj5NxINzdXJpIHBlbnRydSBkZXp2b2x0YXJlYSBkdXJhYmlsxIM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Qcm9ncmFtdWwtUnV1a2tpLWRlLWNyZWFyZS1pbi1jb2xhYm9yYXJlIj5FeHBlcsWjaSDDrm4gcHJvZHVzZSBkaW4gb8WjZWx1cmkgc3BlY2lhbGU8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Bc2lndXJhcmVhLWRlLXNlcnZpY2lpLWRlLWRlcG96aXRhcmUtc2ktcHJlZmFicmljYXJlIj5Bc2lndXJhcmVhIGRlIHNlcnZpY2lpIGRlIGRlcG96aXRhcmUgxZ9pIHByZWZhYnJpY2FyZTwvYT48L2xpPjwvdWw+ZAIHD2QWAmYPZBYCZg9kFgoCBQ9kFgJmDxYCHwBoZAIHD2QWBGYPZBYCZg9kFgRmD2QWAgIBDxYCHwEF6gE8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPnJlbmRlckZsYXNoKCcvfi9tZWRpYS9GbGFzaC9zd2YvYnVpbGRpbmdzb2x1dGlvbi5hc2h4JywgNzk0LCAyNTAsIDEwLCAwLCAwLCAneG1scGF0aD0vfi9tZWRpYS9GbGFzaC94bWwvc2FuZHdpY2hfcGFuZWxfdmlzdWFsaXNlcl9yby5hc2h4JywgJzAnLCAnYWRkaXRpb25hbF8wJywgJyNmZmZmZmYnKTs8L3NjcmlwdD5kAgEPZBYCAgEPZBYCAgEPDxYCHwBoZGQCAQ9kFgJmDw8WAh8AaGRkAgkPFgIfAQUYR2FtYSBub2FzdHLEgyBkZSBwcm9kdXNlZAINDxYCHwEF/x88ZGl2IGNsYXNzPSJoaWdobGlnaHRzLTMiPjxkaXYgY2xhc3M9ImhpZ2hsaWdodCI+PGgzPlN0cnVjdHVyaSBtZXRhbGljZTwvaDM+PGltZyBzcmM9Ii9+L21lZGlhL0ltYWdlcy9CdWlsZGluZy1zb2x1dGlvbnMvVHJ1c3Nlcy9UcnVzc2VzLmFzaHg/bXc9ODUiIGFsdD0iIiB3aWR0aD0iODUiIGhlaWdodD0iODUiIC8+PHA+DQoJCTxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QYW5lLWN1LXBlcmV0aS1zdWJ0aXJpIj5QYW5lIGN1IHBlcmXFo2kgc3VixaNpcmk8YnIgLz48L2E+DQogICAgPGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1Byb2ZpbGUtYXV0b3BvcnRhbnRlLWRpbi10YWJsYS1jdXRhdGEiPlByb2ZpbGUgYXV0b3BvcnRhbnRlPGJyIC8+PC9hPg0KICAgIDxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9DYXNldGUtc3RydWN0dXJhbGUtIj5DYXNldGUgc3RydWN0dXJhbGU8YnIgLz48L2E+PC9wPjwvZGl2PjxkaXYgY2xhc3M9ImhpZ2hsaWdodCI+PGgzPlBhbm91cmkgdGVybW9pem9sYW50ZTwvaDM+PGltZyBzcmM9Ii9+L21lZGlhL0ltYWdlcy9CdWlsZGluZy1zb2x1dGlvbnMvbWFsbW8tYXJlbmEtdGh1bWJuYWlsLmFzaHg/bXc9ODUiIGFsdD0iIiB3aWR0aD0iODUiIGhlaWdodD0iODUiIC8+PHA+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1Bhbm91cmktdGVybW9pem9sYW50ZS10aXAtc2FuZHdpY2gvUGFub3VyaS1lZmljaWVudGUtZW5lcmdldGljLWN1LWV0YW5zZWl6YXJlLXJpZGljYXRhIj5QYW5vdXJpIGVmaWNpZW50ZSBlbmVyZ2V0aWMgY3UgZXRhbsWfZWl6YXJlIHJpZGljYXTEgyA8L2E+PGJyIC8+DQo8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvUGFub3VyaS10ZXJtb2l6b2xhbnRlLXRpcC1zYW5kd2ljaC9QYW5vdXJpLXN0YW5kYXJkLXBlbnRydS1wZXJldGktc2ktYWNvcGVyaXN1cmkiPlBhbm91cmkgc3RhbmRhcmQgcGVudHJ1IHBlcmXFo2kgxZ9pIGFjb3BlcmnFn3VyaSA8L2E+PGJyIC8+DQo8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvUGFub3VyaS10ZXJtb2l6b2xhbnRlLXRpcC1zYW5kd2ljaC9QYW5vdXJpLXBlbnRydS1jYW1lcmUtZnJpZ29yaWZpY2UiPlBhbm91cmkgcGVudHJ1IGNhbWVyZSBmcmlnb3JpZmljZTwvYT48L3A+PC9kaXY+PGRpdiBjbGFzcz0iaGlnaGxpZ2h0LWxhc3QiPjxoMz5QbGFjxINyaSBkZSBmYcWjYWRlPC9oMz48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL0J1aWxkaW5nLXNvbHV0aW9ucy9GYWNhZGUtY2xhZGRpbmdzLmFzaHg/bXc9ODUiIGFsdD0iIiB3aWR0aD0iODUiIGhlaWdodD0iODUiIC8+PHA+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1BsYWNhcmktZmF0YWRlLXZlbnRpbGF0ZSI+UGxhY8SDcmkgZGUgZmHFo2FkZTxiciAvPgo8L2E+CjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QbGFjYXJpLWZhdGFkZS12ZW50aWxhdGUvRmF0YWRlLWN1LXBhbm91cmktY2FzZXRhdGUtTGliZXJ0YS0iPlBhbm91cmkgTGliZXJ0YSBkZSBmYcWjYWTEgzwvYT4gPGJyIC8+CjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QbGFjYXJpLWZhdGFkZS12ZW50aWxhdGUvTGFtZWxlLWRlLXBsYWNhcmUiPkxhbWVsZSBkZSBmYcWjYWTEgzwvYT4gPGJyIC8+CjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9QbGFjYXJpLWZhdGFkZS12ZW50aWxhdGUvUHJvZmlsZS1EZXNpZ24iPlByb2ZpbGUgRGVzaWduPC9hPjxiciAvPgo8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvUGxhY2FyaS1mYXRhZGUtdmVudGlsYXRlL1Byb2ZpbGUtdHJhcGV6b2lkYWxlIj5Qcm9maWxlIHRyYXBlem9pZGFsZTwvYT48L3A+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iaGlnaGxpZ2h0cy0zIj48ZGl2IGNsYXNzPSJoaWdobGlnaHQiPjxoMz5TaXN0ZW1lIHN0cnVjdHVyYWxlIHBlbnRydSBhY29wZXJpxZ91cmk8L2gzPjxpbWcgc3JjPSIvfi9tZWRpYS9Sb21hbmlhL0hhbGUvc3RydWN0dXJhX2Fjb3BlcmlzXzI0MXgyNDEuYXNoeD9tdz04NSIgYWx0PSJzdHJ1Y3R1cmEgYWNvcGVyaXMiIHdpZHRoPSI4NSIgaGVpZ2h0PSI4NSIgLz48cD4NCgkJPGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpL1Byb2ZpbGUtYXV0b3BvcnRhbnRlLWRpbi10YWJsYS1jdXRhdGEiPg0KICAgIDwvYT4NCiAgICA8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvRXh0ZXJuYWwtd2FsbC1lbGVtZW50Ij5Qcm9maWxlIGF1dG9wb3J0YW50ZTxiciAvPjwvYT4NCiAgICA8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvUGFuZS1jdS1wZXJldGktc3VidGlyaSI+DQogICAgPC9hPg0KICAgIDxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Qcm9kdXNlLXNpLXNvbHV0aWkvU29sdXRpaS1pbi1jb25zdHJ1Y3RpaS9FeHRlcm5hbC13YWxsLWVsZW1lbnQiPg0KICAgIDwvYT4NCiAgICA8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvUGFuZS1jdS1wZXJldGktc3VidGlyaSI+UGFuZSBjdSBwZXJlxaNpIHN1YsWjaXJpPC9hPg0KICAgIDxiciAvPg0KICAgIDxhIGhyZWY9Ii80MDRwYWdlP2l0ZW09d2ViJTNhJTdiNDAxNzBEMTEtRkMyNi00REY0LThERUMtMDMwMEE4MDQxOUY1JTdkJTQwcm8tUk8iPlBhbm91cmkgdGVybW9pem9sYW50ZTwvYT7CoDxiciAvPjwvcD48L2Rpdj48ZGl2IGNsYXNzPSJoaWdobGlnaHQiPjxoMz5BY29wZXJpxZ91cmkgbWV0YWxpY2U8L2gzPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvQnVpbGRpbmctc29sdXRpb25zL211c2ljIHNjaG9vbC5hc2h4P213PTg1IiBhbHQ9IiIgd2lkdGg9Ijg1IiBoZWlnaHQ9Ijg1IiAvPjxwPg0KCQk8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvQWNvcGVyaXN1cmktcGVudHJ1LWNhc2UiPkFjb3BlcmnFn3VyaSBkaW4gdGFibMSDIHRpcCDFo2lnbGEgcGV0cnUgY2FzZTwvYT4gPGJyIC8+PGEgaHJlZj0iLzQwNHBhZ2U/aXRlbT13ZWIlM2ElN2I0MDE3MEQxMS1GQzI2LTRERjQtOERFQy0wMzAwQTgwNDE5RjUlN2QlNDByby1STyI+UGFub3VyaSB0ZXJtb2l6b2xhbnRlPC9hPjwvcD48L2Rpdj48ZGl2IGNsYXNzPSJoaWdobGlnaHQtbGFzdCI+PGgzPkhhbGUgbWV0YWxpY2U8L2gzPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvQnVpbGRpbmctc29sdXRpb25zL1N5c3RlbS1oYWxscy9zeXN0ZW0taGFsbC5hc2h4P213PTg1IiBhbHQ9IiIgd2lkdGg9Ijg1IiBoZWlnaHQ9Ijg1IiAvPjxwPg0KCQk8YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvUHJvZHVzZS1zaS1zb2x1dGlpL1NvbHV0aWktaW4tY29uc3RydWN0aWkvSGFsZS1tZXRhbGljZS9IYWxhLW1ldGFsaWNhIj5Tb2x1xaNpZSB1bmljxIMgZGUgaGFsZSBtZXRhbGljZSzCoHByZWfEg3RpdGUgcGVudHJ1IGluc3RhbGFyZSDDrm4gNi04IHPEg3B0xINtw6JuaTxlbT4uPC9lbT48L2E+DQo8L3A+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iaGlnaGxpZ2h0cy0zIj48L2Rpdj5kAg8PFgIfAQUkUnV1a2tpIGxhIGRpc3BvemnFo2lhIGR1bW5lYXZvYXN0csSDZAILDw8WAh8AaGQWAmYPFgIfAGhkAgUPZBYCZg9kFgICAw9kFgQCAQ9kFgICAQ8PFgQfAQULVGlwxINyZcWfdGUfAgU9L1BhZ2luYS1wcmluY2lwYWxhL1Byb2R1c2Utc2ktc29sdXRpaS9Tb2x1dGlpLWluLWNvbnN0cnVjdGlpIxYCHgdvbmNsaWNrBakBd2luZG93Lm9wZW4oJy9ydXVra2lpbnRlcm5ldC9sYXlvdXRzL3ByaW50LmFzcHg/cD17MjMwODQzRjUtN0EyNS00RDk4LUJENzAtMDg2NkYxNzBFRTQ0fScsICdSdXVra2ljb20nLCAnc2Nyb2xsYmFycz0xLCByZXNpemFibGU9MSwgd2lkdGg9ODAwLCBoZWlnaHQ9NTAwJyk7cmV0dXJuIGZhbHNlO2QCAw9kFgYCAQ8WAh8BBQhGYXZvcml0ZWQCAw8WAh8BBQVFbWFpbGQCBQ8WAh8BBRdUcmltaXRlIGFjZXN0xIMgcGFnaW7Eg2QCBw8PFgIfAGhkZAIIDw8WAh8AaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBSJjdGwwMyRTZWFyY2hCb3gxJGxua1Byb2R1Y3RzU2VhcmNo8V7suSvk/6lkGTYemsY2tk/aHEk=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLh1OXVAgKa3YKZBAKRvvHyDTzBfZfbNOL2/JTsmTpXaYJ3zXvp" />
+</div>
+		<div id="page-wrapper">
+			<div id="page-wrapper2">
+				
+
+<div id="header">
+	
+<div id="logo"><a id="ctl03_Logo1_LogoLink" alt="Ruukki" href="../../index.html"></a></div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        // watermark
+        var searchText = 'Căutare';
+        jQuerytb = jQuery('.autocomplete');
+        jQuerytb.val(searchText);
+
+        jQuery('.autocomplete').focus(function() {
+            if (jQuerytb.val() == searchText) {
+                jQuerytb.val('');
+            }
+        });
+        jQuery('.autocomplete').blur(function() {
+            if (jQuery.trim(jQuerytb.val()) == '') {
+                jQuerytb.val(searchText);
+            }
+        });
+
+
+        // autocomplete
+        jQuery("#ctl03_SearchBox1_txtSearch").autocomplete({
+                source: function(request, response) {
+                    jQuery.ajax({
+                        url: "/RuukkiInternet/HttpHandlers/SearchAutoComplete.ashx",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: { query: request.term },
+                        success: function( res ) {
+						    response( $.map( res.matches, 
+                                function( item ) {
+							        return { label: item.Label.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    $.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),	
+                                             value: item.Value, 
+                                             target: item.Target }
+                                }
+                            ))
+                        }
+                    })
+                }
+            , minLength: 2
+            ,focus: function(event, ui) { return false; }
+            ,select: function(event, ui) { 
+                        var link = ui.item.value;
+                        var target = ui.item.target;
+                        if (target == '') window.location = link;
+                        else window.open(link);
+                        return false;
+                    }
+        });
+                jQuery("#ctl03_SearchBox1_txtSearch").data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+	            };
+    });
+
+
+
+
+
+</script>
+
+<div id="search">
+<div id="ctl03_SearchBox1_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl03_SearchBox1_lnkProductsSearch')">
+	
+	    <span id="main-search"><input name="ctl03$SearchBox1$txtSearch" type="text" id="ctl03_SearchBox1_txtSearch" class="autocomplete" />
+        <input type="image" name="ctl03$SearchBox1$lnkProductsSearch" id="ctl03_SearchBox1_lnkProductsSearch" class="search-btn" onmouseover="this.src='/RuukkiInternet/images/search-btn-small-hover.png';" onmouseout="this.src='/RuukkiInternet/images/search-btn-small.png';" src="http://www.ruukkiacoperis.ro/RuukkiInternet/images/search-btn-small.png" style="height:21px;width:25px;border-width:0px;" /></span>
+
+</div>
+</div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('ul li span a').length == 0)
+                jQuery('.layer-open').hide();
+        });
+
+
+
+        jQuery('div#buttons ul li span a').click(function () {
+            jQuery('.layer-open').toggle();
+        });
+    });
+
+    </script>
+<div id="buttons">
+	<ul>
+		<li><span><a href="" onclick="return false;"><span>Alte siteuri Ruukki</span></a><div class="layer-open" style="display: none;"><ul><li><a href="../../www.ruukki.com/index.html">International</a></li><li><a href="../../www.ruukki.nl/index.html">Benelux</a></li><li><a href="../../www.ruukki.com.br/index.html">Brasil</a></li><li><a href="../../www.ruukki.bg/index.html">Bulgarien</a></li><li><a href="../../www.ruukki.cn/index.html">China</a></li><li><a href="../../www.ruukki.cz/index.html">Czech Republic</a></li><li><a href="../../www.ruukki.ee/index.html">Estonia</a></li><li><a href="../../www.ruukki.fi/index.html">Finland</a></li><li><a href="../../www.ruukki.fr/index.html">France</a></li><li><a href="../../www.ruukki.de/index.html">Germany</a></li><li><a href="../../www.ruukki.hu/index.html">Hungary</a></li><li><a href="../../www.ruukki.in/index.html">India</a></li><li><a href="../../www.ruukki.it/index.html">Italy</a></li><li><a href="../../www.ruukki.lv/index.html">Latvia</a></li><li><a href="../../www.ruukki.lt/index.html">Lithuania</a></li><li><a href="../../www.ruukki.no/index.html">Norway</a></li><li><a href="../../www.ruukki.pl/index.html">Poland</a></li><li><a href="../../www.ruukki.ro/index.html">Romania</a></li><li><a href="../../www.ruukki.ru/index.html">Russia</a></li><li><a href="../../www.ruukki.sk/index.html">Slovakia</a></li><li><a href="../../www.ruukki.se/index.html">Sweden</a></li><li><a href="../../www.ruukki.com.tr/index.html">Turkey</a></li><li><a href="../../www.ruukki.com.ua/index.html">Ukraine</a></li></ul></div></span></li>
+		<li><div class="languages"><ul></ul></div></li>
+	</ul>
+</div>
+
+	
+
+<div id="links">
+
+	<ul>
+		
+	</ul>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#main-navi .first a").mouseenter(function () {
+            jQuery(".product-layer").show();
+        });
+        jQuery("#main-navi .first").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+        jQuery(".product-layer").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+    });
+</script>
+<div id="main-navi">
+	<ul>
+		<li class="first"><a href="../..Totul-despre-acoperisuri.html">TOTUL DESPRE ACOPERIŞURI</a><div class="product-layer"><table><tr><td class="professionals"><div class="row">Pentru Profesionişti</div><table><tr><td><ul><li class="header"><a href="Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></td><td></td><td><ul><li class="header"><a href="Produse-metalurgice.html">Produse metalurgice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-cald">Oţeluri laminate la cald</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-rece">Oţeluri laminate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Produse-din-otel-cu-invelis-colorat">Produse din oţel cu înveliş colorat</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Otel-cu-invelis-metalic">Oţel cu înveliş metalic</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Sectiuni-din-otel-galvanizate-la-rece">Secţiuni din oţel galvanizate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Servicii-si-produse-din-otel-de-prima-clasa-disponibile-pentru-clienti-din-diferite-sectoare-">Produse în funcţie de aplicaţie</a></li></ul></td><td></td></tr></table></td><td class="consumers"><div class="row">Pentru clienţi finali</div><a href="../../index.html" target="_blank"><img alt="" width="225" height="225" src="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/~/media/504AC8F64F3F438CA1EC57DA189A5929.ashx" /></a></td></tr></table></div></li><li><a href="../../Produse-pentru-acoperis/Acoperisuri.html">PRODUSE PENTRU ACOPERIŞ</a></li><li><a href="../../Experimenteaza-modele-de-acoperis.html">EXPERIMENTEAZĂ MODELE DE ACOPERIŞ</a></li><li><a href="../..Solicitati-oferta.html">SOLICITAŢI O OFERTĂ</a></li><li><a href="../..Distribuitori.html">DISTRIBUITORI </a></li><li><a href="../../Asistenta/Trimiteti-o-intrebare-doctorului-de-acoperis.html">ASISTENŢĂ</a></li>
+	</ul>
+</div>
+
+
+				<div id="page-content">
+					
+<div id="content-wrapper">
+    <div id="content-wrapper2">
+        <div id="sidebar">
+            
+<div class="sidebar-header">
+    <div class="sidebar-header-2">Gama de produse</div>
+</div>
+<div class="sidebar-content">
+	<ul><li class="selected"><a href="Solutii-in-constructii.html">Soluţii în construcţii</a></li><li class="leftnavi-2"><ul><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></li><li><a href="Produse-metalurgice.html">Produse metalurgice</a></li><div class="sidebar-header"><div class="sidebar-header-2">Ruukki la dispoziţia dumneavoastră</div></div><li><a href="Certificate-si-Declaratii.html">Certificate si Declaraţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Masurile-luate-pentru-asigurarea-unei-dezvoltari-durabile">Măsuri pentru dezvoltarea durabilă</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Programul-Ruukki-de-creare-in-colaborare">Experţi în produse din oţeluri speciale</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Asigurarea-de-servicii-de-depozitare-si-prefabricare">Asigurarea de servicii de depozitare şi prefabricare</a></li></ul>
+</div>
+
+
+            
+        </div>
+        <div id="content">
+            
+            <div id="main">
+                
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        EqualHeight(jQuery(".product-categories2 div.content"));
+        EqualHeight(jQuery(".product-categories2 div.content h3"));
+        jQuery('.nospace').removeClass('spaced')
+    });
+</script>
+<div id="main-content-large">
+    
+<div id="breadcrumb">
+	<ul>
+					
+	</ul>  
+</div>
+    <div class="text-content">
+        <h1>
+            Soluţii în construcţii
+        </h1>
+        <div class="social_top">
+            
+
+        </div>
+    </div>
+    
+<div id="main-img">
+	
+		<div id="imagecontentadditional_0" style="display:none;">
+			<a><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/building-solutions.ashx?mw=794" alt="" width="794" height="250" /></a>
+		</div>
+		<script  type="text/javascript">renderFlash('/~/media/Flash/swf/buildingsolution.ashx', 794, 250, 10, 0, 0, 'xmlpath=/~/media/Flash/xml/sandwich_panel_visualiser_ro.ashx', '0', 'additional_0', '#ffffff');</script>
+
+	
+</div>
+    <div class="text-content">
+        <h2 class="nospace">
+            Gama noastră de produse</h2>
+        
+        <div class="highlights-3"><div class="highlight"><h3>Structuri metalice</h3><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/Trusses/Trusses.ashx?mw=85" alt="" width="85" height="85" /><p>
+		<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri<br /></a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante<br /></a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale<br /></a></p></div><div class="highlight"><h3>Panouri termoizolante</h3><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/malmo-arena-thumbnail.ashx?mw=85" alt="" width="85" height="85" /><p><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich/Panouri-eficiente-energetic-cu-etanseizare-ridicata">Panouri eficiente energetic cu etanşeizare ridicată </a><br />
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich/Panouri-standard-pentru-pereti-si-acoperisuri">Panouri standard pentru pereţi şi acoperişuri </a><br />
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich/Panouri-pentru-camere-frigorifice">Panouri pentru camere frigorifice</a></p></div><div class="highlight-last"><h3>Placări de faţade</h3><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/Facade-claddings.ashx?mw=85" alt="" width="85" height="85" /><p><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări de faţade<br />
+</a>
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate/Fatade-cu-panouri-casetate-Liberta-">Panouri Liberta de faţadă</a> <br />
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate/Lamele-de-placare">Lamele de faţadă</a> <br />
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate/Profile-Design">Profile Design</a><br />
+<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate/Profile-trapezoidale">Profile trapezoidale</a></p></div></div><div class="highlights-3"><div class="highlight"><h3>Sisteme structurale pentru acoperişuri</h3><img src="http://www.ruukkiacoperis.ro/~/media/Romania/Hale/structura_acoperis_241x241.ashx?mw=85" alt="structura acoperis" width="85" height="85" /><p>
+		<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">
+    </a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/External-wall-element">Profile autoportante<br /></a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">
+    </a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/External-wall-element">
+    </a>
+    <a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a>
+    <br />
+    <a href="http://www.ruukkiacoperis.ro/404page?item=web:%7B40170D11-FC26-4DF4-8DEC-0300A80419F5%7D@ro-RO">Panouri termoizolante</a> <br /></p></div><div class="highlight"><h3>Acoperişuri metalice</h3><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/music%20school.ashx?mw=85" alt="" width="85" height="85" /><p>
+		<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri din tablă tip ţigla petru case</a> <br /><a href="http://www.ruukkiacoperis.ro/404page?item=web:%7B40170D11-FC26-4DF4-8DEC-0300A80419F5%7D@ro-RO">Panouri termoizolante</a></p></div><div class="highlight-last"><h3>Hale metalice</h3><img src="http://www.ruukkiacoperis.ro/~/media/Images/Building-solutions/System-halls/system-hall.ashx?mw=85" alt="" width="85" height="85" /><p>
+		<a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice/Hala-metalica">Soluţie unică de hale metalice, pregătite pentru instalare în 6-8 săptămâni<em>.</em></a>
+</p></div></div><div class="highlights-3"></div>
+    </div>
+    <div class="text-content">
+        <h2 class="nospace">
+            Ruukki la dispoziţia dumneavoastră</h2>
+        
+		<p sizset="81" sizcache="16">
+      <a href="../../software.ruukki.com/PublishedService-frontpage=true.html" target="_blank">Design Toolbox - instrumente software pentru arhitecţi si ingineri structurişti</a>
+      <br>
+      Reduceţi impactul clădirilor asupra mediului înconjurător prin calcularea coeficienţilor în sistemele LEED şi BREEAM <br><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Expertii-in-constructii-Ruukki-va-ajuta-sa-construiti-cu-maiestrie">Ruukki pune la dispoziţia dumneavostră servicii de suport tehnic în proiectarea clădirilor dumneavoastră pentru a realiza împreună un proiect bun, sigur şi de durată.</a> </p>
+
+    </div>
+    
+    
+</div>
+
+            </div>
+            
+
+            <div class="text-content social_bottom">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+					
+
+
+
+<div id="footer">
+	<div id="footer-wrapper">
+		
+		<ul class="footer-links">
+			
+            
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('.countrytoggle').length == 0) {
+                jQuery('.country-open').hide();
+            } 
+        });
+
+        jQuery('.countrytoggle').click(function () {
+            jQuery('.country-open').toggle();
+        });
+    });
+
+</script>
+    <li><div class="countries"></div></li>	
+    
+	
+   
+   
+		</ul>         
+		
+		
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact: 'delicious, digg, facebook, more',
+        data_ga_property: 'UA-27088716-1',
+        data_ga_social: true
+    };
+
+</script>
+<style type="text/css">
+    .at300bs
+    {
+        background: none !important;
+        height: 0px !important;
+    }
+</style>
+<ul class="footer-actions">
+    <li id="ctl05_Actions1_liPrint" class="print">
+        <a id="ctl05_Actions1_lnkPrint" onclick="window.open('/ruukkiinternet/layouts/print.aspx?p={230843F5-7A25-4D98-BD70-0866F170EE44}', 'Ruukkicom', 'scrollbars=1, resizable=1, width=800, height=500');return false;" href="Solutii-in-constructii.html#" target="_blank">Tipăreşte</a></li>
+    
+        <li class="bookmark"><a class="addthis_button_favorites" href="Solutii-in-constructii.html#">
+            Favorite</a></li>
+        <li class="email"><a class="addthis_button_email" href="Solutii-in-constructii.html#">
+            Email</a></li>
+        <li class="share"><a class="addthis_button" href="../../www.addthis.com/bookmark.php-v=25038username=ruukki.html">
+            Trimite acestă pagină</a>
+            <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#username=ruukki"></script>
+        </li>
+    
+</ul>
+
+	</div>
+
+    <div>
+    
+     <div id="sitemapContent" >
+            <div class="four-columns">
+                <div class="four-columns2">
+                    <div class="box content sitemap-links">
+                      <ul>
+                        
+                     </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+     		            <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box-last content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </div>
+
+	<div id="footer-copyright">
+		<p><br/></p>		
+	</div>
+</div>
+				
+
+
+				</div>
+			</div>
+		</div>
+        
+	
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+</form>
+	
+    
+    <!-- Old browser notification -->
+    <script type="text/javascript">
+        var $buoop = { vs: { i: 6, f: 3.5, s: 3, o: 9 }, newwindow: true }
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            if ($buoop.ol) $buoop.ol();
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "http://browser-update.org/update.js");
+            document.body.appendChild(e);
+        } 
+     </script>
+     
+	</body>
+</html>

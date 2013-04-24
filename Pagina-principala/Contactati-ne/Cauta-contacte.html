@@ -1,0 +1,778 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro" xml:lang="ro" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Caută contacte - Ruukki</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="pageId" content="{E1662A3E-42AA-4C97-BB7B-7622CAD9A4F2}" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+                
+		
+        <link type="text/css" href="../..RuukkiInternet/css/general.css" rel="Stylesheet" />
+		<link type="text/css" href="../..RuukkiInternet/css/main.css" rel="Stylesheet" />	
+		<link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/colorbox.css" rel="Stylesheet" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="http://www.ruukkiacoperis.ro/RuukkiInternet/css/jquery.jcarousel.css" rel="stylesheet" media="all" />
+        
+        <script type="text/javascript" src="Js/jquery-1.4.2.min.js"></script>
+        
+			<script type="text/javascript" charset="utf-8">var live = true;</script>
+		
+		<script type="text/javascript" src="Js/main.js"></script>
+		<script type="text/javascript" src="Js/jqueryhtmlreplacements.js"></script>
+		<script type="text/javascript" src="Js/jquery.datatables.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.vticker.js"></script>
+		<script type="text/javascript" src="Js/jquery.colorbox-min-1_3_13.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.8.6.custom.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.watermark.min.js"></script>
+		<script type="text/javascript" src="Js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Js/mwheelIntent.js"></script>
+		<script type="text/javascript" src="Js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="Js/jquery.jcarousel.min.js"></script>
+        
+        
+
+   		
+        
+
+    <script type="text/javascript" charset="utf-8">
+
+		var oTable;
+    	jQuery(document).ready(function () {
+
+        jQuery('iframe').each(function()
+        {
+	        var url = jQuery(this).attr("src");
+            if (typeof(url)==="undefined" || url=="")
+            {
+                return;
+            }
+
+            var bInsert = false;
+            var paramPrefix = "?";
+
+            var iWmodeIndex = url.indexOf("?wmode=");
+            if (iWmodeIndex<0)
+            {
+                iWmodeIndex=url.indexOf("&wmode=");
+            }
+
+            if (iWmodeIndex<0)
+            {
+                bInsert = true;
+                paramPrefix = url.lastIndexOf('?')<0 ? "?" : "&";
+            }
+
+            if (bInsert)
+            {
+	            jQuery(this).attr("src", url+paramPrefix+"wmode=opaque");
+            }
+        });
+
+
+			oTable = jQuery('.dataTable').dataTable({
+               "bJQueryUI": false,
+			   "bPaginate": false,
+               "oLanguage": {"sLengthMenu": "Afişează _MENU_ documente per pagină","sZeroRecords": "Nu există rezultate","sInfo": "Afişează _START_ până la _END_ din _TOTAL_ documente","sInfoEmtpy": "Afişează 0 până la 0 din 0 documente","sInfoFiltered": "(selectează din _MAX_ total documente)","sSearch": "Caută","oPaginate": {"sFirst": "jquery/datatables/pagingfirst [ro-RO]","sPrevious": "Anterior","sNext": "Următorul","sLast": "jquery/datatables/paginglast [ro-RO]"}},
+               "sDom": 'frt<"bottom">p'
+			});
+    		jQuery('.dataTables_filter').find('input').wrap('<span class="text-218"></span>');
+    		jQuery("div.bottom").html('<table cellpadding="0" cellspacing="0"><tr class="bottom"><td>&nbsp;</td></tr></table>');
+			
+		});
+
+	</script>
+    
+     
+	</head>
+	<body>
+	<form name="form1" method="post" action="/Pagina-principala/Contactati-ne/Cauta-contacte" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTk4MTA3OA9kFgxmDw8WAh4HVmlzaWJsZWhkZAICDw8WAh8AaGRkAgUPFgIeBFRleHQF2QMib0xhbmd1YWdlIjogeyJzTGVuZ3RoTWVudSI6ICJBZmnFn2VhesSDIF9NRU5VXyBkb2N1bWVudGUgcGVyIHBhZ2luxIMiLCJzWmVyb1JlY29yZHMiOiAiTnUgZXhpc3TEgyByZXp1bHRhdGUiLCJzSW5mbyI6ICJBZmnFn2VhesSDIF9TVEFSVF8gcMOibsSDIGxhIF9FTkRfIGRpbiBfVE9UQUxfIGRvY3VtZW50ZSIsInNJbmZvRW10cHkiOiAiQWZpxZ9lYXrEgyAwIHDDom7EgyBsYSAwIGRpbiAwIGRvY3VtZW50ZSIsInNJbmZvRmlsdGVyZWQiOiAiKHNlbGVjdGVhesSDIGRpbiBfTUFYXyB0b3RhbCBkb2N1bWVudGUpIiwic1NlYXJjaCI6ICJDYXV0xIMiLCJvUGFnaW5hdGUiOiB7InNGaXJzdCI6ICJqcXVlcnkvZGF0YXRhYmxlcy9wYWdpbmdmaXJzdCBbcm8tUk9dIiwic1ByZXZpb3VzIjogIkFudGVyaW9yIiwic05leHQiOiAiVXJtxIN0b3J1bCIsInNMYXN0IjogImpxdWVyeS9kYXRhdGFibGVzL3BhZ2luZ2xhc3QgW3JvLVJPXSJ9fWQCBg8PFgIfAGhkZAIHEGRkFggCAQ9kFgJmD2QWAgIBD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFAS8WAh4DYWx0BQZSdXVra2lkAgMPZBYCZg9kFgJmD2QWCAIBD2QWAmYPZBYCAgEPFgIfAQWKBDx1bD48bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9DYXV0YS1jb250YWN0ZSI+Q2F1dMSDIGNvbnRhY3RlPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9QYWdpbmEtcHJpbmNpcGFsYS9Db250YWN0YXRpLW5lL0dhc2l0aS1sb2NhdGlpbGUtUnV1a2tpIj5HxINzacWjaSBsb2NhxaNpaWxlIFJ1dWtraTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9UcmltaXRlLW5lLWNlcmVyZS1kZS1vZmVydGEiPlRyaW1pdGUtbmUgY2VyZXJlIGRlIG9mZXJ0xIM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1BhZ2luYS1wcmluY2lwYWxhL0NvbnRhY3RhdGktbmUvVHJpbWl0ZS1uZS1jb21lbnRhcmlpbGUtdGFsZSI+VHJpbWl0ZS1uZSBjb21lbnRhcmlpbGUgdGFsZTwvYT48L2xpPjxsaT48YSBocmVmPSIvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9OZXdzbGV0dGVycyI+TmV3c2xldHRlcnM8L2E+PC9saT48L3VsPmQCBw9kFgJmD2QWAmYPZBYCAgMPZBYIZg8QZBAVAxRUb2F0ZSBkZXBhcnRhbWVudGVsZQlWw6JuesSDcmkNU3Vwb3J0IHRlaG5pYxUDACZ7RjcxNTRGODAtM0ZEQS00MTMzLTgwODctMTM5RjVEMkUyRThEfSZ7QkMwQTg0RUQtRDhGOS00NDI1LUI1MDYtMTk2MDgwNjBENTM3fRQrAwNnZ2dkZAIBDxYCHwBoFgJmDxBkZBYAZAICD2QWAmYPEGRkFgBkAgMPEGQQFQMWU2VsZWN0ZWF6xINsZSBwZSB0b2F0ZRlTb2x1xaNpaSDDrm4gY29uc3RydWPFo2lpE1Byb2R1c2UgbWV0YWx1cmdpY2UVAwAmezIzMDg0M0Y1LTdBMjUtNEQ5OC1CRDcwLTA4NjZGMTcwRUU0NH0mezQ0OTQxM0M4LTgyNTMtNEU4NS1CMUIwLTVFNURDMzRDNDRCNH0UKwMDZ2dnZGQCCQ9kFgJmD2QWAmYPZBYEZg9kFgICAQ8PFgIfAGhkZAICD2QWAgIBDw8WAh8AaGRkAg0PDxYCHwBoZGQCBQ9kFgJmD2QWAgIDD2QWBAIBD2QWAgIBDw8WBB8BBQtUaXDEg3JlxZ90ZR8CBTAvUGFnaW5hLXByaW5jaXBhbGEvQ29udGFjdGF0aS1uZS9DYXV0YS1jb250YWN0ZSMWAh4Hb25jbGljawWpAXdpbmRvdy5vcGVuKCcvcnV1a2tpaW50ZXJuZXQvbGF5b3V0cy9wcmludC5hc3B4P3A9e0UxNjYyQTNFLTQyQUEtNEM5Ny1CQjdCLTc2MjJDQUQ5QTRGMn0nLCAnUnV1a2tpY29tJywgJ3Njcm9sbGJhcnM9MSwgcmVzaXphYmxlPTEsIHdpZHRoPTgwMCwgaGVpZ2h0PTUwMCcpO3JldHVybiBmYWxzZTtkAgMPZBYGAgEPFgIfAQUIRmF2b3JpdGVkAgMPFgIfAQUFRW1haWxkAgUPFgIfAQUXVHJpbWl0ZSBhY2VzdMSDIHBhZ2luxINkAgcPDxYCHwBoZGQCCA8PFgIfAGhkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUiY3RsMDMkU2VhcmNoQm94MSRsbmtQcm9kdWN0c1NlYXJjaJYRDMxnvSC5gCW7wlTxo05suOrV" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCgKJmLzZDQKa3YKZBAKRvvHyDQLgtvjpAgKplcHNCgLy7dyBDAKIo9DRBgLQ8oHaCgK40ufPCAK1xYujBb2OAXNeo6+9KCyOfSmTgd6bF7Bp" />
+</div>
+		<div id="page-wrapper">
+			<div id="page-wrapper2">
+				
+
+<div id="header">
+	
+<div id="logo"><a id="ctl03_Logo1_LogoLink" alt="Ruukki" href="../../index.html"></a></div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        // watermark
+        var searchText = 'Căutare';
+        jQuerytb = jQuery('.autocomplete');
+        jQuerytb.val(searchText);
+
+        jQuery('.autocomplete').focus(function() {
+            if (jQuerytb.val() == searchText) {
+                jQuerytb.val('');
+            }
+        });
+        jQuery('.autocomplete').blur(function() {
+            if (jQuery.trim(jQuerytb.val()) == '') {
+                jQuerytb.val(searchText);
+            }
+        });
+
+
+        // autocomplete
+        jQuery("#ctl03_SearchBox1_txtSearch").autocomplete({
+                source: function(request, response) {
+                    jQuery.ajax({
+                        url: "/RuukkiInternet/HttpHandlers/SearchAutoComplete.ashx",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: { query: request.term },
+                        success: function( res ) {
+						    response( $.map( res.matches, 
+                                function( item ) {
+							        return { label: item.Label.replace(
+									    new RegExp(
+										    "(?![^&;]+;)(?!<[^<>]*)(" +
+										    $.ui.autocomplete.escapeRegex(request.term) +
+										    ")(?![^<>]*>)(?![^&;]+;)", "gi"
+									    ), "<strong>$1</strong>"),	
+                                             value: item.Value, 
+                                             target: item.Target }
+                                }
+                            ))
+                        }
+                    })
+                }
+            , minLength: 2
+            ,focus: function(event, ui) { return false; }
+            ,select: function(event, ui) { 
+                        var link = ui.item.value;
+                        var target = ui.item.target;
+                        if (target == '') window.location = link;
+                        else window.open(link);
+                        return false;
+                    }
+        });
+                jQuery("#ctl03_SearchBox1_txtSearch").data("autocomplete")._renderItem = function (ul, item) {
+                    return jQuery("<li></li>")
+				    .data("item.autocomplete", item)
+				    .append("<a>" + item.label + "</a>")
+				    .appendTo(ul);
+	            };
+    });
+
+
+
+
+
+</script>
+
+<div id="search">
+<div id="ctl03_SearchBox1_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl03_SearchBox1_lnkProductsSearch')">
+	
+	    <span id="main-search"><input name="ctl03$SearchBox1$txtSearch" type="text" id="ctl03_SearchBox1_txtSearch" class="autocomplete" />
+        <input type="image" name="ctl03$SearchBox1$lnkProductsSearch" id="ctl03_SearchBox1_lnkProductsSearch" class="search-btn" onmouseover="this.src='/RuukkiInternet/images/search-btn-small-hover.png';" onmouseout="this.src='/RuukkiInternet/images/search-btn-small.png';" src="http://www.ruukkiacoperis.ro/RuukkiInternet/images/search-btn-small.png" style="height:21px;width:25px;border-width:0px;" /></span>
+
+</div>
+</div>
+
+	
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('ul li span a').length == 0)
+                jQuery('.layer-open').hide();
+        });
+
+
+
+        jQuery('div#buttons ul li span a').click(function () {
+            jQuery('.layer-open').toggle();
+        });
+    });
+
+    </script>
+<div id="buttons">
+	<ul>
+		<li><span><a href="" onclick="return false;"><span>Alte siteuri Ruukki</span></a><div class="layer-open" style="display: none;"><ul><li><a href="../../www.ruukki.com/index.html">International</a></li><li><a href="../../www.ruukki.nl/index.html">Benelux</a></li><li><a href="../../www.ruukki.com.br/index.html">Brasil</a></li><li><a href="../../www.ruukki.bg/index.html">Bulgarien</a></li><li><a href="../../www.ruukki.cn/index.html">China</a></li><li><a href="../../www.ruukki.cz/index.html">Czech Republic</a></li><li><a href="../../www.ruukki.ee/index.html">Estonia</a></li><li><a href="../../www.ruukki.fi/index.html">Finland</a></li><li><a href="../../www.ruukki.fr/index.html">France</a></li><li><a href="../../www.ruukki.de/index.html">Germany</a></li><li><a href="../../www.ruukki.hu/index.html">Hungary</a></li><li><a href="../../www.ruukki.in/index.html">India</a></li><li><a href="../../www.ruukki.it/index.html">Italy</a></li><li><a href="../../www.ruukki.lv/index.html">Latvia</a></li><li><a href="../../www.ruukki.lt/index.html">Lithuania</a></li><li><a href="../../www.ruukki.no/index.html">Norway</a></li><li><a href="../../www.ruukki.pl/index.html">Poland</a></li><li><a href="../../www.ruukki.ro/index.html">Romania</a></li><li><a href="../../www.ruukki.ru/index.html">Russia</a></li><li><a href="../../www.ruukki.sk/index.html">Slovakia</a></li><li><a href="../../www.ruukki.se/index.html">Sweden</a></li><li><a href="../../www.ruukki.com.tr/index.html">Turkey</a></li><li><a href="../../www.ruukki.com.ua/index.html">Ukraine</a></li></ul></div></span></li>
+		<li><div class="languages"><ul></ul></div></li>
+	</ul>
+</div>
+
+	
+
+<div id="links">
+
+	<ul>
+		
+	</ul>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#main-navi .first a").mouseenter(function () {
+            jQuery(".product-layer").show();
+        });
+        jQuery("#main-navi .first").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+        jQuery(".product-layer").mouseleave(function () {
+            jQuery(".product-layer").hide();
+        });
+    });
+</script>
+<div id="main-navi">
+	<ul>
+		<li class="first"><a href="../..Totul-despre-acoperisuri.html">TOTUL DESPRE ACOPERIŞURI</a><div class="product-layer"><table><tr><td class="professionals"><div class="row">Pentru Profesionişti</div><table><tr><td><ul><li class="header"><a href="../Produse-si-solutii/Solutii-in-constructii.html">Soluţii în construcţii</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Structuri-metalice">Structuri metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Panouri-termoizolante-tip-sandwich">Panouri termoizolante tip sandwich</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Placari-fatade-ventilate">Placări faţade ventilate</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Profile-autoportante-din-tabla-cutata">Profile autoportante din tablă cutată</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Pane-cu-pereti-subtiri">Pane cu pereţi subţiri</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Casete-structurale-">Casete structurale </a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Hale-metalice">Hale metalice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Solutii-in-constructii/Acoperisuri-pentru-case">Acoperişuri pentru case</a></li></ul></td><td></td><td><ul><li class="header"><a href="../Produse-si-solutii/Produse-metalurgice.html">Produse metalurgice</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-cald">Oţeluri laminate la cald</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Oteluri-laminate-la-rece">Oţeluri laminate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Produse-din-otel-cu-invelis-colorat">Produse din oţel cu înveliş colorat</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Otel-cu-invelis-metalic">Oţel cu înveliş metalic</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Sectiuni-din-otel-galvanizate-la-rece">Secţiuni din oţel galvanizate la rece</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Produse-si-solutii/Produse-metalurgice/Servicii-si-produse-din-otel-de-prima-clasa-disponibile-pentru-clienti-din-diferite-sectoare-">Produse în funcţie de aplicaţie</a></li></ul></td><td></td></tr></table></td><td class="consumers"><div class="row">Pentru clienţi finali</div><a href="../../index.html" target="_blank"><img alt="" width="225" height="225" src="http://www.ruukkiacoperis.ro/Pagina-principala/Contactati-ne/~/media/504AC8F64F3F438CA1EC57DA189A5929.ashx" /></a></td></tr></table></div></li><li><a href="../../Produse-pentru-acoperis/Acoperisuri.html">PRODUSE PENTRU ACOPERIŞ</a></li><li><a href="../../Experimenteaza-modele-de-acoperis.html">EXPERIMENTEAZĂ MODELE DE ACOPERIŞ</a></li><li><a href="../..Solicitati-oferta.html">SOLICITAŢI O OFERTĂ</a></li><li><a href="../..Distribuitori.html">DISTRIBUITORI </a></li><li><a href="../../Asistenta/Trimiteti-o-intrebare-doctorului-de-acoperis.html">ASISTENŢĂ</a></li>
+	</ul>
+</div>
+
+
+				<div id="page-content">
+					
+<div id="content-wrapper">
+ <div id="content-wrapper2">
+    <div id="sidebar">
+		
+<div class="sidebar-header">
+    <div class="sidebar-header-2">Contactaţi-ne</div>
+</div>
+<div class="sidebar-content">
+	<ul><li class="selected"><a href="Cauta-contacte.html">Caută contacte</a></li><li><a href="Gasiti-locatiile-Ruukki.html">Găsiţi locaţiile Ruukki</a></li><li><a href="Trimite-ne-cerere-de-oferta.html">Trimite-ne cerere de ofertă</a></li><li><a href="Trimite-ne-comentariile-tale.html">Trimite-ne comentariile tale</a></li><li><a href="http://www.ruukkiacoperis.ro/Pagina-principala/Contactati-ne/Newsletters">Newsletters</a></li></ul>
+</div>
+
+
+		
+	</div>
+	<div id="content">
+		
+<div id="breadcrumb">
+	<ul>
+					
+	</ul>  
+</div>
+		<div id="main">
+			
+<script type="text/javascript">
+
+	function getItems(role, country, district, mainGroupId, subGroupId)
+	{
+		jQuery('#personResults').html("<div id=\"personResults\"><img src=\"/ruukkiinternet/css/images/loading.gif\" /></div>");
+		// make json request
+		getContacts(role, country, district, mainGroupId, subGroupId, 'Hartă', 'Telefon:', 
+            'Mobil:', 'contacts/no contacts found [ro-RO]', 'ro', '{E1662A3E-42AA-4C97-BB7B-7622CAD9A4F2}' );
+	}
+
+	jQuery('.relMapLink').live('click', function() {
+		jQuery.fn.colorbox({href:jQuery(this).attr('href'), width: "80%", height: "80%", iframe: true, slideshowStart:'Vizualizare în Slideshow',slideshowStop:'Opreşte Slideshow',current:' {current} / {total}',previous:'Anteriorul',next:'Următorul',close:'Închide',opacity: 0.2 });
+		return false;
+	});
+
+    function performQuickSearch()
+    {
+        var role = '';
+		var country = '';
+        var district = '';
+		var mainGroupId = '';
+		var subGroupId = '';
+
+		getItems(role, country, district, mainGroupId, subGroupId);
+		setCriteriaText();
+    }
+
+	function setCriteriaText()
+	{
+		// set search text to criteria
+		var roleText = jQuery('.areaFilter').find(':selected').text();
+		if(roleText != "")
+			roleText += ", ";
+
+		var countryText = jQuery('.countryFilter').find(':selected').text();
+
+		jQuery('#criteriaText').html(roleText + ' ' + countryText);
+		jQuery("#results").show();
+	}
+
+    jQuery(document).ready(function () {
+
+    	jQuery(".hidden").hide();
+		jQuery("#results").hide();
+
+		// check if some params were passed to this page 
+		var tid = getQuerystring('tid');
+		var pid = getQuerystring('pid');
+		var cid = getQuerystring('cid');
+		var gid = getQuerystring('gid');
+        var did = getQuerystring('did');
+
+        var displayAllByDefault = 0 > 0 ? true : false;
+
+        if(!displayAllByDefault)
+        {
+
+		    if(tid != "" || pid != "" || cid != "" || gid != "" || did != "")
+		    {
+			    getItems(tid, cid, did, gid, pid);
+			
+			    jQuery('.areaFilter').val(tid);
+			    var filter = jQuery('.areaFilter').val();
+    		    
+      switch(filter)
+      {
+        case "{F7154F80-3FDA-4133-8087-139F5D2E2E8D}":
+          {
+            jQuery(".productddls.hidden").show();
+            jQuery(".districtddl.hidden").show();
+          }
+          break;
+        case "{BC0A84ED-D8F9-4425-B506-19608060D537}":
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").show();
+          }
+          break;
+
+        default:
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").hide(); 
+            jQuery('.mainGroupFilter').val(''); 
+            jQuery('.subGroupFilter').children().remove();
+          }
+          break;
+      }
+			    
+			    jQuery('.mainGroupFilter').val(gid);
+			    jQuery('.subGroupFilter').val(pid);
+			    setCriteriaText();
+		    }
+
+            // CR 121 E.T.
+         var areaFilterLength = jQuery(".areaFilter option").length;
+         if (areaFilterLength < 3) {
+         
+           jQuery('.areaFilter option:last').attr("selected", "selected");
+           if (jQuery('.areaFilter').val() != ('All')) {
+    			var filter = jQuery('.areaFilter').val();
+    			
+      switch(filter)
+      {
+        case "{F7154F80-3FDA-4133-8087-139F5D2E2E8D}":
+          {
+            jQuery(".productddls.hidden").show();
+            jQuery(".districtddl.hidden").show();
+          }
+          break;
+        case "{BC0A84ED-D8F9-4425-B506-19608060D537}":
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").show();
+          }
+          break;
+
+        default:
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").hide(); 
+            jQuery('.mainGroupFilter').val(''); 
+            jQuery('.subGroupFilter').children().remove();
+          }
+          break;
+      }
+    		}
+    		else {
+				jQuery('.mainGroupFilter').val('');
+				jQuery('.subGroupFilter').children().remove();
+    			jQuery(".hidden").hide();
+    		}
+         }
+         var mainGroupFilterLength = jQuery(' .mainGroupFilter option').length;
+         if (mainGroupFilterLength < 3) {
+            jQuery('.mainGroupFilter option:last').attr("selected", "selected");
+            var mainGroupId = jQuery('.mainGroupFilter').val();
+			var ddl = jQuery('#main_0_bottom_0_ddlSubProductGroup');
+            jQuery('.subGroupFilter').children().remove();
+			getProductsDropdown(mainGroupId, ddl); 
+          }
+         // ->CR 121 ends
+
+
+		    jQuery('#searchButton').click(function () {
+			    var role = jQuery('.areaFilter').val();
+			    var country = '';
+
+                var pDistrictFilter = jQuery('.districtFilter');
+                var district = pDistrictFilter.is(":visible") ? pDistrictFilter.val() : "";
+
+			    var mainGroupId = jQuery('.mainGroupFilter').val();
+			    var subGroupId = jQuery('.subGroupFilter').val();
+			    if(subGroupId == null) subGroupId = "";
+			    getItems(role, country, district, mainGroupId, subGroupId);
+			    setCriteriaText();
+		    });
+
+    	    jQuery('.areaFilter').change(function () {
+    		    if (jQuery(this).val() != ('All')) {
+    			    var filter = jQuery(this).val();
+    			    
+      switch(filter)
+      {
+        case "{F7154F80-3FDA-4133-8087-139F5D2E2E8D}":
+          {
+            jQuery(".productddls.hidden").show();
+            jQuery(".districtddl.hidden").show();
+          }
+          break;
+        case "{BC0A84ED-D8F9-4425-B506-19608060D537}":
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").show();
+          }
+          break;
+
+        default:
+          {
+            jQuery(".districtddl.hidden").hide();
+            jQuery(".productddls.hidden").hide(); 
+            jQuery('.mainGroupFilter').val(''); 
+            jQuery('.subGroupFilter').children().remove();
+          }
+          break;
+      }
+    		    }
+    		    else {
+				    jQuery('.mainGroupFilter').val('');
+				    jQuery('.subGroupFilter').children().remove();
+    			    jQuery(".hidden").hide();
+    		    }
+               var items = jQuery(".mainGroupFilter option").length;
+                 
+                    if (items < 3) {
+                    jQuery(".mainGroupFilter").attr('selectedIndex', 1);
+                    var role = jQuery('.areaFilter').val();
+			        var country = '';
+
+                    var pDistrictFilter = jQuery('.districtFilter');
+                    var district = pDistrictFilter.is(":visible") ? pDistrictFilter.val() : "";
+
+			        var mainGroupId = jQuery('.mainGroupFilter').val();
+			        var subGroupId = jQuery('.subGroupFilter').val();
+			        if(subGroupId == null) subGroupId = "";
+			        getItems(role, country, district, mainGroupId, subGroupId);
+			        setCriteriaText();
+                    }
+                    
+            });
+
+		    jQuery('.mainGroupFilter').change(function() {
+			    var mainGroupId = jQuery(this).val();
+			    var ddl = jQuery('#main_0_bottom_0_ddlSubProductGroup');
+                jQuery('.subGroupFilter').children().remove();
+			    getProductsDropdown(mainGroupId, ddl);
+
+                 var itemsSubGroup = jQuery(".subGroupFilter option").length;
+                    if (itemsSubGroup < 3) {
+                    jQuery(".subGroupFilter").attr('selectedIndex', 1);              
+                    var role = jQuery('.areaFilter').val();
+			        var country = '';
+
+                    var pDistrictFilter = jQuery('.districtFilter');
+                    var district = pDistrictFilter.is(":visible") ? pDistrictFilter.val() : "";
+
+			        var mainGroupId = jQuery('.mainGroupFilter').val();
+			        var subGroupId = jQuery('.subGroupFilter').val();
+
+			        if(subGroupId == null) subGroupId = "";
+			        getItems(role, country, district, mainGroupId, subGroupId);
+                    jQuery("#results").show();
+			        setCriteriaText();
+                    }
+            });
+
+            var searchAllByDefault = 0 > 0 ? true : false;
+            if (searchAllByDefault) {
+                jQuery('#searchButton').trigger("click");
+            }
+        }
+        else
+        {
+            performQuickSearch()
+
+        }
+    });
+</script>
+<div id="main-content-small">
+    <div class="text-content">
+        
+            <h1>
+                Caută contacte
+            </h1>
+        
+        <div class="social_top">
+            
+    <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:locale="en_US"></a><a class="addthis_button_linkedin_counter">
+        </a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone"
+            g:plusone:size="medium"></a><a class="addthis_counter addthis_pill_style"></a>
+    </div>
+    <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f5eff8a1756d046"></script>
+
+
+        </div>
+        
+		<p>Dorţi să contactaţi unul ditre colegii noştri? Vă rugăm să folosiţi opţiunile de mai jos pentru a identifica persoana potrivită. Putem deasemenea să vă contactăm noi, trebuie doar sa completaţi  <a href="Trimite-ne-cerere-de-oferta.html">formularul de contact</a>.</p>
+    <p>Formatul adresei de email: <a href="mailto:nume.prenume@ruukki.com">nume.prenume@ruukki.com</a></p>
+    </div>
+    
+        <div class="row">
+            <table cellpadding="0" cellspacing="0" class="contact-select separator">
+                <tr>
+                    <th>
+                        <label for="ddlContactinformation">
+                            Caută informaţia de contat pentru</label><br />
+                        <select name="main_0$bottom_0$ddlContactinformation" id="main_0_bottom_0_ddlContactinformation" class="areaFilter">
+	<option value="">Toate departamentele</option>
+	<option value="{F7154F80-3FDA-4133-8087-139F5D2E2E8D}">V&#226;nzări</option>
+	<option value="{BC0A84ED-D8F9-4425-B506-19608060D537}">Suport tehnic</option>
+
+</select>
+                    </th>
+                    <th>
+                        
+                    </th>
+                </tr>
+                <tr class="productddls hidden">
+                    <th>
+                        <label for="ddlMainProductGroup">
+                            Alege grupa de produse</label><br />
+                        <select name="main_0$bottom_0$ddlMainProductGroup" id="main_0_bottom_0_ddlMainProductGroup" class="mainGroupFilter">
+	<option selected="selected" value="">Selecteazăle pe toate</option>
+	<option value="{230843F5-7A25-4D98-BD70-0866F170EE44}">Soluţii &#238;n construcţii</option>
+	<option value="{449413C8-8253-4E85-B1B0-5E5DC34C44B4}">Produse metalurgice</option>
+
+</select>
+                    </th>
+                    <th>
+                        <label for="ddlSubProductGroup">
+                            Redefineşte căutarea</label><br />
+                        <select name="main_0$bottom_0$ddlSubProductGroup" id="main_0_bottom_0_ddlSubProductGroup" class="subGroupFilter">
+
+</select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        <a href="Cauta-contacte.html#?ad=Findcontacts" id="searchButton" class="button"><span>
+                            Caută</span></a><br />
+                    </th>
+                </tr>
+                <tr>
+                    <th>&nbsp;
+                        
+                    </th>
+                </tr>
+            </table>
+        </div>
+    
+    
+        <div class="infobox-557 hidden" id="results">
+            <div class="infobox2">
+                <div class="content">
+                    <h2>
+                        <div id="criteriaText">
+                        </div>
+                        
+                    </h2>
+                    <div id="personResults">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+			<div id="right-sidebar">
+				
+	
+ 
+
+	
+	
+	<br />
+
+			</div>
+		</div>
+        
+        
+        <div class="text-content social_bottom">
+            
+        </div>
+    </div>
+ </div>
+</div>
+					
+
+
+
+<div id="footer">
+	<div id="footer-wrapper">
+		
+		<ul class="footer-links">
+			
+            
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').click(function (event) {
+            if (jQuery(event.target).closest('.countrytoggle').length == 0) {
+                jQuery('.country-open').hide();
+            } 
+        });
+
+        jQuery('.countrytoggle').click(function () {
+            jQuery('.country-open').toggle();
+        });
+    });
+
+</script>
+    <li><div class="countries"></div></li>	
+    
+	
+   
+   
+		</ul>         
+		
+		
+<script type="text/javascript">
+    var addthis_config = {
+        services_compact: 'delicious, digg, facebook, more',
+        data_ga_property: 'UA-27088716-1',
+        data_ga_social: true
+    };
+
+</script>
+<style type="text/css">
+    .at300bs
+    {
+        background: none !important;
+        height: 0px !important;
+    }
+</style>
+<ul class="footer-actions">
+    <li id="ctl05_Actions1_liPrint" class="print">
+        <a id="ctl05_Actions1_lnkPrint" onclick="window.open('/ruukkiinternet/layouts/print.aspx?p={E1662A3E-42AA-4C97-BB7B-7622CAD9A4F2}', 'Ruukkicom', 'scrollbars=1, resizable=1, width=800, height=500');return false;" href="Cauta-contacte.html#" target="_blank">Tipăreşte</a></li>
+    
+        <li class="bookmark"><a class="addthis_button_favorites" href="Cauta-contacte.html#">
+            Favorite</a></li>
+        <li class="email"><a class="addthis_button_email" href="Cauta-contacte.html#">
+            Email</a></li>
+        <li class="share"><a class="addthis_button" href="../../www.addthis.com/bookmark.php-v=25038username=ruukki.html">
+            Trimite acestă pagină</a>
+            <script type="text/javascript" src="../../s7.addthis.com/js/250/addthis_widget.js#username=ruukki"></script>
+        </li>
+    
+</ul>
+
+	</div>
+
+    <div>
+    
+     <div id="sitemapContent" >
+            <div class="four-columns">
+                <div class="four-columns2">
+                    <div class="box content sitemap-links">
+                      <ul>
+                        
+                     </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+     		            <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                    <div class="box-last content sitemap-links">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </div>
+
+	<div id="footer-copyright">
+		<p><br/></p>		
+	</div>
+</div>
+				
+
+
+				</div>
+			</div>
+		</div>
+        
+	
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../..errorPages/Error-aspxerrorpath=/WebResource.axd.html" type="text/javascript"></script>
+</form>
+	
+    
+    <!-- Old browser notification -->
+    <script type="text/javascript">
+        var $buoop = { vs: { i: 6, f: 3.5, s: 3, o: 9 }, newwindow: true }
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            if ($buoop.ol) $buoop.ol();
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "http://browser-update.org/update.js");
+            document.body.appendChild(e);
+        } 
+     </script>
+     
+	</body>
+</html>
