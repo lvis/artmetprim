@@ -1,102 +1,63 @@
-<!doctype html>
-<html>
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-<style>
-.headerMenu 
-{
-  background: -webkit-linear-gradient(#f1f1f1, #d6d6d6);
-  background: -moz-linear-gradient(#f1f1f1, #d6d6d6);
-  background: -ms-linear-gradient(#f1f1f1, #d6d6d6);
-  background: linear-gradient(#f1f1f1, #d6d6d6);
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid #c2c2c2;
-  margin-top: -47px;
-}
-
-.headerMenu:after 
-{
-  content: "";
-  position: absolute;
-  width: 1030px;
-  height: 20px;
-  background: red;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  opacity: 0;
-}
-
-.headerMenu .fixed 
-{
-  border-radius: 0;
-  position: fixed;
-  top: 0;
-  width: 1030px;
-  z-index: 30;
-  margin-top: 0;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-}
-.headerMenu .fixed:after 
-{
-  opacity: 1;
-}
-.headerMenu ul 
-{
-  display: table;
-  margin: 0 auto;
-}
-.headerMenu ul li 
-{
-  display: block;
-  float: left;
-}
-.headerMenu ul li a 
-{
-  padding: 12px 20px;
-  width: 120px;
-  margin: 0 5px;
-  display: block;
-  text-align: center;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  color: #555;
-}
-.headerMenu ul li a:hover 
-{
-  background: -webkit-radial-gradient(center center, circle farthest-side, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
-  color: #333;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-}
-.headerMenu ul li.active a,
-.headerMenu ul li a:active
-{
-  border-color: rgba(0, 0, 0, 0.2);
-  background: #fff;
-  background: -webkit-radial-gradient(bottom center, ellipse cover, #ffffff, #f4f4f4, #aaaaaa);
-  color: #333;
-  text-shadow: 0 1px 0 #fff;
-}
-.headerMenu.compact ul li a 
-{
-  width: 80px;
-}
-
+	<link rel="stylesheet" href="http://images.apple.com/home/styles/home.css" type="text/css">
+	<style type="text/css" media="screen">
+	.promos div
+	{ 
+		background-color:#f6f6f6;
+		background-image:linear-gradient(top, rgba(249,249,249,1) 50%, rgba(240,240,240,1) 100%);
+		border-radius:5px;
+		box-shadow:0 -3px 1px rgba(255,255,255,.6), inset 0 2px 1px rgba(255,255,255,.97), 0 0 3px -1px rgba(0,0,0,.7);
+		cursor:pointer;
+		display:inline-block;
+		height:185px; 
+		width:185px;  
+	}
 </style>
-</head>
-<body>
-<div class="headerMenu">
-    <ul role="tablist">
-        <li><a href="#1">Why Xamarin</a></li>
-        <li class="active"><a href="#2">How it Works</a></li>
-        <li><a href="#3">Products</a></li>
-        <li><a href="#4">FAQ</a></li>
-    </ul>
+<body id="home" class="home">
+<aside class="promos">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</aside>
+
+
+
+<div class="teaser-row">   
+<div class="teaser">
+    <h2>Ruukki rainwater systems</h2>
+    <div class="teaser-img">
+        <a id="main_4_ctl00_hlLinkImage" href="/Roofing-products/Rainwater-systems">
+			<img src="/~/media/Images/Ruukkiroofs/Teasers/Front_page/rws.ashx" alt="" width="302" height="167">
+		</a>
+    </div>
+    <div class="teaser-txt">
+        <p><a id="main_4_ctl00_hlLinkText" class="plain" href="/Roofing-products/Rainwater-systems">Ruukki's rainwater systems have been designed for every roof type.<br><br></a></p>
+        <a id="main_4_ctl00_hlLink" href="/Roofing-products/Rainwater-systems">Read more about Ruukki rainwater systems</a>
+    </div>
+</div>
+
+<div class="teaser">
+    <h2>Finnera - easy to buy</h2>
+    <div class="teaser-img">
+        <a id="main_4_ctl01_hlLinkImage" href="/Roofing-products/Roofs/Finnera-Plus-tile-effect-steel-roof"><img src="/~/media/Images/Ruukkiroofs/Teasers/Front_page/Finnera_easy_to_buy.ashx" alt="Finnera is easy to buy" width="302" height="167"></a>
+    </div>
+    <div class="teaser-txt">
+        <p><a id="main_4_ctl01_hlLinkText" class="plain" href="/Roofing-products/Roofs/Finnera-Plus-tile-effect-steel-roof">With Finnera, you get design and top quality in a fully standardized stock-ready package, making your whole roofing project as easy and smooth as possible.</a></p>
+        <a id="main_4_ctl01_hlLink" href="/Roofing-products/Roofs/Finnera-Plus-tile-effect-steel-roof">Read more about Finnera</a>
+    </div>
+</div>
+
+<div class="teaser last">
+    <h2>Visualize your roof</h2>
+    <div class="teaser-img">
+        <a id="main_4_ctl02_hlLinkImage" href="/Visualize-your-roof"><img src="/~/media/Images/Ruukkiroofs/Teasers/Front_page/Roof-visualizer.ashx" alt="Roof visualizer" width="302" height="167"></a>
+    </div>
+    <div class="teaser-txt">
+        <p><a id="main_4_ctl02_hlLinkText" class="plain" href="/Visualize-your-roof">See how different roof colours and roofing sheets would look on your house.<br><br></a></p>
+        <a id="main_4_ctl02_hlLink" href="/Visualize-your-roof">To roof visualizer</a>
+    </div>
+</div>
+
 </div>
 </body>
-</html>

@@ -6,7 +6,7 @@ function getRezervariEmail()
 	$mailbox = "{imap.gmail.com:993/imap/ssl}INBOX";
 	$username = "florika.lupu";
 	$password = "Ionel@#3";
-	$mailStream = @imap_open($mailbox, $username, $password)
+	$mailStream = imap_open($mailbox, $username, $password)
 	or
 	die('Cannot connect to Gmail:'.print_r(imap_errors()));
 	$date = date("d M Y", strToTime("0 days"));//strToTime("0 days") time()

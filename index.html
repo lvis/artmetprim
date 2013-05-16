@@ -1,23 +1,60 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="keywords" content="acoperişuri metalice, tablă tip ţiglă , sistem de jheaburi şi burlane, sistem pluvial, tablă profilată pentru acoperiş" />
-<meta name="description" content="Experienţa de peste 20 de ani a companiei în realizarea de acoperişuri metalice, este garanţia unor produse din tablă, uşor de montat, uşor de cumpărat, şi uşor de întreţinut pentru o viaţă fără de griji."/>
-<title>ArtMetPrim</title>
-<link href="style.css" media="screen" type="text/css" rel="stylesheet"/>
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
-</head>
-<body>
-<nav id="headerMenu">
-    <a href="#home" rel="index">ArtMetPrim</a>
-    <a href="#solutions" title="Soluții pentru casa ta" rel="next">Soluții</a>
-    <a href="#products" title="Cupara produse pentru casa" rel="next">Produse</a>
-    <a href="#gallery" title="Gasește inpirația" rel="next">Galerie</a>
-    <a href="#support" title="Soluționează problema" rel="next">Asistență</a>
-</nav>
-<!--<div id="content"></div>-->
-<iframe id="content" sandbox="allow-scripts || allow-same-origin || allow-top-navigation"></iframe>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="acoperişuri metalice, tablă tip ţiglă , sistem de jheaburi şi burlane, sistem pluvial, tablă profilată pentru acoperiş" />
+        <meta name="description" content="Experienţa de peste 20 de ani a companiei în realizarea de acoperişuri metalice, este garanţia unor produse din tablă, uşor de montat, uşor de cumpărat, şi uşor de întreţinut pentru o viaţă fără de griji."/>
+        <title>ArtMetPrim</title>
+        <link type="text/css" rel="stylesheet" href="style.css" media="screen"/>
+
+        <!-- <link rel="stylesheet" type="text/css" href="css/general.css"
+        media="print,screen" />
+        <link rel="stylesheet" type="text/css" href="css/main.css"
+        media="print,screen" />
+        <link rel="stylesheet" type="text/css"
+        href="css/jquery-ui-1.8.16.custom.css" />
+        <link rel="Stylesheet" type="text/css" href="css/TableStyles.css" />
+        <link rel="Stylesheet" type="text/css" href="css/colorbox.css" /> -->
+        <script type="text/javascript" src="jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <!--[if lt IE 9]>
+        <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("aside"  );
+        document.createElement("nav"    );
+        document.createElement("article");
+        document.createElement("hgroup" );
+        document.createElement("time"   );
+        </script>
+        <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated
+        using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in
+        order to display this page.
+        </noscript>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="headerMenu">
+            <a href="home.html"  title="Ești acasă" rel="index"target="iframeContent"><img src="assets/LogoRuukki.png"/></a>
+            <a href="solutions.html" title="Soluții pentru casa ta" rel="next" target="iframeContent">Soluții</a>
+            <a href="products.html" title="Cumpără produse" rel="next" target="iframeContent">Produse</a>
+            <a href="gallery.html" title="Găsește inpirația" rel="next" target="iframeContent">Galerie</a>
+            <a href="support.html" title="Asistență în soluționarea problemei" rel="next" target="iframeContent">Asistență</a>
+        </div>
+        <div class="iframeWrap">
+            <iframe id="content" name="iframeContent" src="home.html" frameborder="0" onload="handle_contentLoad(event)">
+                &nbsp;
+            </iframe>
+        </div>
+        <footer>
+            <span><img src="assets/LogoMoldcell.png" /> 079250042</span>
+            <span><img src="assets/LogoOrange.jpg" /> 060150042</span>
+            <span><img src="assets/LogoPhone.png" /> (299)33-284</span>
+            <span style="color: #999">Drept de autor © 2013 Art-Met Prim. Toate drepturile rezervate.</span>
+        </footer>
+    </body>
 </html>
