@@ -1,158 +1,113 @@
 <?php
 error_reporting(E_ALL);
 
+function trace($output)
+{
+  // print $output; 
+}
+
 function getRezervariEmail()
 {
-	$mailbox = "{imap.gmail.com:993/imap/ssl}INBOX";
+    $mailbox = "{imap.gmail.com:993/imap/ssl}INBOX";
 	$username = "florika.lupu";
 	$password = "Ionel@#3";
 	$mailStream = imap_open($mailbox, $username, $password)
 	or
 	die('Cannot connect to Gmail:'.print_r(imap_errors()));
-	$date = date("d M Y", strToTime("0 days"));//strToTime("0 days") time()
-	$criteria = 'SUBJECT "solduri" FROM "adistudio92@mail.ru" SINCE "'.$date.'"';
-	/* grab emails */
+	$date = date("d M Y", strToTime("-7 days"));//strToTime("0 days") time()
+	$criteria = 'SUBJECT "Solduri" FROM "adistudio92@mail.ru" SINCE "'.$date.'"';
 	$emails = imap_search($mailStream, $criteria, SE_FREE, "UTF-8");
     
-	/* if emails are returned, cycle through each... */
 	if($emails)
 	{
-		/* begin output var */
-		$output = '';
-		/* put the newest emails on top */
 		rsort($emails);
-		/* for every email... */
-		foreach($emails as $email_number)
+        $emailCount = 1;//count($emails);
+        for ($i=0; $i < $emailCount; $i++)
 		{
-			/* get information specific to this email */
-			$overview = imap_fetch_overview($mailStream,$email_number,0);
-			/* get mail message */
-			$message = imap_fetchbody($mailStream,$email_number,2);
-			/* code for atachements*/
-			/* get mail structure */
-			$structure = imap_fetchstructure($mailStream, $email_number);
-
-			$attachments = array();
-			/* if any attachments found... */
-			print "Verify attachement ".isset($structure->parts)." ".count($structure->parts);
-
+		    $overview = imap_fetch_overview($mailStream, $emails[$i], 0);
+			$structure = imap_fetchstructure($mailStream, $emails[$i]);
+			
+			trace ("<p>{$overview[0]->date}</p><p>");
+			
 			if(isset($structure->parts) && count($structure->parts))
 			{
-				for($i = 0; $i < count($structure->parts); $i++)
+				for($j = 0; $j < count($structure->parts); $j++)
 				{
-					$attachments[$i] = array(
-							'is_attachment' => false,
-							'filename' => '',
-							'name' => '',
-							'attachment' => ''
-					);
-
-					if($structure->parts[$i]->ifdparameters)
+				    $attachmentName = null;
+					
+					if($structure->parts[$j]->ifparameters)
 					{
-						foreach($structure->parts[$i]->dparameters as $object)
-						{
-							if(strtolower($object->attribute) == 'filename')
-							{
-								$attachments[$i]['is_attachment'] = true;
-								$attachments[$i]['filename'] = $object->value;
-							}
-						}
-					}
-
-					if($structure->parts[$i]->ifparameters)
-					{
-						foreach($structure->parts[$i]->parameters as $object)
+						foreach($structure->parts[$j]->parameters as $object)
 						{
 							if(strtolower($object->attribute) == 'name')
 							{
-								$attachments[$i]['is_attachment'] = true;
-								$attachments[$i]['name'] = $object->value;
+							    $attachmentName = $object->value;
 							}
 						}
 					}
 
-					if($attachments[$i]['is_attachment'])
+					if($attachmentName != null)
 					{
-						$attachments[$i]['attachment'] = imap_fetchbody($mailStream, $email_number, $i+1);
+					    $decodedAttachmentData = null;
+						$attachmentData = imap_fetchbody($mailStream, $emails[$i], $j+1);
+						trace ("<span>{$attachmentName}</span> [Save, ");
+                        $file = new SplFileObject($attachmentName, 'w+');
+    
+                        if ($file->isWritable() == false)
+                        {
+                            chmod($attachmentName, 0777);
+                        }
+                        
 						switch ($structure->parts[$i]->encoding)
 						{
+						    /* 0 = 7BIT encoding */
 							case 0:
 								{
-									print "<p>7BIT</p>";
-									break;
+									$decodedAttachmentData = base64_decode($attachmentData);
+                                    break;
 								}
 							case 1:
 								{
-									print "<p>8BIT</p>";
+									trace ("<p>8BIT</p>");
 									break;
 								}
 							case 2:
 								{
-									print "<p>BINARY</p>";
+									trace ("<p>BINARY</p>");
 									break;
 								}
 								/* 3 = BASE64 encoding */
 							case 3:
 								{
-									print "<p>BASE64</p>";
-									$attachments[$i]['attachment'] = base64_decode($attachments[$i]['attachment']);
-									break;
+                                    $decodedAttachmentData = base64_decode($attachmentData);
+                                    break;
 								}
 								/* 4 = QUOTED-PRINTABLE encoding */
 							case 4:
 								{
-									print "<p>QUOTED-PRINTABLE</p>";
-									$attachments[$i]['attachment'] = quoted_printable_decode($attachments[$i]['attachment']);
+									$decodedAttachmentData = quoted_printable_decode($attachmentData);
 									break;
 								}
 							case 5:
 								{
-									print "<p>OTHER</p>";
+									trace ("<p>OTHER</p>");
 									break;
 								}
 						}
+                        if ($decodedAttachmentData != null) {
+                            $written = $file->fwrite($decodedAttachmentData);
+                            trace ("Saved {$written} bytes");
+                        }        
+                        trace ("] ");
 					}
 				}
 			}
-			/* iterate through each attachment and save it */
-			foreach($attachments as $attachment)
-			{
-				print "<p>{$attachment['is_attachment']}</p>";
-				if($attachment['is_attachment'] == 1)
-				{
-					$filename = $attachment['name'];
-
-					if(empty($filename))
-					{
-						$filename = $attachment['filename'];
-					}
-
-					if(empty($filename))
-					{
-						$filename = time() . ".dat";
-					}
-
-					/* prefix the email number to the filename in case two emails
-					 * have the attachment with the same file name.
-					*/
-					//                 $file = new SplFileObject($email_number."-".$filename, 'w+');
-					print "<p>Save :".$filename."</p>";
-					$file = new SplFileObject($filename, 'w+');
-
-					if ($file->isWritable() == false)
-					{
-						chmod($filename, 0777);
-					}
-
-					$written = $file->fwrite($attachment['attachment']);
-					print "<p>Saved ".$email_number . "-" . $filename." bytes:".$written."</p>";
-				}
-			}
+            trace ("</p>");
 		}
 	}
 	else
 	{
-		echo "Email not found at $date";
+		trace ("Email not found at $date");
 	}
 	/* close the connection */
 	imap_close($mailStream);
