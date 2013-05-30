@@ -18,7 +18,7 @@
  */
 (function($){     
 	$.fn.extend({   
-		createCarousel: function(options) { 		
+		billy: function(options) { 		
 			// Defaults
 			var defaults = {
 				transition		: 'scroll',
